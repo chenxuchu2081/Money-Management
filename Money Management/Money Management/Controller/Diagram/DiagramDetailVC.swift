@@ -24,11 +24,19 @@ class DiagramDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSou
     var expendTableList = [(name: String, images: Data, Price: Double, percent: Float, date: Date)]()
     var incomeTableList = [(name: String, images: Data, Price: Double, percent: Float, date: Date)]()
     
+    var expendLineChartData = [LineChart]()
+    var incomeLineChartData = [LineChart]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
         viewContext = app.persistentContainer.viewContext
+        
+        //for each date not repeat and calculate same date it's total price,
+        for dayOf31 in 1...31{
+            expendLineChartData.append(LineChart(day: dayOf31, price: 0, ishaveData: false))
+            incomeLineChartData.append(LineChart(day: dayOf31, price: 0, ishaveData: false))
+        }
         
         if let name = typeName, let totalPrices = totalPrice{
             searchToSaveTable(nameType: name, pricesForPercent: totalPrices)
@@ -36,8 +44,14 @@ class DiagramDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSou
         nameLable.text = typeName!
         averageDatePriceLable.text = String(format: "%0.1f", totalPrice! / 30)
         totalPriceLable.text = String(format: "%0.1f", totalPrice!)
-        LineChart.setupLineChart(pieView: lineChart)
+        
+        if isExpend == true{
+            LineChart.setupLineChart(lineChart: lineChart, price: expendLineChartData)
+        }else{
+            LineChart.setupLineChart(lineChart: lineChart, price: incomeLineChartData)
+        }
     }
+    
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -117,12 +131,39 @@ class DiagramDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSou
                     let percent = data.price / pricesForPercent
                     let image = data.image! as Data
                     let date = data.date! as Date
-                    expendTableList.append((name: nameType, images: image , Price: data.price, percent: Float(percent), date: date))
+                    let price = data.price
+                    expendTableList.append((name: nameType, images: image , Price: price, percent: Float(percent), date: date))
+                    
+                    let dayOfDate = Helper.getComponentOfDate(Date: date, WhichComponent: "day")
+                    
+                    for data in expendLineChartData{
+                        if dayOfDate == data.day{
+                            data.price += price
+                            data.ishaveData = true
+                        }
+                    }
+                    
+                    expendLineChartData.append(LineChart(day: dayOfDate, price: price, ishaveData: true))
+                    
                 }else if data.type == "收入"{
                     let percent = data.price / pricesForPercent
                     let image = data.image! as Data
                     let date = data.date! as Date
-                    incomeTableList.append((name: nameType, images: image , Price: data.price, percent: Float(percent), date: date))
+                    let price = data.price
+                    incomeTableList.append((name: nameType, images: image , Price: price, percent: Float(percent), date: date))
+                    
+                    let dayOfDate = Helper.getComponentOfDate(Date: date, WhichComponent: "day")
+                    
+                    for data in incomeLineChartData{
+                        if dayOfDate == data.day{
+                            data.price += price
+                            data.ishaveData = true
+                        }
+                    }
+                    
+                    incomeLineChartData.append(LineChart(day: dayOfDate, price: price, ishaveData: true))
+                    
+                    
                 }else{
                     return
                 }

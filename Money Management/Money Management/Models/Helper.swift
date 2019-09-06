@@ -30,6 +30,28 @@ class Helper: NSObject{
         return date
     }
     
+    static func getComponentOfDate(Date: Date, WhichComponent: String) -> Int{
+        let calendar = Calendar.current
+        let timeZone = TimeZone.init(identifier: "UTC")
+        let componets = calendar.dateComponents(in: timeZone!, from: Date)
+        
+        switch WhichComponent {
+        case "year":
+            return componets.year!
+        case "month":
+            return componets.month!
+        case "day":
+            return componets.day!
+        case "hour":
+            return componets.hour!
+        case "second":
+            return componets.second!
+        case "weekday":
+            return componets.weekday!
+        default:
+            return componets.day!
+        }
+    }
     
     
     
