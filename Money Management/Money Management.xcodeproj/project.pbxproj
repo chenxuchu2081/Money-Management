@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2891D38714CA2E11B6421FE7 /* Pods_Money_ManagementTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DE8B49DF21020CAE976A1A7 /* Pods_Money_ManagementTests.framework */; };
+		2BDFEE919ACFC8235FBE7D2C /* Pods_Money_ManagementUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC73F9C0C0F0280C4EB35C3 /* Pods_Money_ManagementUITests.framework */; };
+		5B9502E4E43BB4076C2F75EA /* Pods_Money_Management.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6247D8658E124928E9E42A6 /* Pods_Money_Management.framework */; };
+		5F08F57F231FFA82000E2986 /* DiagramTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F08F57E231FFA82000E2986 /* DiagramTVC.swift */; };
 		5F0C114B230B9EA8006E69AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0C114A230B9EA8006E69AC /* AppDelegate.swift */; };
 		5F0C1150230B9EA8006E69AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F0C114E230B9EA8006E69AC /* Main.storyboard */; };
 		5F0C1153230B9EA8006E69AC /* Money_Management.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5F0C1151230B9EA8006E69AC /* Money_Management.xcdatamodeld */; };
@@ -18,12 +22,16 @@
 		5F0C1181230BB24E006E69AC /* expenses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0C1180230BB24E006E69AC /* expenses.swift */; };
 		5F0C1183230BB3AE006E69AC /* expensesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0C1182230BB3AE006E69AC /* expensesController.swift */; };
 		5F0C1185230BC094006E69AC /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0C1184230BC094006E69AC /* Helper.swift */; };
+		5F19112D231C15A100DEAA9F /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F19112C231C15A100DEAA9F /* Property.swift */; };
+		5F1A1B3A2320E95D009F5999 /* DiagramDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1A1B392320E95D009F5999 /* DiagramDetailVC.swift */; };
 		5F1A3A04230D2458000ED2E8 /* ConsumeType+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1A3A02230D2458000ED2E8 /* ConsumeType+CoreDataClass.swift */; };
 		5F1A3A05230D2458000ED2E8 /* ConsumeType+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1A3A03230D2458000ED2E8 /* ConsumeType+CoreDataProperties.swift */; };
 		5F2519132314D57E00CC7357 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F2519122314D57E00CC7357 /* Assets.xcassets */; };
 		5F281B3B230BD65300337214 /* AddDataCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F281B3A230BD65300337214 /* AddDataCVC.swift */; };
 		5F2C900E231772F10036DF12 /* AddCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2C900D231772F10036DF12 /* AddCategoryVC.swift */; };
+		5F37D07F23215BF9001671A7 /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F37D07E23215BF9001671A7 /* More.storyboard */; };
 		5F3F3018230D5AA900843879 /* CoreDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3F3017230D5AA900843879 /* CoreDatas.swift */; };
+		5F400909232233600088D55B /* DiagramDetailTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F400908232233600088D55B /* DiagramDetailTVC.swift */; };
 		5F41003B2317E8F100EC4327 /* Category_Income+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4100372317E8F100EC4327 /* Category_Income+CoreDataClass.swift */; };
 		5F41003C2317E8F100EC4327 /* Category_Income+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4100382317E8F100EC4327 /* Category_Income+CoreDataProperties.swift */; };
 		5F41003D2317E8F100EC4327 /* Category_Expend+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4100392317E8F100EC4327 /* Category_Expend+CoreDataClass.swift */; };
@@ -33,14 +41,16 @@
 		5F4416FF2314F0630059D6A3 /* Detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4416FE2314F0630059D6A3 /* Detail.swift */; };
 		5F62E0392318EF9000D8F143 /* ReviewCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F62E0382318EF9000D8F143 /* ReviewCategoryVC.swift */; };
 		5F62E03B2318F73E00D8F143 /* ReviewCategoryTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F62E03A2318F73E00D8F143 /* ReviewCategoryTVC.swift */; };
+		5F76AED0231E898800DE7D5D /* Diagram.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F76AECE231E898800DE7D5D /* Diagram.storyboard */; };
+		5F76AED2231E89A800DE7D5D /* DiagramVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F76AED1231E89A800DE7D5D /* DiagramVC.swift */; };
 		5F8C076F2316DA8100C7564D /* HomePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F8C076E2316DA8100C7564D /* HomePage.storyboard */; };
 		5F8C07722316DB3A00C7564D /* Category.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F8C07702316DB3A00C7564D /* Category.storyboard */; };
-		5FA4B1C4230E698A009E0B02 /* Expend+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA4B1C0230E698A009E0B02 /* Expend+CoreDataClass.swift */; };
-		5FA4B1C5230E698A009E0B02 /* Expend+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA4B1C1230E698A009E0B02 /* Expend+CoreDataProperties.swift */; };
-		5FA4B1C6230E698A009E0B02 /* Income+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA4B1C2230E698A009E0B02 /* Income+CoreDataClass.swift */; };
-		5FA4B1C7230E698A009E0B02 /* Income+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA4B1C3230E698A009E0B02 /* Income+CoreDataProperties.swift */; };
 		5FA4B1C9230E69B6009E0B02 /* Expend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA4B1C8230E69B6009E0B02 /* Expend.swift */; };
+		5FB08F29232107EA00213E5E /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB08F28232107EA00213E5E /* LineChart.swift */; };
 		5FD429BC2312AB29002BDBFB /* PopoverDateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD429BB2312AB29002BDBFB /* PopoverDateVC.swift */; };
+		5FE6116E231FBA9F00CECC6B /* PieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE6116D231FBA9F00CECC6B /* PieChart.swift */; };
+		5FE7D5DE231D406100125C1B /* PopertyItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE7D5DC231D406100125C1B /* PopertyItem+CoreDataClass.swift */; };
+		5FE7D5DF231D406100125C1B /* PopertyItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE7D5DD231D406100125C1B /* PopertyItem+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +71,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0DE8B49DF21020CAE976A1A7 /* Pods_Money_ManagementTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Money_ManagementTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0EB8149C1C0E93DD3D8EBDE3 /* Pods-Money ManagementUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Money ManagementUITests.release.xcconfig"; path = "Target Support Files/Pods-Money ManagementUITests/Pods-Money ManagementUITests.release.xcconfig"; sourceTree = "<group>"; };
+		102F2C86E02B8847305EB95D /* Pods-Money ManagementTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Money ManagementTests.debug.xcconfig"; path = "Target Support Files/Pods-Money ManagementTests/Pods-Money ManagementTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4BC73F9C0C0F0280C4EB35C3 /* Pods_Money_ManagementUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Money_ManagementUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F08F57E231FFA82000E2986 /* DiagramTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagramTVC.swift; sourceTree = "<group>"; };
 		5F0C1147230B9EA8006E69AC /* Money Management.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Money Management.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F0C114A230B9EA8006E69AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5F0C114F230B9EA8006E69AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -78,12 +93,16 @@
 		5F0C1180230BB24E006E69AC /* expenses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = expenses.swift; sourceTree = "<group>"; };
 		5F0C1182230BB3AE006E69AC /* expensesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = expensesController.swift; sourceTree = "<group>"; };
 		5F0C1184230BC094006E69AC /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		5F19112C231C15A100DEAA9F /* Property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
+		5F1A1B392320E95D009F5999 /* DiagramDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagramDetailVC.swift; sourceTree = "<group>"; };
 		5F1A3A02230D2458000ED2E8 /* ConsumeType+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ConsumeType+CoreDataClass.swift"; sourceTree = "<group>"; };
 		5F1A3A03230D2458000ED2E8 /* ConsumeType+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ConsumeType+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		5F2519122314D57E00CC7357 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5F281B3A230BD65300337214 /* AddDataCVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDataCVC.swift; sourceTree = "<group>"; };
 		5F2C900D231772F10036DF12 /* AddCategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCategoryVC.swift; sourceTree = "<group>"; };
+		5F37D07E23215BF9001671A7 /* More.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = More.storyboard; sourceTree = "<group>"; };
 		5F3F3017230D5AA900843879 /* CoreDatas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDatas.swift; sourceTree = "<group>"; };
+		5F400908232233600088D55B /* DiagramDetailTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagramDetailTVC.swift; sourceTree = "<group>"; };
 		5F4100372317E8F100EC4327 /* Category_Income+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category_Income+CoreDataClass.swift"; sourceTree = "<group>"; };
 		5F4100382317E8F100EC4327 /* Category_Income+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category_Income+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		5F4100392317E8F100EC4327 /* Category_Expend+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category_Expend+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -93,14 +112,21 @@
 		5F4416FE2314F0630059D6A3 /* Detail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detail.swift; sourceTree = "<group>"; };
 		5F62E0382318EF9000D8F143 /* ReviewCategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCategoryVC.swift; sourceTree = "<group>"; };
 		5F62E03A2318F73E00D8F143 /* ReviewCategoryTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCategoryTVC.swift; sourceTree = "<group>"; };
+		5F76AECF231E898800DE7D5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Money Management/Base.lproj/Diagram.storyboard"; sourceTree = "<group>"; };
+		5F76AED1231E89A800DE7D5D /* DiagramVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagramVC.swift; sourceTree = "<group>"; };
 		5F8C076E2316DA8100C7564D /* HomePage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HomePage.storyboard; sourceTree = "<group>"; };
 		5F8C07712316DB3A00C7564D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Money Management/Base.lproj/Category.storyboard"; sourceTree = "<group>"; };
-		5FA4B1C0230E698A009E0B02 /* Expend+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Expend+CoreDataClass.swift"; sourceTree = "<group>"; };
-		5FA4B1C1230E698A009E0B02 /* Expend+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Expend+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		5FA4B1C2230E698A009E0B02 /* Income+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Income+CoreDataClass.swift"; sourceTree = "<group>"; };
-		5FA4B1C3230E698A009E0B02 /* Income+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Income+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		5FA4B1C8230E69B6009E0B02 /* Expend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expend.swift; sourceTree = "<group>"; };
+		5FB08F28232107EA00213E5E /* LineChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChart.swift; sourceTree = "<group>"; };
 		5FD429BB2312AB29002BDBFB /* PopoverDateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverDateVC.swift; sourceTree = "<group>"; };
+		5FE6116D231FBA9F00CECC6B /* PieChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChart.swift; sourceTree = "<group>"; };
+		5FE7D5DC231D406100125C1B /* PopertyItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PopertyItem+CoreDataClass.swift"; sourceTree = "<group>"; };
+		5FE7D5DD231D406100125C1B /* PopertyItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PopertyItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		65BB0A2592E3F0BC5CB82AE1 /* Pods-Money ManagementUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Money ManagementUITests.debug.xcconfig"; path = "Target Support Files/Pods-Money ManagementUITests/Pods-Money ManagementUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		921784BA4A22F0ED4099DD6D /* Pods-Money Management.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Money Management.release.xcconfig"; path = "Target Support Files/Pods-Money Management/Pods-Money Management.release.xcconfig"; sourceTree = "<group>"; };
+		A97166A72340120EAB7EEF67 /* Pods-Money ManagementTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Money ManagementTests.release.xcconfig"; path = "Target Support Files/Pods-Money ManagementTests/Pods-Money ManagementTests.release.xcconfig"; sourceTree = "<group>"; };
+		AAE801B3767C9E6572D5BBBD /* Pods-Money Management.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Money Management.debug.xcconfig"; path = "Target Support Files/Pods-Money Management/Pods-Money Management.debug.xcconfig"; sourceTree = "<group>"; };
+		E6247D8658E124928E9E42A6 /* Pods_Money_Management.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Money_Management.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +134,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B9502E4E43BB4076C2F75EA /* Pods_Money_Management.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +142,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2891D38714CA2E11B6421FE7 /* Pods_Money_ManagementTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,6 +150,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BDFEE919ACFC8235FBE7D2C /* Pods_Money_ManagementUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,13 +160,14 @@
 		5F0C113E230B9EA8006E69AC = {
 			isa = PBXGroup;
 			children = (
-				5F8C07702316DB3A00C7564D /* Category.storyboard */,
-				5F8C076E2316DA8100C7564D /* HomePage.storyboard */,
+				5FA4419F231C0ADD00995055 /* Storyboards */,
 				5F1A3A06230D246B000ED2E8 /* CoreData */,
 				5F0C1149230B9EA8006E69AC /* Money Management */,
 				5F0C1161230B9EA9006E69AC /* Money ManagementTests */,
 				5F0C116C230B9EA9006E69AC /* Money ManagementUITests */,
 				5F0C1148230B9EA8006E69AC /* Products */,
+				FAA7D0CFDB63098E4D9806CF /* Pods */,
+				B02DC6D57F6E58937C6FE3A3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -200,16 +230,14 @@
 		5F1A3A06230D246B000ED2E8 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				5FE7D5DC231D406100125C1B /* PopertyItem+CoreDataClass.swift */,
+				5FE7D5DD231D406100125C1B /* PopertyItem+CoreDataProperties.swift */,
 				5F4100372317E8F100EC4327 /* Category_Income+CoreDataClass.swift */,
 				5F4100382317E8F100EC4327 /* Category_Income+CoreDataProperties.swift */,
 				5F4100392317E8F100EC4327 /* Category_Expend+CoreDataClass.swift */,
 				5F41003A2317E8F100EC4327 /* Category_Expend+CoreDataProperties.swift */,
 				5F1A3A02230D2458000ED2E8 /* ConsumeType+CoreDataClass.swift */,
 				5F1A3A03230D2458000ED2E8 /* ConsumeType+CoreDataProperties.swift */,
-				5FA4B1C0230E698A009E0B02 /* Expend+CoreDataClass.swift */,
-				5FA4B1C1230E698A009E0B02 /* Expend+CoreDataProperties.swift */,
-				5FA4B1C2230E698A009E0B02 /* Income+CoreDataClass.swift */,
-				5FA4B1C3230E698A009E0B02 /* Income+CoreDataProperties.swift */,
 				5F3F3017230D5AA900843879 /* CoreDatas.swift */,
 				5FA4B1C8230E69B6009E0B02 /* Expend.swift */,
 			);
@@ -233,6 +261,7 @@
 				5F0C1182230BB3AE006E69AC /* expensesController.swift */,
 				5F0C1184230BC094006E69AC /* Helper.swift */,
 				5F4416FE2314F0630059D6A3 /* Detail.swift */,
+				5F19112C231C15A100DEAA9F /* Property.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -248,10 +277,58 @@
 		5F37F41E230BCDA900AD6461 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				5F76AECD231E895600DE7D5D /* Diagram */,
 				5F2C900C231772C30036DF12 /* Category */,
 				5F0C117F230BAF93006E69AC /* HomePage */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		5F76AECD231E895600DE7D5D /* Diagram */ = {
+			isa = PBXGroup;
+			children = (
+				5F76AED1231E89A800DE7D5D /* DiagramVC.swift */,
+				5FE6116D231FBA9F00CECC6B /* PieChart.swift */,
+				5F08F57E231FFA82000E2986 /* DiagramTVC.swift */,
+				5F1A1B392320E95D009F5999 /* DiagramDetailVC.swift */,
+				5FB08F28232107EA00213E5E /* LineChart.swift */,
+				5F400908232233600088D55B /* DiagramDetailTVC.swift */,
+			);
+			path = Diagram;
+			sourceTree = "<group>";
+		};
+		5FA4419F231C0ADD00995055 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				5F37D07E23215BF9001671A7 /* More.storyboard */,
+				5F76AECE231E898800DE7D5D /* Diagram.storyboard */,
+				5F8C07702316DB3A00C7564D /* Category.storyboard */,
+				5F8C076E2316DA8100C7564D /* HomePage.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		B02DC6D57F6E58937C6FE3A3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E6247D8658E124928E9E42A6 /* Pods_Money_Management.framework */,
+				0DE8B49DF21020CAE976A1A7 /* Pods_Money_ManagementTests.framework */,
+				4BC73F9C0C0F0280C4EB35C3 /* Pods_Money_ManagementUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FAA7D0CFDB63098E4D9806CF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AAE801B3767C9E6572D5BBBD /* Pods-Money Management.debug.xcconfig */,
+				921784BA4A22F0ED4099DD6D /* Pods-Money Management.release.xcconfig */,
+				102F2C86E02B8847305EB95D /* Pods-Money ManagementTests.debug.xcconfig */,
+				A97166A72340120EAB7EEF67 /* Pods-Money ManagementTests.release.xcconfig */,
+				65BB0A2592E3F0BC5CB82AE1 /* Pods-Money ManagementUITests.debug.xcconfig */,
+				0EB8149C1C0E93DD3D8EBDE3 /* Pods-Money ManagementUITests.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,9 +338,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5F0C1172230B9EA9006E69AC /* Build configuration list for PBXNativeTarget "Money Management" */;
 			buildPhases = (
+				5649E712208F8D8310D924F6 /* [CP] Check Pods Manifest.lock */,
 				5F0C1143230B9EA8006E69AC /* Sources */,
 				5F0C1144230B9EA8006E69AC /* Frameworks */,
 				5F0C1145230B9EA8006E69AC /* Resources */,
+				15EDA74B739BC3C0401B5A94 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -278,6 +357,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5F0C1175230B9EA9006E69AC /* Build configuration list for PBXNativeTarget "Money ManagementTests" */;
 			buildPhases = (
+				E05FADC9036D7300DA74BC9B /* [CP] Check Pods Manifest.lock */,
 				5F0C115A230B9EA9006E69AC /* Sources */,
 				5F0C115B230B9EA9006E69AC /* Frameworks */,
 				5F0C115C230B9EA9006E69AC /* Resources */,
@@ -296,6 +376,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5F0C1178230B9EA9006E69AC /* Build configuration list for PBXNativeTarget "Money ManagementUITests" */;
 			buildPhases = (
+				BADD653D7C8C30E2AB85342D /* [CP] Check Pods Manifest.lock */,
 				5F0C1165230B9EA9006E69AC /* Sources */,
 				5F0C1166230B9EA9006E69AC /* Frameworks */,
 				5F0C1167230B9EA9006E69AC /* Resources */,
@@ -359,7 +440,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F8C07722316DB3A00C7564D /* Category.storyboard in Resources */,
+				5F37D07F23215BF9001671A7 /* More.storyboard in Resources */,
 				5F8C076F2316DA8100C7564D /* HomePage.storyboard in Resources */,
+				5F76AED0231E898800DE7D5D /* Diagram.storyboard in Resources */,
 				5F0C1158230B9EA9006E69AC /* LaunchScreen.storyboard in Resources */,
 				5F2519132314D57E00CC7357 /* Assets.xcassets in Resources */,
 				5F0C1150230B9EA8006E69AC /* Main.storyboard in Resources */,
@@ -382,6 +465,97 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		15EDA74B739BC3C0401B5A94 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Money Management/Pods-Money Management-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Money Management/Pods-Money Management-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5649E712208F8D8310D924F6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Money Management-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BADD653D7C8C30E2AB85342D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Money ManagementUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E05FADC9036D7300DA74BC9B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Money ManagementTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5F0C1143230B9EA8006E69AC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -390,28 +564,33 @@
 				5F0C1153230B9EA8006E69AC /* Money_Management.xcdatamodeld in Sources */,
 				5F1A3A04230D2458000ED2E8 /* ConsumeType+CoreDataClass.swift in Sources */,
 				5F62E0392318EF9000D8F143 /* ReviewCategoryVC.swift in Sources */,
-				5FA4B1C5230E698A009E0B02 /* Expend+CoreDataProperties.swift in Sources */,
+				5FE7D5DF231D406100125C1B /* PopertyItem+CoreDataProperties.swift in Sources */,
 				5F4416FB2314E0F20059D6A3 /* CustomView.swift in Sources */,
 				5F41003C2317E8F100EC4327 /* Category_Income+CoreDataProperties.swift in Sources */,
+				5F400909232233600088D55B /* DiagramDetailTVC.swift in Sources */,
 				5F0C117E230BAE6B006E69AC /* HomePaeTVC.swift in Sources */,
 				5F281B3B230BD65300337214 /* AddDataCVC.swift in Sources */,
 				5F4416FF2314F0630059D6A3 /* Detail.swift in Sources */,
 				5F3F3018230D5AA900843879 /* CoreDatas.swift in Sources */,
-				5FA4B1C6230E698A009E0B02 /* Income+CoreDataClass.swift in Sources */,
 				5F0C1181230BB24E006E69AC /* expenses.swift in Sources */,
+				5FB08F29232107EA00213E5E /* LineChart.swift in Sources */,
+				5F08F57F231FFA82000E2986 /* DiagramTVC.swift in Sources */,
 				5F41003D2317E8F100EC4327 /* Category_Expend+CoreDataClass.swift in Sources */,
 				5F41003B2317E8F100EC4327 /* Category_Income+CoreDataClass.swift in Sources */,
+				5F19112D231C15A100DEAA9F /* Property.swift in Sources */,
 				5F0C1183230BB3AE006E69AC /* expensesController.swift in Sources */,
 				5F2C900E231772F10036DF12 /* AddCategoryVC.swift in Sources */,
 				5F4416FD2314E8160059D6A3 /* HomeDetailVC.swift in Sources */,
-				5FA4B1C7230E698A009E0B02 /* Income+CoreDataProperties.swift in Sources */,
+				5FE6116E231FBA9F00CECC6B /* PieChart.swift in Sources */,
 				5F62E03B2318F73E00D8F143 /* ReviewCategoryTVC.swift in Sources */,
 				5FD429BC2312AB29002BDBFB /* PopoverDateVC.swift in Sources */,
+				5F76AED2231E89A800DE7D5D /* DiagramVC.swift in Sources */,
 				5F0C117C230BAAFD006E69AC /* HomePageVC.swift in Sources */,
+				5FE7D5DE231D406100125C1B /* PopertyItem+CoreDataClass.swift in Sources */,
 				5F41003E2317E8F100EC4327 /* Category_Expend+CoreDataProperties.swift in Sources */,
 				5FA4B1C9230E69B6009E0B02 /* Expend.swift in Sources */,
 				5F0C114B230B9EA8006E69AC /* AppDelegate.swift in Sources */,
-				5FA4B1C4230E698A009E0B02 /* Expend+CoreDataClass.swift in Sources */,
+				5F1A1B3A2320E95D009F5999 /* DiagramDetailVC.swift in Sources */,
 				5F1A3A05230D2458000ED2E8 /* ConsumeType+CoreDataProperties.swift in Sources */,
 				5F0C1185230BC094006E69AC /* Helper.swift in Sources */,
 			);
@@ -463,6 +642,14 @@
 				5F0C1157230B9EA9006E69AC /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		5F76AECE231E898800DE7D5D /* Diagram.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5F76AECF231E898800DE7D5D /* Base */,
+			);
+			name = Diagram.storyboard;
 			sourceTree = "<group>";
 		};
 		5F8C07702316DB3A00C7564D /* Category.storyboard */ = {
@@ -594,6 +781,7 @@
 		};
 		5F0C1173230B9EA9006E69AC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AAE801B3767C9E6572D5BBBD /* Pods-Money Management.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -612,6 +800,7 @@
 		};
 		5F0C1174230B9EA9006E69AC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 921784BA4A22F0ED4099DD6D /* Pods-Money Management.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -630,6 +819,7 @@
 		};
 		5F0C1176230B9EA9006E69AC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 102F2C86E02B8847305EB95D /* Pods-Money ManagementTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -651,6 +841,7 @@
 		};
 		5F0C1177230B9EA9006E69AC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A97166A72340120EAB7EEF67 /* Pods-Money ManagementTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -672,6 +863,7 @@
 		};
 		5F0C1179230B9EA9006E69AC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65BB0A2592E3F0BC5CB82AE1 /* Pods-Money ManagementUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -692,6 +884,7 @@
 		};
 		5F0C117A230B9EA9006E69AC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0EB8149C1C0E93DD3D8EBDE3 /* Pods-Money ManagementUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

@@ -177,23 +177,26 @@ class AddDataCVC: UICollectionViewController, NSFetchedResultsControllerDelegate
             print("Testing...AddData")
             
             //addData to core data in expends
-            let data = NSEntityDescription.insertNewObject(forEntityName: "Expend", into: self.viewContext) as! Expend
+            
+            let data = NSEntityDescription.insertNewObject(forEntityName: "PopertyItem", into: self.viewContext) as! PopertyItem
             
             
-            data.expend_ID = UUID().uuidString //generate  Unique Identifier
-            
+            data.id = UUID().uuidString //generate  Unique Identifier
             data.name = name
             data.image = UIImage(data: image)?.jpegData(compressionQuality: 0.9) as NSData?
             data.desc = desc!
             data.price = price!
             data.date = date! as NSDate
+            if self.isChangeNavTitleExpend == true{
+                data.type = "支出"
+            }else{
+                data.type = "收入"
+            }
             
             self.app.saveContext()
             print("save successful...")
             
             print("\(name), \(String(describing: price)) , \(String(describing: desc)), \(String(describing: date)) , \(image)")
-            
-            self.queryData()
             
         }
         
@@ -228,8 +231,8 @@ class AddDataCVC: UICollectionViewController, NSFetchedResultsControllerDelegate
     
     func queryData(){
         do{
-            let printData = try viewContext.fetch(Expend.fetchRequest())
-            for datas in printData as! [Expend]{
+            let printData = try viewContext.fetch(PopertyItem.fetchRequest())
+            for datas in printData as! [PopertyItem]{
                 print("\(String(describing: datas.name)), \(String(describing: datas.desc))")
             }
         }catch{
@@ -290,6 +293,7 @@ class AddDataCVC: UICollectionViewController, NSFetchedResultsControllerDelegate
             collectionsView.reloadData()
         }
     }
+    
     
     func fetchCategory_Expend_Data(entityName: String){
         let fetchRequest = NSFetchRequest<Category_Expend>(entityName: entityName)

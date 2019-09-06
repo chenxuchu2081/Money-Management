@@ -15,14 +15,15 @@ class Detail{
     var detailPrice: Double?
     var detailDate: Date?
     var dateilDesc: String?
+    var detailType: String?
     
-    init(id: String, name: String, image: Data, price: Double, desc: String, date: Date) {
+    init(id: String, name: String, image: Data, price: Double, desc: String, date: Date, type: String) {
         self.id = id
         self.detailName = name
         self.detailImage = image
         self.detailPrice = price
         self.detailDate = date
         self.dateilDesc = desc
-        
+        self.detailType = type
     }
 }

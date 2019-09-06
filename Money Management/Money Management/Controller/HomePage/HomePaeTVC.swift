@@ -14,6 +14,7 @@ class HomePaeTVC: UITableViewCell {
     @IBOutlet weak var typeImage: UIImageView!
     @IBOutlet weak var payPrice: UILabel!
     @IBOutlet weak var dataOfYear: UILabel!
+    @IBOutlet weak var popertyType: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

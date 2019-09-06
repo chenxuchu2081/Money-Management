@@ -15,33 +15,34 @@ class HomePageVC: UIViewController,UITableViewDelegate, UITableViewDataSource, N
 //    var findYears: String? = "2019"
 //    var findMonth: String? = "01"
 //    var isFinding: Bool? = false
+    var calculator = Property()
     
-   
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var expendLable: UILabel!
+    @IBOutlet weak var incomeLabel: UILabel!
+    @IBOutlet weak var popertyLabel: UILabel!
     
+    @IBOutlet weak var showMonth: UIBarButtonItem!
     
     let app = UIApplication.shared.delegate as! AppDelegate
     var viewContext: NSManagedObjectContext!
     
-    var controller = NSFetchedResultsController<Expend>()
-    let fetchRequest = NSFetchRequest<Expend>(entityName: "Expend")
+    var controller = NSFetchedResultsController<PopertyItem>()
+    let fetchRequest = NSFetchRequest<PopertyItem>(entityName: "PopertyItem")
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        viewContext = app.persistentContainer.viewContext
-        
-        fetchExpend()
-        
         // Do any additional setup after loading the view.
-        print(Helper.FormatDate(dates: Date()))
+        viewContext = app.persistentContainer.viewContext
+       fetchExpend()
+        showMonth.title = PopoverDateVC.passNowMonth! + "月"
         
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         refresh()
-        
+
     }
     
     
@@ -58,12 +59,21 @@ class HomePageVC: UIViewController,UITableViewDelegate, UITableViewDataSource, N
         }
         var beginMonthOfYear: String?
         var endMonthOfYear: String?
-        beginMonthOfYear = months!+"-"+"01-"+years!
-        endMonthOfYear = months!+"-"+"31-"+years!
+        beginMonthOfYear = years!+"-"+months!+"-01"
+        endMonthOfYear = years!+"-"+months!+"-31"
         //var Stringdates = helper.FormatDate(dates: Date())
-        
         let fromDate = Helper.stringConvertDate(string: beginMonthOfYear!)
         let toDate = Helper.stringConvertDate(string: endMonthOfYear!)
+        
+        //for calculate poperty for each
+        queryPropertyPrice(startDate: fromDate, endDate: toDate)
+        calculator.calculateTotalProperty()
+        expendLable.text = String(calculator.totalExpend!)
+        incomeLabel.text = String(calculator.totalIncome!)
+        popertyLabel.text = String(calculator.totalProperty!)
+        
+        //set bar title
+        showMonth.title = months! + "月"
         
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: "date", ascending: true)]
         fetchRequest.predicate = NSPredicate(format: "date >= %@ and date <= %@", fromDate as CVarArg, toDate as CVarArg)
@@ -107,6 +117,9 @@ class HomePageVC: UIViewController,UITableViewDelegate, UITableViewDataSource, N
              cell.dataOfYear.text = Helper.FormatDate(dates: list.date as! Date)
         }
              cell.payPrice.text = String(list.price)
+        if list.type != nil{
+             cell.popertyType.text = list.type
+        }
       // print(list.expend_ID)
         return cell
     }
@@ -116,16 +129,19 @@ class HomePageVC: UIViewController,UITableViewDelegate, UITableViewDataSource, N
                 let image: Data?
                 let price: Double?
                 let date: Date?
+                let type: String?
                 let list = self.controller.object(at: indexPath)
    
-                id = list.expend_ID
+                id = list.id
                 name = list.name
                 desc = list.desc ?? name
                 image = list.image as Data?
                 date = list.date as Date?
                 price = list.price
+                type = list.type
         
-        let passDetailDate = Detail(id: id!, name: name!, image: image!, price: price!, desc: desc!, date: date!)
+        
+        let passDetailDate = Detail(id: id!, name: name!, image: image!, price: price!, desc: desc!, date: date!, type: type!)
         //print(passDetailDate!.detailName!)
         let destinationCV = storyboard?.instantiateViewController(withIdentifier: "detailCV") as! HomeDetailVC
         destinationCV.detail = passDetailDate
@@ -256,6 +272,31 @@ class HomePageVC: UIViewController,UITableViewDelegate, UITableViewDataSource, N
 //            vc.detail = passDetailDate
 //        }
     }
+    
+    
+    func queryPropertyPrice(startDate: Date, endDate: Date){
+        var ExpendPrice = [Double]()
+        var IncomePrice = [Double]()
+        let fliter = NSFetchRequest<NSFetchRequestResult>(entityName: "PopertyItem")
+        fliter.predicate = NSPredicate(format: "date >= %@ and date <= %@", startDate as CVarArg, endDate as CVarArg)
+        do{
+            let allData = try viewContext.fetch(fliter)
+            
+            for data in allData as! [PopertyItem]{
+                print("\(data.price)")
+                if data.type == "支出"{
+                    ExpendPrice.append(data.price)
+                }else if data.type == "收入"{
+                    IncomePrice.append(data.price)
+                }
+            }
+            calculator.calculateTotalExpend(price:ExpendPrice)
+            calculator.calculateTotalIncome(price: IncomePrice)
+        }catch{
+            print(error)
+        }
+    }
+    
     
     /*
     // MARK: - Navigation

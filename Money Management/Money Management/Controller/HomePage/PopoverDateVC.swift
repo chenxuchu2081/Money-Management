@@ -121,6 +121,10 @@ extension Date {
     var month: String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MMMM"
-        return dateFormatter.string(from: self)
+        let date = dateFormatter.date(from: dateFormatter.string(from: self))
+        let component = dateFormatter.calendar.component(.month, from: date!)
+        let toStringMonth = String(component)
+        return toStringMonth
+        //return dateFormatter.string(from: self)
     }
 }

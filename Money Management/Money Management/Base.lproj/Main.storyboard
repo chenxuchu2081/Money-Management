@@ -10,38 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="9lB-xE-Jhj">
-            <objects>
-                <viewController id="W5T-vE-udu" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Dei-Af-XdG">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="XcE-kQ-uci"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="6Go-nC-Q4B"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="f8X-Rc-c97" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2868" y="1003"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="4ne-Bs-ghQ">
-            <objects>
-                <viewController id="KnE-Z0-UQ8" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="VmB-PR-Bso">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="HcD-yG-Tjg"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="oEV-5i-m2s"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ul2-Ml-ovg" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1507" y="1880"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="NCy-W8-4SW">
             <objects>
@@ -54,34 +22,15 @@
                     </tabBar>
                     <connections>
                         <segue destination="18P-dt-fAn" kind="relationship" relationship="viewControllers" id="FBC-m1-Itp"/>
-                        <segue destination="MSt-UG-8BW" kind="relationship" relationship="viewControllers" id="7vL-JP-5h4"/>
+                        <segue destination="nWe-5M-Kh8" kind="relationship" relationship="viewControllers" id="7vL-JP-5h4"/>
                         <segue destination="jyg-Im-Wck" kind="relationship" relationship="viewControllers" id="J2r-hU-VBf"/>
                         <segue destination="ELb-dh-9W3" kind="relationship" relationship="viewControllers" id="jVj-J1-H2b"/>
-                        <segue destination="LEQ-0b-9LX" kind="relationship" relationship="viewControllers" id="3ZO-5Z-X1W"/>
+                        <segue destination="eGS-oP-3rk" kind="relationship" relationship="viewControllers" id="3ZO-5Z-X1W"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QZf-js-t4M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="124.6376811594203" y="113.83928571428571"/>
-        </scene>
-        <!--圖表-->
-        <scene sceneID="onx-AP-kyg">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MSt-UG-8BW" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="圖表" image="pie-chart" id="LLc-Ch-ECL"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tIH-Xg-Xf6">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="W5T-vE-udu" kind="relationship" relationship="rootViewController" id="AEs-64-qSX"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iOx-nd-Agt" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1958" y="1002"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="4Yj-ib-3NH">
@@ -116,26 +65,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ajl-Cn-7XX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="874" y="-1542"/>
-        </scene>
-        <!--更多-->
-        <scene sceneID="Phh-Xb-YUH">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LEQ-0b-9LX" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="更多" image="more" id="sQC-c7-K1j"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XaC-nx-MPE">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="KnE-Z0-UQ8" kind="relationship" relationship="rootViewController" id="FF0-cx-TG7"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Oyq-2d-QBG" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="125" y="1880"/>
+            <point key="canvasLocation" x="1129" y="-798"/>
         </scene>
         <!--UINavigationController-UgW-0J-9wJ-->
         <scene sceneID="GUh-UF-jKd">
@@ -171,12 +101,30 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="25i-LS-81v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1944.9275362318842" y="-686.38392857142856"/>
+            <point key="canvasLocation" x="1223" y="26"/>
+        </scene>
+        <!--Diagram-->
+        <scene sceneID="678-aF-I99">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Diagram" id="nWe-5M-Kh8" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Wxq-2f-zOq"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jqb-YY-vge" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1220" y="208"/>
+        </scene>
+        <!--More-->
+        <scene sceneID="nkf-Rw-z8b">
+            <objects>
+                <viewControllerPlaceholder storyboardName="More" id="eGS-oP-3rk" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="eWD-Hr-iz2"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wj0-Ib-qrm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="812" y="971"/>
         </scene>
     </scenes>
     <resources>
         <image name="export" width="32" height="32"/>
-        <image name="more" width="32" height="32"/>
-        <image name="pie-chart" width="32" height="32"/>
     </resources>
 </document>

@@ -25,11 +25,12 @@ class HomeDetailVC: UIViewController {
     @IBOutlet weak var detailPrice: UILabel!
     @IBOutlet weak var detailDate: UILabel!
     @IBOutlet weak var deteilDesc: UILabel!
+    @IBOutlet weak var detailType: UILabel!
     
     let app = UIApplication.shared.delegate as! AppDelegate
     var viewContext: NSManagedObjectContext!
     
-    let fetchRequest = NSFetchRequest<Expend>(entityName: "Expend")
+    let fetchRequest = NSFetchRequest<PopertyItem>(entityName: "PopertyItem")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +47,7 @@ class HomeDetailVC: UIViewController {
             detailPrice.text = String(detail.detailPrice!)
             detailDate.text = Helper.FormatDate(dates: detail.detailDate!)
             deteilDesc.text = detail.dateilDesc
+            detailType.text = detail.detailType
         }
     }
     
@@ -55,7 +57,7 @@ class HomeDetailVC: UIViewController {
     }
     
     func deleteObject(id: String){
-        fetchRequest.predicate = NSPredicate(format: "expend_ID = %@", id)
+        fetchRequest.predicate = NSPredicate(format: "id = %@", id)
         do{
             let search = try viewContext.fetch(fetchRequest)
             let delete = search[0] as! NSManagedObject
