@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nmC-Uk-ejP">
-                                <rect key="frame" x="21" y="388" width="372" height="474"/>
+                                <rect key="frame" x="21" y="376" width="372" height="486"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -89,6 +89,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="9月" id="6Go-nC-Q4B"/>
                     <connections>
+                        <outlet property="navtitle" destination="6Go-nC-Q4B" id="XUd-J7-XnC"/>
                         <outlet property="pieView" destination="4UH-bK-wA3" id="6XM-rw-yv9"/>
                         <outlet property="tableViews" destination="nmC-Uk-ejP" id="h12-vy-vE9"/>
                     </connections>

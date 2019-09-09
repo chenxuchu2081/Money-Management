@@ -22,6 +22,9 @@
 		5F0C1181230BB24E006E69AC /* expenses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0C1180230BB24E006E69AC /* expenses.swift */; };
 		5F0C1183230BB3AE006E69AC /* expensesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0C1182230BB3AE006E69AC /* expensesController.swift */; };
 		5F0C1185230BC094006E69AC /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0C1184230BC094006E69AC /* Helper.swift */; };
+		5F0E35DE2324AF5B0033C8BE /* ViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0E35DD2324AF5B0033C8BE /* ViewStyle.swift */; };
+		5F0E35E02324B31A0033C8BE /* export.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F0E35DF2324B31A0033C8BE /* export.storyboard */; };
+		5F0E35E42324B81B0033C8BE /* ExportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F0E35E32324B81B0033C8BE /* ExportVC.swift */; };
 		5F19112D231C15A100DEAA9F /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F19112C231C15A100DEAA9F /* Property.swift */; };
 		5F1A1B3A2320E95D009F5999 /* DiagramDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1A1B392320E95D009F5999 /* DiagramDetailVC.swift */; };
 		5F1A3A04230D2458000ED2E8 /* ConsumeType+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1A3A02230D2458000ED2E8 /* ConsumeType+CoreDataClass.swift */; };
@@ -93,6 +96,9 @@
 		5F0C1180230BB24E006E69AC /* expenses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = expenses.swift; sourceTree = "<group>"; };
 		5F0C1182230BB3AE006E69AC /* expensesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = expensesController.swift; sourceTree = "<group>"; };
 		5F0C1184230BC094006E69AC /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		5F0E35DD2324AF5B0033C8BE /* ViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStyle.swift; sourceTree = "<group>"; };
+		5F0E35DF2324B31A0033C8BE /* export.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = export.storyboard; sourceTree = "<group>"; };
+		5F0E35E32324B81B0033C8BE /* ExportVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportVC.swift; sourceTree = "<group>"; };
 		5F19112C231C15A100DEAA9F /* Property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
 		5F1A1B392320E95D009F5999 /* DiagramDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagramDetailVC.swift; sourceTree = "<group>"; };
 		5F1A3A02230D2458000ED2E8 /* ConsumeType+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ConsumeType+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -227,6 +233,21 @@
 			path = HomePage;
 			sourceTree = "<group>";
 		};
+		5F0E35E12324B7C80033C8BE /* ExportFormat */ = {
+			isa = PBXGroup;
+			children = (
+				5F0E35E32324B81B0033C8BE /* ExportVC.swift */,
+			);
+			path = ExportFormat;
+			sourceTree = "<group>";
+		};
+		5F0E35E22324B7ED0033C8BE /* More */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = More;
+			sourceTree = "<group>";
+		};
 		5F1A3A06230D246B000ED2E8 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
@@ -270,6 +291,7 @@
 			isa = PBXGroup;
 			children = (
 				5F4416FA2314E0F20059D6A3 /* CustomView.swift */,
+				5F0E35DD2324AF5B0033C8BE /* ViewStyle.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -277,6 +299,8 @@
 		5F37F41E230BCDA900AD6461 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				5F0E35E22324B7ED0033C8BE /* More */,
+				5F0E35E12324B7C80033C8BE /* ExportFormat */,
 				5F76AECD231E895600DE7D5D /* Diagram */,
 				5F2C900C231772C30036DF12 /* Category */,
 				5F0C117F230BAF93006E69AC /* HomePage */,
@@ -301,6 +325,7 @@
 			isa = PBXGroup;
 			children = (
 				5F37D07E23215BF9001671A7 /* More.storyboard */,
+				5F0E35DF2324B31A0033C8BE /* export.storyboard */,
 				5F76AECE231E898800DE7D5D /* Diagram.storyboard */,
 				5F8C07702316DB3A00C7564D /* Category.storyboard */,
 				5F8C076E2316DA8100C7564D /* HomePage.storyboard */,
@@ -441,6 +466,7 @@
 			files = (
 				5F8C07722316DB3A00C7564D /* Category.storyboard in Resources */,
 				5F37D07F23215BF9001671A7 /* More.storyboard in Resources */,
+				5F0E35E02324B31A0033C8BE /* export.storyboard in Resources */,
 				5F8C076F2316DA8100C7564D /* HomePage.storyboard in Resources */,
 				5F76AED0231E898800DE7D5D /* Diagram.storyboard in Resources */,
 				5F0C1158230B9EA9006E69AC /* LaunchScreen.storyboard in Resources */,
@@ -579,6 +605,7 @@
 				5F41003B2317E8F100EC4327 /* Category_Income+CoreDataClass.swift in Sources */,
 				5F19112D231C15A100DEAA9F /* Property.swift in Sources */,
 				5F0C1183230BB3AE006E69AC /* expensesController.swift in Sources */,
+				5F0E35E42324B81B0033C8BE /* ExportVC.swift in Sources */,
 				5F2C900E231772F10036DF12 /* AddCategoryVC.swift in Sources */,
 				5F4416FD2314E8160059D6A3 /* HomeDetailVC.swift in Sources */,
 				5FE6116E231FBA9F00CECC6B /* PieChart.swift in Sources */,
@@ -591,6 +618,7 @@
 				5FA4B1C9230E69B6009E0B02 /* Expend.swift in Sources */,
 				5F0C114B230B9EA8006E69AC /* AppDelegate.swift in Sources */,
 				5F1A1B3A2320E95D009F5999 /* DiagramDetailVC.swift in Sources */,
+				5F0E35DE2324AF5B0033C8BE /* ViewStyle.swift in Sources */,
 				5F1A3A05230D2458000ED2E8 /* ConsumeType+CoreDataProperties.swift in Sources */,
 				5F0C1185230BC094006E69AC /* Helper.swift in Sources */,
 			);
@@ -667,6 +695,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -728,6 +757,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

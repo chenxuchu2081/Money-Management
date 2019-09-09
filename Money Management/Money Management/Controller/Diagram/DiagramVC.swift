@@ -14,6 +14,8 @@ class DiagramVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
    
     @IBOutlet var pieView: PieChartView!
     @IBOutlet weak var tableViews: UITableView!
+    @IBOutlet weak var navtitle: UINavigationItem!
+    
     
     let app = UIApplication.shared.delegate as! AppDelegate
     var viewContext: NSManagedObjectContext!
@@ -30,7 +32,7 @@ class DiagramVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         viewContext = app.persistentContainer.viewContext
         
         // Do any additional setup after loading the view.
@@ -49,13 +51,19 @@ class DiagramVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
         
         PieChart.setupPieChart(pieView: pieView, NameSet: expendTypeNameSet)
         
-        
+//        for btn in 0 ..< months.count{
+//            months[btn].setTitle(String(format: "%d 月", btn), for: .normal)
+//        }
+       
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
+        navtitle.title = PopoverDateVC.passNowMonth! + "月"
     }
+     
+
+    
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1

@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -23,13 +24,48 @@
                         <segue destination="18P-dt-fAn" kind="relationship" relationship="viewControllers" id="FBC-m1-Itp"/>
                         <segue destination="nWe-5M-Kh8" kind="relationship" relationship="viewControllers" id="7vL-JP-5h4"/>
                         <segue destination="jyg-Im-Wck" kind="relationship" relationship="viewControllers" id="J2r-hU-VBf"/>
-                        <segue destination="KrL-Al-ucD" kind="relationship" relationship="viewControllers" id="jVj-J1-H2b"/>
+                        <segue destination="ELb-dh-9W3" kind="relationship" relationship="viewControllers" id="jVj-J1-H2b"/>
                         <segue destination="eGS-oP-3rk" kind="relationship" relationship="viewControllers" id="3ZO-5Z-X1W"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QZf-js-t4M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="124.6376811594203" y="113.83928571428571"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="4Yj-ib-3NH">
+            <objects>
+                <viewController id="F80-EM-B8C" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="08p-yL-4oh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="5lu-66-1Ot"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="kxX-c0-Cwr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VEi-sP-jOy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2868" y="-1542"/>
+        </scene>
+        <!--導出-->
+        <scene sceneID="QD7-yf-got">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ELb-dh-9W3" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="導出" image="export" id="Dlq-W3-xD6"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BNb-jA-iMW">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="F80-EM-B8C" kind="relationship" relationship="rootViewController" id="O2b-Gk-PRV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ajl-Cn-7XX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1129" y="-798"/>
         </scene>
         <!--UINavigationController-UgW-0J-9wJ-->
         <scene sceneID="GUh-UF-jKd">
@@ -87,15 +123,8 @@
             </objects>
             <point key="canvasLocation" x="1295" y="350"/>
         </scene>
-        <!--export-->
-        <scene sceneID="ft2-JT-37O">
-            <objects>
-                <viewControllerPlaceholder storyboardName="export" id="KrL-Al-ucD" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="ffF-w2-m3v"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4is-VK-vkE" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1129" y="-798"/>
-        </scene>
     </scenes>
+    <resources>
+        <image name="export" width="32" height="32"/>
+    </resources>
 </document>
