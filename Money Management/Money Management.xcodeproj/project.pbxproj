@@ -48,6 +48,9 @@
 		5F76AED2231E89A800DE7D5D /* DiagramVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F76AED1231E89A800DE7D5D /* DiagramVC.swift */; };
 		5F8C076F2316DA8100C7564D /* HomePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F8C076E2316DA8100C7564D /* HomePage.storyboard */; };
 		5F8C07722316DB3A00C7564D /* Category.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F8C07702316DB3A00C7564D /* Category.storyboard */; };
+		5FA4842423275A2C00DE9B27 /* AlertMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA4842323275A2C00DE9B27 /* AlertMessage.swift */; };
+		5FA4842723276CA400DE9B27 /* NotificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA4842623276CA400DE9B27 /* NotificationVC.swift */; };
+		5FA4842923276EB800DE9B27 /* NotificationTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA4842823276EB800DE9B27 /* NotificationTVC.swift */; };
 		5FA4B1C9230E69B6009E0B02 /* Expend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA4B1C8230E69B6009E0B02 /* Expend.swift */; };
 		5FB08F29232107EA00213E5E /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB08F28232107EA00213E5E /* LineChart.swift */; };
 		5FD429BC2312AB29002BDBFB /* PopoverDateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD429BB2312AB29002BDBFB /* PopoverDateVC.swift */; };
@@ -122,6 +125,9 @@
 		5F76AED1231E89A800DE7D5D /* DiagramVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagramVC.swift; sourceTree = "<group>"; };
 		5F8C076E2316DA8100C7564D /* HomePage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HomePage.storyboard; sourceTree = "<group>"; };
 		5F8C07712316DB3A00C7564D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Money Management/Base.lproj/Category.storyboard"; sourceTree = "<group>"; };
+		5FA4842323275A2C00DE9B27 /* AlertMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertMessage.swift; sourceTree = "<group>"; };
+		5FA4842623276CA400DE9B27 /* NotificationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationVC.swift; sourceTree = "<group>"; };
+		5FA4842823276EB800DE9B27 /* NotificationTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTVC.swift; sourceTree = "<group>"; };
 		5FA4B1C8230E69B6009E0B02 /* Expend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expend.swift; sourceTree = "<group>"; };
 		5FB08F28232107EA00213E5E /* LineChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChart.swift; sourceTree = "<group>"; };
 		5FD429BB2312AB29002BDBFB /* PopoverDateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverDateVC.swift; sourceTree = "<group>"; };
@@ -244,6 +250,8 @@
 		5F0E35E22324B7ED0033C8BE /* More */ = {
 			isa = PBXGroup;
 			children = (
+				5FA4842623276CA400DE9B27 /* NotificationVC.swift */,
+				5FA4842823276EB800DE9B27 /* NotificationTVC.swift */,
 			);
 			path = More;
 			sourceTree = "<group>";
@@ -278,9 +286,9 @@
 		5F37F41B230BCC7800AD6461 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5FA4842523275E3F00DE9B27 /* supportFile */,
 				5F0C1180230BB24E006E69AC /* expenses.swift */,
 				5F0C1182230BB3AE006E69AC /* expensesController.swift */,
-				5F0C1184230BC094006E69AC /* Helper.swift */,
 				5F4416FE2314F0630059D6A3 /* Detail.swift */,
 				5F19112C231C15A100DEAA9F /* Property.swift */,
 			);
@@ -331,6 +339,15 @@
 				5F8C076E2316DA8100C7564D /* HomePage.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		5FA4842523275E3F00DE9B27 /* supportFile */ = {
+			isa = PBXGroup;
+			children = (
+				5F0C1184230BC094006E69AC /* Helper.swift */,
+				5FA4842323275A2C00DE9B27 /* AlertMessage.swift */,
+			);
+			path = supportFile;
 			sourceTree = "<group>";
 		};
 		B02DC6D57F6E58937C6FE3A3 /* Frameworks */ = {
@@ -593,6 +610,7 @@
 				5FE7D5DF231D406100125C1B /* PopertyItem+CoreDataProperties.swift in Sources */,
 				5F4416FB2314E0F20059D6A3 /* CustomView.swift in Sources */,
 				5F41003C2317E8F100EC4327 /* Category_Income+CoreDataProperties.swift in Sources */,
+				5FA4842423275A2C00DE9B27 /* AlertMessage.swift in Sources */,
 				5F400909232233600088D55B /* DiagramDetailTVC.swift in Sources */,
 				5F0C117E230BAE6B006E69AC /* HomePaeTVC.swift in Sources */,
 				5F281B3B230BD65300337214 /* AddDataCVC.swift in Sources */,
@@ -602,9 +620,11 @@
 				5FB08F29232107EA00213E5E /* LineChart.swift in Sources */,
 				5F08F57F231FFA82000E2986 /* DiagramTVC.swift in Sources */,
 				5F41003D2317E8F100EC4327 /* Category_Expend+CoreDataClass.swift in Sources */,
+				5FA4842923276EB800DE9B27 /* NotificationTVC.swift in Sources */,
 				5F41003B2317E8F100EC4327 /* Category_Income+CoreDataClass.swift in Sources */,
 				5F19112D231C15A100DEAA9F /* Property.swift in Sources */,
 				5F0C1183230BB3AE006E69AC /* expensesController.swift in Sources */,
+				5FA4842723276CA400DE9B27 /* NotificationVC.swift in Sources */,
 				5F0E35E42324B81B0033C8BE /* ExportVC.swift in Sources */,
 				5F2C900E231772F10036DF12 /* AddCategoryVC.swift in Sources */,
 				5F4416FD2314E8160059D6A3 /* HomeDetailVC.swift in Sources */,

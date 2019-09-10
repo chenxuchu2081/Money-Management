@@ -49,6 +49,7 @@ class ExportVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
         let end = Helper.stringConvertDate(string: endMonthOfYear!)
         startDate.setDate(start, animated: true)
         endtDate.setDate(end, animated: true)
+        
         setDefaultValue(start: start, end: end)
     }
     
@@ -58,29 +59,19 @@ class ExportVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
         theExportFormat = format
     }
     
-    func exportFormat(TypeOfFormat: String){
+    func exportFormat(startDate: Date, endDate: Date, TypeOfFormat: String){
         let fileName = "Tasks.csv"
         let path = NSURL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(fileName)
         var csvText = "Date,Export/Income,Category,Notes, total\n"
         
         
-        var years: String?
-        var months: String?
-        if let year = PopoverDateVC.changeYear{
-            years = String(year)
-        }
-        //var month: String? = Date().month
-        if let month = PopoverDateVC.passNowMonth{
-            months = month
-        }
         var beginMonthOfYear: String?
         var endMonthOfYear: String?
-        beginMonthOfYear = years!+"-"+months!+"-01"
-        endMonthOfYear = years!+"-"+months!+"-31"
+        beginMonthOfYear = Helper.FormatDate(dates: startDate)
+        endMonthOfYear = Helper.FormatDate(dates: endDate)
         //var Stringdates = helper.FormatDate(dates: Date())
         let fromDate = Helper.stringConvertDate(string: beginMonthOfYear!)
         let toDate = Helper.stringConvertDate(string: endMonthOfYear!)
-        
         
         
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: "date", ascending: true)]
@@ -88,8 +79,11 @@ class ExportVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
         
         do {
             let result = try viewContext.fetch(fetchRequest)
+            
+            //ensure exit of data
+            if result.count > 0{
+            
             for task in result as [PopertyItem] {
-                
                 //add it to the csv file.
                 let date = Helper.FormatDate(dates: task.date! as Date)
                 let type = String(format: "%@ ", task.type!)
@@ -98,16 +92,24 @@ class ExportVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
                 let newLine = "\(date),\(type),\(name),\(desc),\(task.price)\n"
                 csvText.append(contentsOf: newLine)
             }
+                // creating the csv file
+                createCVS(csvText: csvText, path: path!)
+                
+            }else{
+                AlertMessages.showErrorAlert(title: "Error", msg: "There is no data to export", vc: self)
+            }
+            
         } catch {
             fatalError("Failed to fetch entities: \(error)")
         }
-        
-        // creating the csv file
+    }
+    
+    func createCVS(csvText: String, path: URL){
         do {
-            try csvText.write(to: path!, atomically: true, encoding: String.Encoding.utf8)
+            try csvText.write(to: path, atomically: true, encoding: String.Encoding.utf8)
             
             //exporting csv file and share it
-            let vc = UIActivityViewController(activityItems: [path!], applicationActivities: [])
+            let vc = UIActivityViewController(activityItems: [path], applicationActivities: [])
             vc.excludedActivityTypes = [
                 UIActivity.ActivityType.airDrop,
                 UIActivity.ActivityType.assignToContact,
@@ -132,12 +134,14 @@ class ExportVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
             print("Failed to create file")
             print("\(error)")
         }
-        
-        
     }
     
     @IBAction func sureExport(_ sender: UIButton){
-        exportFormat(TypeOfFormat: "")
+        
+        if theStartDate != nil && theEndDate != nil && theExportFormat != nil{
+            exportFormat(startDate: theStartDate!, endDate: theEndDate!, TypeOfFormat: theExportFormat!)
+        }
+        
     }
     
     
@@ -155,17 +159,20 @@ class ExportVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        print(format[row])
+        print("had selected \(format[row])")
+        theExportFormat = format[row]
     }
     
     @IBAction func startDate(_ sender: UIDatePicker){
         let startdate = Helper.FormatDate(dates: sender.date)
         print(startdate)
+        theStartDate = sender.date
     }
     
     @IBAction func endDate(_ sender: UIDatePicker){
         let enddate = Helper.FormatDate(dates: sender.date)
         print(enddate)
+        theEndDate = sender.date
     }
     
     

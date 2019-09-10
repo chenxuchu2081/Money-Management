@@ -174,29 +174,30 @@ class AddDataCVC: UICollectionViewController, NSFetchedResultsControllerDelegate
             date = Helper.stringConvertDate(string: alert.textFields![2].text!)
             
             
-            print("Testing...AddData")
-            
             //addData to core data in expends
-            
             let data = NSEntityDescription.insertNewObject(forEntityName: "PopertyItem", into: self.viewContext) as! PopertyItem
             
-            
-            data.id = UUID().uuidString //generate  Unique Identifier
-            data.name = name
-            data.image = UIImage(data: image)?.jpegData(compressionQuality: 0.9) as NSData?
-            data.desc = desc!
-            data.price = price!
-            data.date = date! as NSDate
-            if self.isChangeNavTitleExpend == true{
-                data.type = "支出"
+            if price == nil{
+                AlertMessages.showErrorAlert(title: "Save Error", msg: "the price space should be filled in", vc: self)
             }else{
-                data.type = "收入"
+                data.id = UUID().uuidString //generate  Unique Identifier
+                data.name = name
+                data.image = UIImage(data: image)?.jpegData(compressionQuality: 0.9) as NSData?
+                data.desc = desc!
+                data.price = price!
+                data.date = date! as NSDate
+                if self.isChangeNavTitleExpend == true{
+                    data.type = "支出"
+                }else{
+                    data.type = "收入"
+                }
+                
+                self.app.saveContext()
+                AlertMessages.showSuccessfulMessage(title: "Successful", msg: "Data save successfully", vc: self)
             }
             
-            self.app.saveContext()
-            print("save successful...")
             
-            print("\(name), \(String(describing: price)) , \(String(describing: desc)), \(String(describing: date)) , \(image)")
+//            print("\(name), \(String(describing: price)) , \(String(describing: desc)), \(String(describing: date)) , \(image)")
             
         }
         

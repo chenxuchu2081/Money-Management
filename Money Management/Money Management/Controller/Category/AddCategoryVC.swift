@@ -171,7 +171,7 @@ class AddCategoryVC: UIViewController, UICollectionViewDelegate, UICollectionVie
 //            }
         
         }else{
-            alarming(text: "空格必須填寫才能存入！")
+            AlertMessages.alarming(text: "空格必須填寫才能存入！", vc: self)
         }
         
         
