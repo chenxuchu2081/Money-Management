@@ -19,6 +19,12 @@ class HomeDetailVC: UIViewController {
     var detail: Detail!
     
     var deleteObjectId: String?
+    var name: String?
+    var desc: String?
+    var price: Double?
+    var image: Data?
+    var date: Date?
+    var type: String?
     
     @IBOutlet weak var detailName: UILabel!
     @IBOutlet weak var detailImage: UIImageView!
@@ -29,7 +35,6 @@ class HomeDetailVC: UIViewController {
     
     let app = UIApplication.shared.delegate as! AppDelegate
     var viewContext: NSManagedObjectContext!
-    
     let fetchRequest = NSFetchRequest<PopertyItem>(entityName: "PopertyItem")
     
     override func viewDidLoad() {
@@ -41,13 +46,19 @@ class HomeDetailVC: UIViewController {
         if detail != nil{
             deleteObjectId = detail.id
             detailName.text = detail.detailName
+                    name = detail.detailName
             if detail.detailImage != nil{
                 detailImage.image = UIImage(data: detail.detailImage!)
+                image = detail.detailImage!
             }
             detailPrice.text = String(detail.detailPrice!)
+            price = detail.detailPrice!
             detailDate.text = Helper.FormatDate(dates: detail.detailDate!)
+            date = detail.detailDate!
             deteilDesc.text = detail.dateilDesc
+            desc = detail.dateilDesc
             detailType.text = detail.detailType
+            type = detail.detailType
         }
     }
     
@@ -78,6 +89,13 @@ class HomeDetailVC: UIViewController {
         print("remember to remind user deleting message")
         let des = storyboard?.instantiateViewController(withIdentifier: "HomePageCV")
         show(des!, sender: self)
+    }
+    
+    @IBAction func editData(_ sender: UIButton){
+        let item = PopertyItemObject(id: deleteObjectId!, name: name!, desc: desc!, price: price!, date: date!, image: image, type: type!)
+        let vc = storyboard?.instantiateViewController(withIdentifier: "addAndupdateDataCVC") as! AddDataCVC
+        vc.editData = item
+        show(vc, sender: self)
     }
     /*
     // MARK: - Navigation

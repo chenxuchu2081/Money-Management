@@ -23,7 +23,7 @@ class AddDataCVC: UICollectionViewController, NSFetchedResultsControllerDelegate
     var expendName : String? = "支出"
     var incomeName : String? = "收入"
     var isChangeNavTitleExpend: Bool? = true
-    
+    var editData: PopertyItemObject!
     
     
     @IBOutlet weak var toolbar: UIToolbar!
@@ -68,6 +68,15 @@ class AddDataCVC: UICollectionViewController, NSFetchedResultsControllerDelegate
         // self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if editData != nil{
+            updateDate(id: editData.id!, name: editData.name!, image: editData.image!)
+        }
+        
     }
     
     /*
@@ -153,12 +162,16 @@ class AddDataCVC: UICollectionViewController, NSFetchedResultsControllerDelegate
                 image = lists.image as Data?
             }
         }
-        print(name)
-        inputAlert(name: name!, image: image!)
+        
+        if editData != nil{
+            updateDate(id: editData.id!, name: name!, image: image!)
+        }else{
+            insertAlert(name: name!, image: image!)
+        }
             
     }
     
-    func inputAlert(name: String, image: Data){
+    func insertAlert(name: String, image: Data){
         var price: Double?
         var desc: String?
         var date: Date?
@@ -174,9 +187,8 @@ class AddDataCVC: UICollectionViewController, NSFetchedResultsControllerDelegate
             date = Helper.stringConvertDate(string: alert.textFields![2].text!)
             
             
-            //addData to core data in expends
+            //insertData to core data in expends
             let data = NSEntityDescription.insertNewObject(forEntityName: "PopertyItem", into: self.viewContext) as! PopertyItem
-            
             if price == nil{
                 AlertMessages.showErrorAlert(title: "Save Error", msg: "the price space should be filled in", vc: self)
             }else{
@@ -197,7 +209,7 @@ class AddDataCVC: UICollectionViewController, NSFetchedResultsControllerDelegate
             }
             
             
-//            print("\(name), \(String(describing: price)) , \(String(describing: desc)), \(String(describing: date)) , \(image)")
+
             
         }
         
@@ -225,10 +237,87 @@ class AddDataCVC: UICollectionViewController, NSFetchedResultsControllerDelegate
         
         present(alert, animated: true, completion: nil)
         
-        
     }
     
-    
+    func updateDate(id: String, name: String, image: Data){
+        var price: Double?
+        var desc: String?
+        var date: Date?
+        let name = name
+        let image = image
+        
+        let alert = UIAlertController(title: "修改這筆資料？", message: name , preferredStyle: .alert)
+        let cancleAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
+        let sureAction = UIAlertAction(title: "確定", style: .default){
+            (action) in
+            price = Double(alert.textFields![0].text!)
+            desc = alert.textFields![1].text ?? "沒有"
+            date = Helper.stringConvertDate(string: alert.textFields![2].text!)
+        
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "PopertyItem")
+        request.predicate = nil
+        let updateID = id
+        request.predicate =
+            NSPredicate(format: "id = %@", updateID)
+        do {
+            let results =
+                try self.viewContext.fetch(request) as! [PopertyItem]
+            
+                if price == nil{
+                    AlertMessages.showErrorAlert(title: "Update Error", msg: "the price space should be filled in", vc: self)
+                }else{
+                    results[0].setValue(name, forKey: "name")
+                    results[0].setValue(desc, forKey: "desc")
+                    results[0].setValue(price, forKey: "price")
+                    //results[0].type = ""
+                    results[0].setValue(date as NSDate?, forKey: "date")
+                    results[0].setValue(UIImage(data: image)?.jpegData(compressionQuality: 0.9) as NSData?, forKey: "image")
+                    if self.isChangeNavTitleExpend == true{
+                        results[0].setValue("支出", forKey: "type")
+                    }else{
+                        results[0].setValue("收入", forKey: "type")
+                    }
+                    
+                    try self.app.saveContext()
+                    AlertMessages.showSuccessfulMessage(title: "Successful", msg: "Data Update successfully", vc: self)
+                }
+            
+        } catch {
+            fatalError("\(error)")
+        }
+        }
+        alert.addTextField{
+            (textField) in
+            textField.placeholder = "價錢"
+            textField.keyboardType = .numberPad
+            textField.layer.cornerRadius = 8
+            if self.editData != nil{
+                textField.text = String(self.editData.price!)
+            }
+            
+        }
+        alert.addTextField{
+            (textField) in
+            textField.placeholder = "備忘(可選)"
+            if self.editData != nil{
+                textField.text = self.editData.desc
+            }
+            
+        }
+        alert.addTextField{
+            (textField) in
+            textField.placeholder = "日期"
+            if self.editData != nil{
+                textField.text = Helper.FormatDate(dates: self.editData.date!)
+            }
+            
+            
+        }
+        alert.addAction(sureAction)
+        alert.addAction(cancleAction)
+        
+        present(alert, animated: true, completion: nil)
+    }
     
     func queryData(){
         do{

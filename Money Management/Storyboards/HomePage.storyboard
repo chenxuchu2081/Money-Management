@@ -272,6 +272,9 @@
                                         <rect key="frame" x="334" y="304" width="32" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="edit"/>
+                                        <connections>
+                                            <action selector="editData:" destination="niA-jA-mTA" eventType="touchUpInside" id="qjk-7r-MD1"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
@@ -304,7 +307,7 @@
         <!--支出-->
         <scene sceneID="PxG-RE-AZh">
             <objects>
-                <collectionViewController id="9rn-vm-woX" customClass="AddDataCVC" customModule="Money_Management" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="addAndupdateDataCVC" id="9rn-vm-woX" customClass="AddDataCVC" customModule="Money_Management" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="lSj-gf-TYW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

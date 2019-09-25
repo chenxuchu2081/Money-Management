@@ -8,20 +8,37 @@
 
 import UIKit
 import CoreData
+import Firebase
+import FirebaseAuth
+import GoogleSignIn
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
+class AppDelegate: UIResponder, UIApplicationDelegate{
+    
+    
+    
+    
     var window: UIWindow?
     
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-//        if let rootVC = window?.rootViewController as? AddDataCVC {
-//            rootVC.container = persistentContainer
-//        }
+        
+        // Use Firebase library to configure APIs
+        FirebaseApp.configure()
         return true
     }
+    
+//    @available(iOS 9.0, *)
+//    func application(_ application: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any])
+//      -> Bool {
+//        return (GIDSignIn.sharedInstance()?.handle(url))!
+//    }
+//
+//    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+//        return (GIDSignIn.sharedInstance()?.handle(url))!
+//    }
+    
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -91,6 +108,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
+    
+    
+    
+
+    
 
 }
 

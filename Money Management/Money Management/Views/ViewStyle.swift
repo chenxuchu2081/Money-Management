@@ -36,3 +36,12 @@ class ViewStyle{
     
     
 }
+
+extension UIView {
+    
+    func animateToggleAlpha() {
+        UIView.animate(withDuration: 0.5) {
+            self.alpha = self.alpha == 1 ? 0 : 1
+        }
+    }
+}

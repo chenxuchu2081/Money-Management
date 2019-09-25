@@ -20,7 +20,7 @@ class Helper: NSObject{
         print(whatTime)
         return whatTime
     }
-    
+
    static func stringConvertDate(string:String, dateFormat:String="yyyy-MM-dd") -> Date {
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier: "en_US_POSIX")
@@ -28,6 +28,15 @@ class Helper: NSObject{
         //let date = dateFormatter.date(from: string)
         let date = dateFormatter.parseDate(from: string)
         return date
+    }
+    
+    static func FormatTime(time: Date, timeFormat: String="HH:mm") -> String{
+        let formatString = DateFormatter()
+        formatString.dateFormat = timeFormat
+        let whatTime = formatString.string(from: time)
+        
+        print(whatTime)
+        return whatTime
     }
     
     static func getComponentOfDate(Date: Date, WhichComponent: String) -> Int{
