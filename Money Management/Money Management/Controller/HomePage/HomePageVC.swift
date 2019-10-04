@@ -12,9 +12,6 @@ import CoreData
 private let identifiers = "TypeCell"
 class HomePageVC: UIViewController,UITableViewDelegate, UITableViewDataSource, NSFetchedResultsControllerDelegate, UIPopoverPresentationControllerDelegate {
     
-//    var findYears: String? = "2019"
-//    var findMonth: String? = "01"
-//    var isFinding: Bool? = false
     var calculator = Property()
     
     @IBOutlet weak var tableView: UITableView!
@@ -46,7 +43,7 @@ class HomePageVC: UIViewController,UITableViewDelegate, UITableViewDataSource, N
     }
     
     
-    
+    //MARK: - CoreData
     func fetchExpend(){
         var years: String?
         var months: String?
@@ -86,6 +83,31 @@ class HomePageVC: UIViewController,UITableViewDelegate, UITableViewDataSource, N
         
     }
     
+    func queryPropertyPrice(startDate: Date, endDate: Date){
+        var ExpendPrice = [Double]()
+        var IncomePrice = [Double]()
+        let fliter = NSFetchRequest<NSFetchRequestResult>(entityName: "PopertyItem")
+        fliter.predicate = NSPredicate(format: "date >= %@ and date <= %@", startDate as CVarArg, endDate as CVarArg)
+        do{
+            let allData = try viewContext.fetch(fliter)
+            
+            for data in allData as! [PopertyItem]{
+                print("\(data.price)")
+                if data.type == "支出"{
+                    ExpendPrice.append(data.price)
+                }else if data.type == "收入"{
+                    IncomePrice.append(data.price)
+                }
+            }
+            calculator.calculateTotalExpend(price:ExpendPrice)
+            calculator.calculateTotalIncome(price: IncomePrice)
+        }catch{
+            print(error)
+        }
+    }
+    
+    
+    //MARK: - TableView
     func numberOfSections(in tableView: UITableView) -> Int {
         
         return controller.sections!.count
@@ -231,7 +253,7 @@ class HomePageVC: UIViewController,UITableViewDelegate, UITableViewDataSource, N
     }
     
     
-    
+    //MARK: - Popover
     // origin popover can run Ipad
     func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
         return .none
@@ -250,7 +272,7 @@ class HomePageVC: UIViewController,UITableViewDelegate, UITableViewDataSource, N
                 print(error.localizedDescription)
             }
         }
-        PopoverDateVC.choseMonthFindd == false
+        PopoverDateVC.choseMonthFindd = false
     }
     
     
@@ -274,28 +296,6 @@ class HomePageVC: UIViewController,UITableViewDelegate, UITableViewDataSource, N
     }
     
     
-    func queryPropertyPrice(startDate: Date, endDate: Date){
-        var ExpendPrice = [Double]()
-        var IncomePrice = [Double]()
-        let fliter = NSFetchRequest<NSFetchRequestResult>(entityName: "PopertyItem")
-        fliter.predicate = NSPredicate(format: "date >= %@ and date <= %@", startDate as CVarArg, endDate as CVarArg)
-        do{
-            let allData = try viewContext.fetch(fliter)
-            
-            for data in allData as! [PopertyItem]{
-                print("\(data.price)")
-                if data.type == "支出"{
-                    ExpendPrice.append(data.price)
-                }else if data.type == "收入"{
-                    IncomePrice.append(data.price)
-                }
-            }
-            calculator.calculateTotalExpend(price:ExpendPrice)
-            calculator.calculateTotalIncome(price: IncomePrice)
-        }catch{
-            print(error)
-        }
-    }
     
     
     /*

@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--類別設置-->
+        <!--Category Setting-->
         <scene sceneID="Z1T-Hg-VsJ">
             <objects>
                 <viewController id="fRh-hZ-8ml" customClass="ReviewCategoryVC" customModule="Money_Management" customModuleProvider="target" sceneMemberID="viewController">
@@ -22,8 +22,8 @@
                                     <constraint firstAttribute="height" constant="30" id="Vib-WT-ike"/>
                                 </constraints>
                                 <segments>
-                                    <segment title="支出"/>
-                                    <segment title="收入"/>
+                                    <segment title="Expend"/>
+                                    <segment title="Income"/>
                                 </segments>
                                 <connections>
                                     <action selector="changeExpend_Income:" destination="fRh-hZ-8ml" eventType="valueChanged" id="rYE-Wq-cZj"/>
@@ -75,7 +75,7 @@
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hUK-pM-u4G">
                                 <rect key="frame" x="82" y="735" width="250" height="40"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="+ 添加新類別"/>
+                                <state key="normal" title="+ Add New Category"/>
                                 <connections>
                                     <segue destination="xQ3-XH-TD3" kind="show" identifier="toAddReviewVC" id="yWU-eT-wsK"/>
                                 </connections>
@@ -94,7 +94,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qOD-gI-TXj"/>
                     </view>
-                    <navigationItem key="navigationItem" title="類別設置" id="uDo-vp-aZe"/>
+                    <navigationItem key="navigationItem" title="Category Setting" id="uDo-vp-aZe"/>
                     <connections>
                         <outlet property="tableView" destination="yJE-S7-dvN" id="9sA-XB-wza"/>
                     </connections>
@@ -166,7 +166,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="45"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="交通" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CzX-IR-V5T">
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Transportation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CzX-IR-V5T">
                                             <rect key="frame" x="95" y="10" width="224" height="30"/>
                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
                                             <nil key="textColor"/>
