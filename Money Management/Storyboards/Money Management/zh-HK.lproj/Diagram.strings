@@ -1,0 +1,42 @@
+
+/* Class = "UILabel"; text = "93"; ObjectID = "3pI-6e-cF3"; */
+"3pI-6e-cF3.text" = "93";
+
+/* Class = "UILabel"; text = "Foods 83%"; ObjectID = "5d1-Fr-IVY"; */
+"5d1-Fr-IVY.text" = "Foods 83%";
+
+/* Class = "UINavigationItem"; title = "9月"; ObjectID = "6Go-nC-Q4B"; */
+"6Go-nC-Q4B.title" = "9月";
+
+/* Class = "UITabBarItem"; title = "圖表"; ObjectID = "LLc-Ch-ECL"; */
+"LLc-Ch-ECL.title" = "圖表";
+
+/* Class = "UILabel"; text = "Food 53%"; ObjectID = "P9n-Sn-csV"; */
+"P9n-Sn-csV.text" = "Food 53%";
+
+/* Class = "UILabel"; text = "3.10"; ObjectID = "dc2-A3-d4c"; */
+"dc2-A3-d4c.text" = "3.10";
+
+/* Class = "UILabel"; text = "93:00"; ObjectID = "dfN-cw-Qo8"; */
+"dfN-cw-Qo8.text" = "93:00";
+
+/* Class = "UISegmentedControl"; h2y-dR-xwz.segmentTitles[0] = "Expend List"; ObjectID = "h2y-dR-xwz"; */
+"h2y-dR-xwz.segmentTitles[0]" = "支出列表";
+
+/* Class = "UISegmentedControl"; h2y-dR-xwz.segmentTitles[1] = "Income List"; ObjectID = "h2y-dR-xwz"; */
+"h2y-dR-xwz.segmentTitles[1]" = "收入列表";
+
+/* Class = "UILabel"; text = "Foods"; ObjectID = "iKU-gS-c4j"; */
+"iKU-gS-c4j.text" = "Foods";
+
+/* Class = "UILabel"; text = "Average Day:"; ObjectID = "mHn-Hm-0Zi"; */
+"mHn-Hm-0Zi.text" = "平均每天:";
+
+/* Class = "UILabel"; text = "2019-9-1"; ObjectID = "s3c-7s-CYW"; */
+"s3c-7s-CYW.text" = "2019-9-1";
+
+/* Class = "UILabel"; text = "Total:"; ObjectID = "v0H-D0-9Zh"; */
+"v0H-D0-9Zh.text" = "總額:";
+
+/* Class = "UILabel"; text = "93"; ObjectID = "wGq-ep-VR4"; */
+"wGq-ep-VR4.text" = "93";

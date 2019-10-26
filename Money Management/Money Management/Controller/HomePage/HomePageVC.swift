@@ -13,6 +13,7 @@ private let identifiers = "TypeCell"
 class HomePageVC: UIViewController,UITableViewDelegate, UITableViewDataSource, NSFetchedResultsControllerDelegate, UIPopoverPresentationControllerDelegate {
     
     var calculator = Property()
+    var userDefault = UserDefaults()
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var expendLable: UILabel!
@@ -34,6 +35,7 @@ class HomePageVC: UIViewController,UITableViewDelegate, UITableViewDataSource, N
        fetchExpend()
         showMonth.title = PopoverDateVC.passNowMonth! + "月"
         
+      
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -45,8 +47,19 @@ class HomePageVC: UIViewController,UITableViewDelegate, UITableViewDataSource, N
     
     //MARK: - CoreData
     func fetchExpend(){
+        
+        //read data from plist
+//        if let apiKey = Bundle.main.object(forInfoDictionaryKey: "PopoverDateYear") as? String {
+//            print("\(apiKey)...")
+//        }
+      
+//        if let month = userDefault.value(forKey: "PopeverDateMonth"){
+//            print("\(month)...good")
+//        }
+        
         var years: String?
         var months: String?
+        var endOfMonth: String?
         if let year = PopoverDateVC.changeYear{
             years = String(year)
         }
@@ -54,14 +67,22 @@ class HomePageVC: UIViewController,UITableViewDelegate, UITableViewDataSource, N
         if let month = PopoverDateVC.passNowMonth{
             months = month
         }
+        if let endMonth = PopoverDateVC.endOfMonth{
+            endOfMonth = endMonth
+        }
+        
         var beginMonthOfYear: String?
         var endMonthOfYear: String?
         beginMonthOfYear = years!+"-"+months!+"-01"
-        endMonthOfYear = years!+"-"+months!+"-31"
+        endMonthOfYear = years!+"-"+months!+"-"+endOfMonth!//remember to handle 30,31 day of month
+        
+        
         //var Stringdates = helper.FormatDate(dates: Date())
         let fromDate = Helper.stringConvertDate(string: beginMonthOfYear!)
         let toDate = Helper.stringConvertDate(string: endMonthOfYear!)
         
+//        print("\(fromDate) : from")
+//        print("\(toDate) : to")
         //for calculate poperty for each
         queryPropertyPrice(startDate: fromDate, endDate: toDate)
         calculator.calculateTotalProperty()
@@ -92,7 +113,7 @@ class HomePageVC: UIViewController,UITableViewDelegate, UITableViewDataSource, N
             let allData = try viewContext.fetch(fliter)
             
             for data in allData as! [PopertyItem]{
-                print("\(data.price)")
+               
                 if data.type == "支出"{
                     ExpendPrice.append(data.price)
                 }else if data.type == "收入"{
@@ -262,8 +283,8 @@ class HomePageVC: UIViewController,UITableViewDelegate, UITableViewDataSource, N
     //close popover window to run code
     func popoverPresentationControllerDidDismissPopover(_ popoverPresentationController: UIPopoverPresentationController) {
         if PopoverDateVC.choseMonthFindd == true{
-            print("\(PopoverDateVC.changeYear)")
-            print("\(PopoverDateVC.passNowMonth)")
+//            print("\(PopoverDateVC.changeYear)")
+//            print("\(PopoverDateVC.passNowMonth)")
             do{
                 //let ToSearch = self.controller.object(at: )
                 refresh()

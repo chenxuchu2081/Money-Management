@@ -1,0 +1,105 @@
+{
+    "entertainment" : [
+        "01.png",
+        "02.png",
+        "03.png",
+        "04.png",
+        "05.png",
+        "06.png"
+    ],
+    "shopping" : [
+    "001-price tag.png",
+    "005-hot deal.png",
+    "009-buy online.png",
+    "002-package.png",
+    "006-monday.png",
+    "010-smartphone.png",
+    "003-discount.png",
+    "007-sale tag.png",
+    "011-credit card.png",
+    "004-coupon.png",
+    "008-online store.png",
+    "08.png"
+    ],
+    "public service" : [
+    "001-university.png",
+    "002-extinguisher.png",
+    "003-water.png",
+    "004-gas.png",
+    "005-bus.png",
+    "006-taxi.png",
+    "007-light.png",
+    "008-traffic sign.png"
+    ],
+    "restaurant" : [
+        "001-mixer.png",
+        "002-baker.png",
+        "003-spatula.png",
+        "004-mixer.png",
+        "005-minute.png",
+        "006-rolling pin.png",
+        "007-colorant.png",
+        "008-cookie.png"
+    ],
+    "electronic" : [
+        "01.png",
+        "02.png",
+        "03.png"
+    ],
+    "furniture" : [
+    "air-conditioner.png",
+    "clock.png",
+    "tv.png",
+    "bathtub.png",
+    "fridge.png",
+    "wardrobe.png",
+    "bedroom.png",
+    "mirror.png"
+    ],
+    "transportation" : [
+    "01.png",
+    "02.png",
+    "03.png",
+    "04.png",
+    "05.png",
+    "06.png",
+    "07.png",
+    "08.png"
+    ],
+    "education" : [
+    "01.png",
+    "02.png",
+    "03.png",
+    "04.png"
+    ],
+    "fitness" : [
+        "barbell.png",
+        "diet.png",
+        "muscle.png",
+        "running.png"
+    ],
+    "health" : [
+        "01.png",
+        "02.png",
+        "03.png"
+    ],
+    "medical" : [
+        "ambulance.png",
+        "band-aid.png",
+        "syringe.png",
+        "antibiotic.png",
+        "first-aid-kit.png"
+    ],
+    "transportation" : [],
+    "Income" : [
+    "credit-card.png",
+    "hand.png",
+    "insert-coin.png"
+    ],
+    "personal" : [
+    "approved.png",
+    "salary.png",
+    "notification.png",
+    "thinking.png"
+    ]
+}

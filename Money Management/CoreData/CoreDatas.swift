@@ -10,16 +10,17 @@ import Foundation
 import UIKit
 import CoreData
 
-class CoreDatas: NSObject{
+class CoreDatas{
     
     var container: NSPersistentContainer!
     let app = UIApplication.shared.delegate as! AppDelegate
     var viewContext: NSManagedObjectContext!
     
-    func initViewContext(){
-        
-         viewContext = app.persistentContainer.viewContext
+    init() {
+        viewContext = app.persistentContainer.viewContext
     }
+        
+       
     
     //     func inserData<T: Equatable>(Item: [T]){}
     func inserData(){

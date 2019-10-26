@@ -1,0 +1,18 @@
+
+/* Class = "UINavigationItem"; title = "Export Form"; ObjectID = "959-G1-F7l"; */
+"959-G1-F7l.title" = "導出表格";
+
+/* Class = "UITabBarItem"; title = "導出"; ObjectID = "Dlq-W3-xD6"; */
+"Dlq-W3-xD6.title" = "導出";
+
+/* Class = "UIButton"; normalTitle = "OK"; ObjectID = "FHr-i4-TPD"; */
+"FHr-i4-TPD.normalTitle" = "確定";
+
+/* Class = "UILabel"; text = "End"; ObjectID = "Y7V-Sf-GDv"; */
+"Y7V-Sf-GDv.text" = "結束";
+
+/* Class = "UILabel"; text = "Format"; ObjectID = "bSe-Tr-hDK"; */
+"bSe-Tr-hDK.text" = "格式";
+
+/* Class = "UILabel"; text = "Start"; ObjectID = "xbZ-UD-Id4"; */
+"xbZ-UD-Id4.text" = "開始";

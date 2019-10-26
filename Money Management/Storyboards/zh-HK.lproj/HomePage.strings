@@ -1,0 +1,117 @@
+
+/* Class = "UIButton"; normalTitle = "Mar."; ObjectID = "1uH-hp-WlB"; */
+"1uH-hp-WlB.normalTitle" = "3月";
+
+/* Class = "UILabel"; text = "Expend:"; ObjectID = "5aH-Jx-jpX"; */
+"5aH-Jx-jpX.text" = "支出:";
+
+/* Class = "UILabel"; text = "TypeName"; ObjectID = "65G-eP-VZO"; */
+"65G-eP-VZO.text" = "類別名稱";
+
+/* Class = "UIButton"; normalTitle = "May"; ObjectID = "9gl-sE-TPm"; */
+"9gl-sE-TPm.normalTitle" = "5月";
+
+/* Class = "UIButton"; normalTitle = "Feb."; ObjectID = "9vv-Lb-vFf"; */
+"9vv-Lb-vFf.normalTitle" = "2月";
+
+/* Class = "UIButton"; normalTitle = "Dec."; ObjectID = "B2u-8F-cRo"; */
+"B2u-8F-cRo.normalTitle" = "12月";
+
+/* Class = "UIButton"; normalTitle = "Aug."; ObjectID = "BS6-yV-inf"; */
+"BS6-yV-inf.normalTitle" = "8月";
+
+/* Class = "UIButton"; normalTitle = "Oct."; ObjectID = "Bwt-pi-FrO"; */
+"Bwt-pi-FrO.normalTitle" = "10月";
+
+/* Class = "UIButton"; normalTitle = "Jun."; ObjectID = "C5y-7j-RfN"; */
+"C5y-7j-RfN.normalTitle" = "6月";
+
+/* Class = "UILabel"; text = "Balance"; ObjectID = "Ddx-7R-GtA"; */
+"Ddx-7R-GtA.text" = "餘額";
+
+/* Class = "UILabel"; text = "Type"; ObjectID = "Eh9-Yg-MJx"; */
+"Eh9-Yg-MJx.text" = "類別";
+
+/* Class = "UIBarButtonItem"; title = "關閉"; ObjectID = "GVV-vl-uyw"; */
+"GVV-vl-uyw.title" = "關閉";
+
+/* Class = "UITabBarItem"; title = "主頁"; ObjectID = "HC3-yT-MW8"; */
+"HC3-yT-MW8.title" = "主頁";
+
+/* Class = "UILabel"; text = "telephone"; ObjectID = "IBv-NG-W6m"; */
+"IBv-NG-W6m.text" = "telephone";
+
+/* Class = "UILabel"; text = "08，26，2019（Monday）"; ObjectID = "Isn-tF-8Xd"; */
+"Isn-tF-8Xd.text" = "08，26，2019（星期一）";
+
+/* Class = "UIButton"; normalTitle = "Sep."; ObjectID = "K0C-zQ-SWl"; */
+"K0C-zQ-SWl.normalTitle" = "9月";
+
+/* Class = "UILabel"; text = "2019"; ObjectID = "LYy-tB-hMa"; */
+"LYy-tB-hMa.text" = "2019";
+
+/* Class = "UILabel"; text = "Expend"; ObjectID = "P3j-g5-KLh"; */
+"P3j-g5-KLh.text" = "支出";
+
+/* Class = "UILabel"; text = "Note"; ObjectID = "QeY-5M-joc"; */
+"QeY-5M-joc.text" = "備註";
+
+/* Class = "UILabel"; text = "Expend"; ObjectID = "RCh-DQ-DpL"; */
+"RCh-DQ-DpL.text" = "支出";
+
+/* Class = "UIButton"; normalTitle = "Jan."; ObjectID = "SdE-qU-pgm"; */
+"SdE-qU-pgm.normalTitle" = "1月";
+
+/* Class = "UILabel"; text = "Date"; ObjectID = "TRM-GD-8Z9"; */
+"TRM-GD-8Z9.text" = "日期";
+
+/* Class = "UILabel"; text = "Income"; ObjectID = "V2X-Zc-AYX"; */
+"V2X-Zc-AYX.text" = "收入";
+
+/* Class = "UILabel"; text = "Amount"; ObjectID = "XoT-b4-rlO"; */
+"XoT-b4-rlO.text" = "金額";
+
+/* Class = "UINavigationItem"; title = "Home"; ObjectID = "Ylv-aE-Llr"; */
+"Ylv-aE-Llr.title" = "主頁";
+
+/* Class = "UIButton"; normalTitle = "Apr."; ObjectID = "Zcw-xY-TKB"; */
+"Zcw-xY-TKB.normalTitle" = "4月";
+
+/* Class = "UIBarButtonItem"; title = "Month"; ObjectID = "be9-Yf-f7c"; */
+"be9-Yf-f7c.title" = "月";
+
+/* Class = "UINavigationItem"; title = "Expend"; ObjectID = "cgg-JD-hdG"; */
+"cgg-JD-hdG.title" = "支出";
+
+/* Class = "UILabel"; text = "10"; ObjectID = "dez-rC-z8Z"; */
+"dez-rC-z8Z.text" = "10";
+
+/* Class = "UILabel"; text = "-300"; ObjectID = "f73-T5-dLs"; */
+"f73-T5-dLs.text" = "-300";
+
+/* Class = "UILabel"; text = "50000"; ObjectID = "fvv-0o-Nap"; */
+"fvv-0o-Nap.text" = "50000";
+
+/* Class = "UIButton"; normalTitle = "Jul."; ObjectID = "gQQ-MF-mYN"; */
+"gQQ-MF-mYN.normalTitle" = "7月";
+
+/* Class = "UINavigationItem"; title = "詳情"; ObjectID = "geY-uf-liB"; */
+"geY-uf-liB.title" = "詳情";
+
+/* Class = "UILabel"; text = "this is Snack"; ObjectID = "k6u-Lh-hwu"; */
+"k6u-Lh-hwu.text" = "this is Snack";
+
+/* Class = "UIButton"; normalTitle = "Nov."; ObjectID = "lL7-qv-T6U"; */
+"lL7-qv-T6U.normalTitle" = "11月";
+
+/* Class = "UILabel"; text = "50000"; ObjectID = "p4N-cT-H7M"; */
+"p4N-cT-H7M.text" = "50000";
+
+/* Class = "UILabel"; text = "50000"; ObjectID = "r93-or-EgZ"; */
+"r93-or-EgZ.text" = "50000";
+
+/* Class = "UILabel"; text = "Data"; ObjectID = "vyd-qD-3Xc"; */
+"vyd-qD-3Xc.text" = "日期";
+
+/* Class = "UILabel"; text = "Snack"; ObjectID = "zgz-5J-1u3"; */
+"zgz-5J-1u3.text" = "Snack";

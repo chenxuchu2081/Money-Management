@@ -1,0 +1,9 @@
+/* Class = "UINavigationItem"; title = "詳情"; ObjectID = "geY-uf-liB"; */
+"geY-uf-liB.title" = "Detail";
+
+/* Class = "UIBarButtonItem"; title = "關閉"; ObjectID = "GVV-vl-uyw"; */
+"GVV-vl-uyw.title" = "Close";
+
+/* Class = "UITabBarItem"; title = "主頁"; ObjectID = "HC3-yT-MW8"; */
+"HC3-yT-MW8.title" = "Home";
+

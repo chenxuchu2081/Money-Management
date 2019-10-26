@@ -8,13 +8,17 @@
 
 import Foundation
 
+
 class Helper: NSObject{
     
     
     
     static func FormatDate(dates: Date) -> String{
         let formatString = DateFormatter()
+//        formatString.dateStyle = .long
+//        formatString.timeStyle = .none
         formatString.dateFormat = "yyyy-MM-dd"
+        formatString.locale = Locale(identifier: "en_US_POSIX")
         let whatTime = formatString.string(from: dates)
         
         print(whatTime)
@@ -22,11 +26,13 @@ class Helper: NSObject{
     }
 
    static func stringConvertDate(string:String, dateFormat:String="yyyy-MM-dd") -> Date {
+        let stringDate = string
         let dateFormatter = DateFormatter()
-        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
         dateFormatter.dateFormat = dateFormat
-        //let date = dateFormatter.date(from: string)
-        let date = dateFormatter.parseDate(from: string)
+       // let locale = Locale.current.identifier
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+        dateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
+        let date = dateFormatter.parseDate(from: stringDate)
         return date
     }
     
@@ -155,3 +161,5 @@ extension DateFormatter
         return croppedDateSeperatedByHyphen
     }
 }
+
+

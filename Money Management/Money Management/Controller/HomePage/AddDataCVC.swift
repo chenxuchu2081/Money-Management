@@ -205,7 +205,7 @@ class AddDataCVC: UICollectionViewController, NSFetchedResultsControllerDelegate
                 }
                 
                 self.app.saveContext()
-                AlertMessages.showSuccessfulMessage(title: "Successful", msg: "Data save successfully", vc: self)
+                AlertMessages.showToast(msg: "Data Save Successfully", seconds: 2, vc: self)
             }
             
             
@@ -279,7 +279,7 @@ class AddDataCVC: UICollectionViewController, NSFetchedResultsControllerDelegate
                     }
                     
                     try self.app.saveContext()
-                    AlertMessages.showSuccessfulMessage(title: "Successful", msg: "Data Update successfully", vc: self)
+                    AlertMessages.showToast(msg: "Data Update Successfully", seconds: 2, vc: self)
                 }
             
         } catch {

@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Tab Bar Controller-->
+        <!--Tabbar Controller-->
         <scene sceneID="NCy-W8-4SW">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="P9P-sN-Zmu" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="P9P-sN-Zmu" customClass="TabbarController" customModule="Money_Management" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8ck-QC-uvu">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>

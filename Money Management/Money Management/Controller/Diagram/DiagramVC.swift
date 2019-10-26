@@ -10,6 +10,16 @@ import UIKit
 import Charts
 import CoreData
 
+struct ExpendLimited {
+    var typeName: String
+    var price: Double
+}
+
+struct IncomeLimited {
+    var typeName: String
+    var price: Double
+}
+
 class DiagramVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
    
     @IBOutlet var pieView: PieChartView!
@@ -30,6 +40,15 @@ class DiagramVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
     var poperty = Property()
     var isSwitchExpendTable: Bool? = true
     
+    var expendLimitedPieChart = [ExpendLimited]()
+    var incomeLimitedPieChart = [IncomeLimited]()
+    var expendDataCount: Int = 0
+    var incomeDataCount: Int = 0
+    var expendlimitedCount : Int = 0
+    var incomelimitedCount : Int = 0
+    var expend4ItemPrice: Double? = 0
+    var income4ItemPrice: Double? = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -37,7 +56,11 @@ class DiagramVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
         
         // Do any additional setup after loading the view.
         
+        //get each type to save to set
         fetchPoertyItem()
+        
+        expendlimitedCount = expendTypeNameSet.count //set 4 if num is big than 4
+        incomelimitedCount = incomeTypeNameSet.count
         
         //through set name to search data to save in tableviewArray
         for e in expendTypeNameSet.sorted(){
@@ -46,13 +69,18 @@ class DiagramVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
         for i in incomeTypeNameSet.sorted(){
             searchToSaveTable(which:"Income", nameType: i, pricesForPercent: incomeTotalPrice)
         }
+        
         print(expendTotalPrice)
         print(incomeTotalPrice)
         
-        PieChart.setupPieChart(pieView: pieView, NameSet: expendTypeNameSet)
+        PieChart.setupPieChart(pieView: pieView, NameSet: expendLimitedPieChart)
         
-//        for btn in 0 ..< months.count{
-//            months[btn].setTitle(String(format: "%d 月", btn), for: .normal)
+//        print(">>testing")
+//        for index in expendLimitedPieChart{
+//            print(index.self)
+//        }
+//        for index in incomeLimitedPieChart{
+//            print(index.self)
 //        }
        
     }
@@ -61,8 +89,6 @@ class DiagramVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
         super.viewDidAppear(animated)
         navtitle.title = PopoverDateVC.passNowMonth! + "月"
     }
-     
-
     
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -133,13 +159,13 @@ class DiagramVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
         if index == 0{
             refreshAllPageData()
             PieChart.updataPieChartData(pieView: pieView)
-            PieChart.setupPieChart(pieView: pieView, NameSet: expendTypeNameSet)
+            PieChart.setupPieChart(pieView: pieView, NameSet: expendLimitedPieChart)
             isSwitchExpendTable = true
             tableViews.reloadData()
         }else if index == 1{
             refreshAllPageData()
             PieChart.updataPieChartData(pieView: pieView)
-            PieChart.setupPieChart(pieView: pieView, NameSet: self.incomeTypeNameSet)
+            PieChart.setupPieChart(pieView: pieView, NameSet: incomeLimitedPieChart)
             isSwitchExpendTable = false
             tableViews.reloadData()
         }
@@ -147,9 +173,9 @@ class DiagramVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
     }
     
     func fetchPoertyItem(){
-        
         var years: String?
         var months: String?
+        var endOfMonth: String?
         if let year = PopoverDateVC.changeYear{
             years = String(year)
         }
@@ -157,10 +183,13 @@ class DiagramVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
         if let month = PopoverDateVC.passNowMonth{
             months = month
         }
+        if let endMonth = PopoverDateVC.endOfMonth{
+            endOfMonth = endMonth
+        }
         var beginMonthOfYear: String?
         var endMonthOfYear: String?
         beginMonthOfYear = years!+"-"+months!+"-01"
-        endMonthOfYear = years!+"-"+months!+"-31"
+        endMonthOfYear = years!+"-"+months!+"-"+endOfMonth!
         //var Stringdates = helper.FormatDate(dates: Date())
         let fromDate = Helper.stringConvertDate(string: beginMonthOfYear!)
         let toDate = Helper.stringConvertDate(string: endMonthOfYear!)
@@ -191,6 +220,7 @@ class DiagramVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
     func searchToSaveTable(which: String? = "Expend", nameType: String, pricesForPercent: Double){
         var years: String?
         var months: String?
+         var endOfMonth: String?
         if let year = PopoverDateVC.changeYear{
             years = String(year)
         }
@@ -198,10 +228,13 @@ class DiagramVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
         if let month = PopoverDateVC.passNowMonth{
             months = month
         }
+        if let endMonth = PopoverDateVC.endOfMonth{
+            endOfMonth = endMonth
+        }
         var beginMonthOfYear: String?
         var endMonthOfYear: String?
         beginMonthOfYear = years!+"-"+months!+"-01"
-        endMonthOfYear = years!+"-"+months!+"-31"
+        endMonthOfYear = years!+"-"+months!+"-"+endOfMonth!
         //var Stringdates = helper.FormatDate(dates: Date())
         let fromDate = Helper.stringConvertDate(string: beginMonthOfYear!)
         let toDate = Helper.stringConvertDate(string: endMonthOfYear!)
@@ -213,6 +246,7 @@ class DiagramVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
         
         var prices = [Double]()
         var image: Data?
+        
         do {
             let result = try viewContext.fetch(fetchRequest)
             if result[0].image != nil{
@@ -224,25 +258,76 @@ class DiagramVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
         } catch {
             fatalError("Failed to fetch entities: \(error)")
         }
-        let toatlPrice = poperty.calculateEachTypeTotalPrice(total: prices)
-        let percent = toatlPrice / pricesForPercent
+        let totalPrice = poperty.calculateEachTypeTotalPrice(total: prices)
+        let percent = totalPrice / pricesForPercent
+        
+        
         if which == "Expend"{
-        expendTableList.append((name: nameType, images: image!, totalPrice: toatlPrice, percent: Float(percent)))
+        expendTableList.append((name: nameType, images: image!, totalPrice: totalPrice, percent: Float(percent)))
+            
+            //limited to show 5 item in piechart of expend section
+            if expendDataCount < expendlimitedCount{
+                expendLimitedPieChart.append(ExpendLimited(typeName: nameType, price: totalPrice))
+                    expendDataCount += 1
+                if expendDataCount == 3{ //set it over 4
+                    expendlimitedCount = 4
+                }
+                expend4ItemPrice! += totalPrice
+            }else if expendDataCount == 4{
+                var leftPrice: Double? = 0
+                leftPrice = expendTotalPrice - expend4ItemPrice!
+                expendLimitedPieChart.append(ExpendLimited(typeName: "Other", price: leftPrice!))
+                expendDataCount += 1
+            }else{
+                print("other name in expendPart type was not saved")
+            }
+            
         }else if which == "Income"{
-        incomeTableList.append((name: nameType, images: image!, totalPrice: toatlPrice, percent: Float(percent)))
+        incomeTableList.append((name: nameType, images: image!, totalPrice: totalPrice, percent: Float(percent)))
+            
+            //limited to show 5 item in piechart of income section
+            if incomeDataCount < incomelimitedCount{
+                incomeLimitedPieChart.append(IncomeLimited(typeName: nameType, price: totalPrice))
+                    incomeDataCount += 1
+                    income4ItemPrice! += totalPrice
+                if incomeDataCount == 3{ //set it if over 4
+                    incomelimitedCount = 4
+                }
+                }else if incomeDataCount == 4{
+                    var leftPrice: Double? = 0
+                    leftPrice = incomeTotalPrice - income4ItemPrice!
+                incomeLimitedPieChart.append(IncomeLimited(typeName: "Other", price: leftPrice!))
+                    incomeDataCount += 1
+                }else{
+                    print("left name in IncomePart type was not saved")
+                }
         }
     }
+    
+    
     
     func refreshAllPageData(){
         expendTypeNameSet.removeAll()
         incomeTypeNameSet.removeAll()
         expendTotalPrice = 0
         incomeTotalPrice = 0
+        expendDataCount = 0
+        incomeDataCount = 0
+        expendlimitedCount = 0
+        incomelimitedCount = 0
+        expend4ItemPrice = 0
+        income4ItemPrice = 0
+        expendLimitedPieChart.removeAll()
+        incomeLimitedPieChart.removeAll()
         expendTableList.removeAll()
         incomeTableList.removeAll()
         
         //insert each data name to set
         fetchPoertyItem()
+        
+        expendlimitedCount = expendTypeNameSet.count
+        incomelimitedCount = incomeTypeNameSet.count
+        
         //through set name to search data to save in tableviewArray
         for e in expendTypeNameSet.sorted(){
             searchToSaveTable(which:"Expend" ,nameType: e, pricesForPercent: expendTotalPrice)

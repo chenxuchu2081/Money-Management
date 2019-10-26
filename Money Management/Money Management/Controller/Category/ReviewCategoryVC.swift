@@ -22,20 +22,35 @@ class ReviewCategoryVC: UIViewController, UITableViewDelegate, UITableViewDataSo
     var isIncomeSegment = false
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
     
+    //MARK: - ViewControler LifeCircle
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         viewContext = app.persistentContainer.viewContext
+        
+        if isExpendSegment == true{
+            segmentedControl.isEnabledForSegment(at: 0)
         fetchCategory_Expend_Data(entityName: "Category_Expend")
+        }else{
+            segmentedControl.isEnabledForSegment(at: 1)
+            fetchCategory_Income_Data(entityName: "Category_Income")
+        }
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        refresh(entityName: "Category_Expend")
+        if isExpendSegment == true{
+            refresh(entityName: "Category_Expend")
+        }else{
+            refresh(entityName: "Category_Income")
+        }
     }
-    
+     
+     //FIXME: - UI Segmented control
     @IBAction func changeExpend_Income(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0{
             isExpendSegment = true
@@ -48,6 +63,7 @@ class ReviewCategoryVC: UIViewController, UITableViewDelegate, UITableViewDataSo
         }
     }
     
+    //MARK: - TableView
     func numberOfSections(in tableView: UITableView) -> Int {
         if isExpendSegment == true{
             return Expendcontroller.sections!.count
@@ -135,6 +151,7 @@ class ReviewCategoryVC: UIViewController, UITableViewDelegate, UITableViewDataSo
         return [moreaction, deleteAction]
     }
     
+    //MARK: - fetch Data
     func fetchCategory_Expend_Data(entityName: String){
         let fetchRequest = NSFetchRequest<Category_Expend>(entityName: entityName)
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]

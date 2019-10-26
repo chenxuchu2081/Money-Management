@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -37,6 +37,9 @@
 		5F2695E52345EED800922A79 /* LanguageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2695E42345EED800922A79 /* LanguageVC.swift */; };
 		5F281B3B230BD65300337214 /* AddDataCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F281B3A230BD65300337214 /* AddDataCVC.swift */; };
 		5F2C900E231772F10036DF12 /* AddCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2C900D231772F10036DF12 /* AddCategoryVC.swift */; };
+		5F2F6DBC234B3C55000DCE9B /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2F6DBB234B3C55000DCE9B /* TabbarController.swift */; };
+		5F382D72235048B000DA1E0C /* Category.json in Resources */ = {isa = PBXBuildFile; fileRef = 5F382D71235048B000DA1E0C /* Category.json */; };
+		5F382D7423504C1A00DA1E0C /* JsonHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F382D7323504C1A00DA1E0C /* JsonHandling.swift */; };
 		5F3F3018230D5AA900843879 /* CoreDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3F3017230D5AA900843879 /* CoreDatas.swift */; };
 		5F400909232233600088D55B /* DiagramDetailTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F400908232233600088D55B /* DiagramDetailTVC.swift */; };
 		5F41003B2317E8F100EC4327 /* Category_Income+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4100372317E8F100EC4327 /* Category_Income+CoreDataClass.swift */; };
@@ -59,6 +62,7 @@
 		5FA4842923276EB800DE9B27 /* NotificationTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA4842823276EB800DE9B27 /* NotificationTVC.swift */; };
 		5FA4B1C9230E69B6009E0B02 /* Expend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA4B1C8230E69B6009E0B02 /* Expend.swift */; };
 		5FB08F29232107EA00213E5E /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB08F28232107EA00213E5E /* LineChart.swift */; };
+		5FC64FB2235071130025171A /* MoreTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC64FB1235071130025171A /* MoreTVC.swift */; };
 		5FCA378D232B606C001B67FA /* PopertyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCA378C232B606C001B67FA /* PopertyItem.swift */; };
 		5FD429BC2312AB29002BDBFB /* PopoverDateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD429BB2312AB29002BDBFB /* PopoverDateVC.swift */; };
 		5FE6116E231FBA9F00CECC6B /* PieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE6116D231FBA9F00CECC6B /* PieChart.swift */; };
@@ -129,6 +133,9 @@
 		5F2695E42345EED800922A79 /* LanguageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageVC.swift; sourceTree = "<group>"; };
 		5F281B3A230BD65300337214 /* AddDataCVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDataCVC.swift; sourceTree = "<group>"; };
 		5F2C900D231772F10036DF12 /* AddCategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCategoryVC.swift; sourceTree = "<group>"; };
+		5F2F6DBB234B3C55000DCE9B /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
+		5F382D71235048B000DA1E0C /* Category.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Category.json; sourceTree = "<group>"; };
+		5F382D7323504C1A00DA1E0C /* JsonHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonHandling.swift; sourceTree = "<group>"; };
 		5F3F3017230D5AA900843879 /* CoreDatas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDatas.swift; sourceTree = "<group>"; };
 		5F400908232233600088D55B /* DiagramDetailTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagramDetailTVC.swift; sourceTree = "<group>"; };
 		5F4100372317E8F100EC4327 /* Category_Income+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category_Income+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -158,6 +165,7 @@
 		5FA4842823276EB800DE9B27 /* NotificationTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTVC.swift; sourceTree = "<group>"; };
 		5FA4B1C8230E69B6009E0B02 /* Expend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expend.swift; sourceTree = "<group>"; };
 		5FB08F28232107EA00213E5E /* LineChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChart.swift; sourceTree = "<group>"; };
+		5FC64FB1235071130025171A /* MoreTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreTVC.swift; sourceTree = "<group>"; };
 		5FCA378C232B606C001B67FA /* PopertyItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopertyItem.swift; sourceTree = "<group>"; };
 		5FD429BB2312AB29002BDBFB /* PopoverDateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverDateVC.swift; sourceTree = "<group>"; };
 		5FE6116D231FBA9F00CECC6B /* PieChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChart.swift; sourceTree = "<group>"; };
@@ -226,6 +234,7 @@
 		5F0C1149230B9EA8006E69AC /* Money Management */ = {
 			isa = PBXGroup;
 			children = (
+				5F382D71235048B000DA1E0C /* Category.json */,
 				5F837A042345DC1A00C9A57E /* Localizable.strings */,
 				5F77FB50233B5EDB00B2FBF0 /* GoogleService-Info.plist */,
 				5F0C1151230B9EA8006E69AC /* Money_Management.xcdatamodeld */,
@@ -286,6 +295,7 @@
 				5FA4842823276EB800DE9B27 /* NotificationTVC.swift */,
 				5F77FB52233B61A600B2FBF0 /* AccountVC.swift */,
 				5F2695E42345EED800922A79 /* LanguageVC.swift */,
+				5FC64FB1235071130025171A /* MoreTVC.swift */,
 			);
 			path = More;
 			sourceTree = "<group>";
@@ -349,6 +359,7 @@
 				5F76AECD231E895600DE7D5D /* Diagram */,
 				5F2C900C231772C30036DF12 /* Category */,
 				5F0C117F230BAF93006E69AC /* HomePage */,
+				5F2F6DBB234B3C55000DCE9B /* TabbarController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -384,6 +395,7 @@
 				5FECEF5B2345DA8200D8C87B /* StorageService.swift */,
 				5F0C1184230BC094006E69AC /* Helper.swift */,
 				5FA4842323275A2C00DE9B27 /* AlertMessage.swift */,
+				5F382D7323504C1A00DA1E0C /* JsonHandling.swift */,
 			);
 			path = supportFile;
 			sourceTree = "<group>";
@@ -521,6 +533,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F382D72235048B000DA1E0C /* Category.json in Resources */,
 				5F8C07722316DB3A00C7564D /* Category.storyboard in Resources */,
 				5F2695D42345EA2400922A79 /* More.storyboard in Resources */,
 				5F77FB51233B5EDC00B2FBF0 /* GoogleService-Info.plist in Resources */,
@@ -557,26 +570,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Money Management/Pods-Money Management-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/AppAuth/AppAuth.framework",
-				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
-				"${BUILT_PRODUCTS_DIR}/GTMAppAuth/GTMAppAuth.framework",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-Money Management/Pods-Money Management-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AppAuth.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMAppAuth.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-Money Management/Pods-Money Management-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -611,16 +609,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Money Management/Pods-Money Management-resources.sh",
-				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+				"${PODS_ROOT}/Target Support Files/Pods-Money Management/Pods-Money Management-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+				"${PODS_ROOT}/Target Support Files/Pods-Money Management/Pods-Money Management-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -685,6 +678,7 @@
 				5FE7D5DF231D406100125C1B /* PopertyItem+CoreDataProperties.swift in Sources */,
 				5F4416FB2314E0F20059D6A3 /* CustomView.swift in Sources */,
 				5F41003C2317E8F100EC4327 /* Category_Income+CoreDataProperties.swift in Sources */,
+				5FC64FB2235071130025171A /* MoreTVC.swift in Sources */,
 				5FA4842423275A2C00DE9B27 /* AlertMessage.swift in Sources */,
 				5F400909232233600088D55B /* DiagramDetailTVC.swift in Sources */,
 				5F0C117E230BAE6B006E69AC /* HomePaeTVC.swift in Sources */,
@@ -701,12 +695,14 @@
 				5FCA378D232B606C001B67FA /* PopertyItem.swift in Sources */,
 				5F41003B2317E8F100EC4327 /* Category_Income+CoreDataClass.swift in Sources */,
 				5F19112D231C15A100DEAA9F /* Property.swift in Sources */,
+				5F382D7423504C1A00DA1E0C /* JsonHandling.swift in Sources */,
 				5F0C1183230BB3AE006E69AC /* expensesController.swift in Sources */,
 				5FA4842723276CA400DE9B27 /* NotificationVC.swift in Sources */,
 				5F0E35E42324B81B0033C8BE /* ExportVC.swift in Sources */,
 				5F2C900E231772F10036DF12 /* AddCategoryVC.swift in Sources */,
 				5F4416FD2314E8160059D6A3 /* HomeDetailVC.swift in Sources */,
 				5FE6116E231FBA9F00CECC6B /* PieChart.swift in Sources */,
+				5F2F6DBC234B3C55000DCE9B /* TabbarController.swift in Sources */,
 				5F62E03B2318F73E00D8F143 /* ReviewCategoryTVC.swift in Sources */,
 				5FD429BC2312AB29002BDBFB /* PopoverDateVC.swift in Sources */,
 				5F76AED2231E89A800DE7D5D /* DiagramVC.swift in Sources */,

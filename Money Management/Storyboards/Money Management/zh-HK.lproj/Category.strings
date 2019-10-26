@@ -1,0 +1,27 @@
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "1Ka-U5-bZw"; */
+"1Ka-U5-bZw.text" = "Name";
+
+/* Class = "UILabel"; text = "Transportation"; ObjectID = "CzX-IR-V5T"; */
+"CzX-IR-V5T.text" = "Transportation";
+
+/* Class = "UITextField"; placeholder = "分類名稱"; ObjectID = "E36-x2-xgF"; */
+"E36-x2-xgF.placeholder" = "分類名稱";
+
+/* Class = "UITabBarItem"; title = "類別"; ObjectID = "Fv2-Nl-2Ze"; */
+"Fv2-Nl-2Ze.title" = "類別";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "KDu-Cc-fG5"; */
+"KDu-Cc-fG5.title" = "Item";
+
+/* Class = "UISegmentedControl"; e5j-Es-5L5.segmentTitles[0] = "Expend"; ObjectID = "e5j-Es-5L5"; */
+"e5j-Es-5L5.segmentTitles[0]" = "支出";
+
+/* Class = "UISegmentedControl"; e5j-Es-5L5.segmentTitles[1] = "Income"; ObjectID = "e5j-Es-5L5"; */
+"e5j-Es-5L5.segmentTitles[1]" = "收入";
+
+/* Class = "UIButton"; normalTitle = "+ Add New Category"; ObjectID = "hUK-pM-u4G"; */
+"hUK-pM-u4G.normalTitle" = "+ 加入新類別";
+
+/* Class = "UINavigationItem"; title = "Category Setting"; ObjectID = "uDo-vp-aZe"; */
+"uDo-vp-aZe.title" = "類別設置";

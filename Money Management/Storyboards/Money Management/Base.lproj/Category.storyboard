@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dbN-h8-GkV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dbN-h8-GkV">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -25,15 +25,21 @@
                                     <segment title="Expend"/>
                                     <segment title="Income"/>
                                 </segments>
+                                <variation key="heightClass=compact-widthClass=compact">
+                                    <mask key="constraints">
+                                        <exclude reference="Vib-WT-ike"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <action selector="changeExpend_Income:" destination="fRh-hZ-8ml" eventType="valueChanged" id="rYE-Wq-cZj"/>
                                 </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yJE-S7-dvN">
-                                <rect key="frame" x="0.0" y="121" width="375" height="611"/>
+                                <rect key="frame" x="0.0" y="121" width="375" height="580"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="611" id="PGN-IX-b2S"/>
+                                    <constraint firstAttribute="height" constant="580" id="PGN-IX-b2S"/>
+                                    <constraint firstAttribute="height" constant="212" id="mX2-Zc-hHe"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" rowHeight="70" id="Eqx-LJ-DkD" customClass="ReviewCategoryTVC" customModule="Money_Management" customModuleProvider="target">
@@ -43,23 +49,40 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ka-U5-bZw">
-                                                    <rect key="frame" x="20" y="9" width="90" height="45"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="category (1)" translatesAutoresizingMaskIntoConstraints="NO" id="piF-uR-szU">
+                                                    <rect key="frame" x="165" y="12.666666666666664" width="45" height="45"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="45" id="dbr-tk-E4M"/>
+                                                        <constraint firstAttribute="height" constant="45" id="n8c-mt-pdH"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hQ9-9d-Udj">
+                                                    <rect key="frame" x="312" y="19" width="32" height="32"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="32" id="dzl-Tb-KhH"/>
+                                                        <constraint firstAttribute="height" constant="32" id="sB9-9u-Rxr"/>
+                                                    </constraints>
+                                                    <state key="normal" image="menu"/>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ka-U5-bZw">
+                                                    <rect key="frame" x="14.999999999999996" y="13" width="44.666666666666657" height="45"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="45" id="Na5-dT-0yO"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Category/Restaurant/001" translatesAutoresizingMaskIntoConstraints="NO" id="piF-uR-szU">
-                                                    <rect key="frame" x="118" y="9" width="45" height="45"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hQ9-9d-Udj">
-                                                    <rect key="frame" x="362" y="18" width="32" height="32"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" image="menu"/>
-                                                </button>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="piF-uR-szU" firstAttribute="centerX" secondItem="Tqf-AC-9xK" secondAttribute="centerX" id="5ZY-5d-kQI"/>
+                                                <constraint firstItem="piF-uR-szU" firstAttribute="centerY" secondItem="Tqf-AC-9xK" secondAttribute="centerY" id="Jbv-Nz-NOq"/>
+                                                <constraint firstAttribute="trailing" secondItem="hQ9-9d-Udj" secondAttribute="trailing" constant="31" id="Sko-PQ-bSX"/>
+                                                <constraint firstItem="1Ka-U5-bZw" firstAttribute="top" secondItem="Tqf-AC-9xK" secondAttribute="top" constant="13" id="bPJ-1k-upB"/>
+                                                <constraint firstAttribute="bottom" secondItem="1Ka-U5-bZw" secondAttribute="bottom" constant="12" id="eAZ-sR-F0i"/>
+                                                <constraint firstItem="1Ka-U5-bZw" firstAttribute="leading" secondItem="Tqf-AC-9xK" secondAttribute="leading" constant="15" id="mWM-Dj-xGH"/>
+                                                <constraint firstAttribute="bottom" secondItem="hQ9-9d-Udj" secondAttribute="bottom" constant="19" id="yxL-TT-smU"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="imageview" destination="piF-uR-szU" id="sK0-Ay-AnR"/>
@@ -67,13 +90,24 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="mX2-Zc-hHe"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact">
+                                    <mask key="constraints">
+                                        <exclude reference="PGN-IX-b2S"/>
+                                        <include reference="mX2-Zc-hHe"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="fRh-hZ-8ml" id="XML-iJ-a0e"/>
                                     <outlet property="delegate" destination="fRh-hZ-8ml" id="TWV-yt-Ddi"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hUK-pM-u4G">
-                                <rect key="frame" x="82" y="735" width="250" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hUK-pM-u4G">
+                                <rect key="frame" x="75" y="709" width="225" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="+ Add New Category"/>
                                 <connections>
@@ -83,27 +117,46 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="hUK-pM-u4G" firstAttribute="top" secondItem="yJE-S7-dvN" secondAttribute="bottom" constant="8" symbolic="YES" id="Bqm-PR-Tl0"/>
+                            <constraint firstItem="qOD-gI-TXj" firstAttribute="bottom" secondItem="hUK-pM-u4G" secondAttribute="bottom" constant="27" id="5bg-ul-3vl"/>
                             <constraint firstItem="e5j-Es-5L5" firstAttribute="top" secondItem="qOD-gI-TXj" secondAttribute="top" id="Kf3-Ey-tpg"/>
+                            <constraint firstItem="hUK-pM-u4G" firstAttribute="centerX" secondItem="zGO-JE-VQ5" secondAttribute="centerX" id="Lyl-6m-jg9"/>
                             <constraint firstItem="e5j-Es-5L5" firstAttribute="leading" secondItem="qOD-gI-TXj" secondAttribute="leading" id="Wq0-TC-ZaE"/>
-                            <constraint firstItem="yJE-S7-dvN" firstAttribute="centerX" secondItem="hUK-pM-u4G" secondAttribute="centerX" id="Zgc-gR-dnc"/>
+                            <constraint firstItem="hUK-pM-u4G" firstAttribute="top" secondItem="yJE-S7-dvN" secondAttribute="bottom" constant="8" id="ZSH-0e-a4R"/>
+                            <constraint firstItem="yJE-S7-dvN" firstAttribute="top" secondItem="zGO-JE-VQ5" secondAttribute="top" constant="65" id="az8-vM-e3z"/>
+                            <constraint firstItem="hUK-pM-u4G" firstAttribute="top" secondItem="yJE-S7-dvN" secondAttribute="bottom" constant="8" id="cY7-JW-0Sk"/>
                             <constraint firstItem="yJE-S7-dvN" firstAttribute="trailing" secondItem="e5j-Es-5L5" secondAttribute="trailing" id="euU-PT-6NR"/>
                             <constraint firstItem="yJE-S7-dvN" firstAttribute="top" secondItem="e5j-Es-5L5" secondAttribute="bottom" constant="3" id="gzq-xW-Bf1"/>
                             <constraint firstItem="e5j-Es-5L5" firstAttribute="trailing" secondItem="qOD-gI-TXj" secondAttribute="trailing" id="o1i-WE-rh1"/>
                             <constraint firstItem="yJE-S7-dvN" firstAttribute="leading" secondItem="e5j-Es-5L5" secondAttribute="leading" id="qL9-Eo-LNR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qOD-gI-TXj"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="az8-vM-e3z"/>
+                                <exclude reference="ZSH-0e-a4R"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="5bg-ul-3vl"/>
+                                <exclude reference="Kf3-Ey-tpg"/>
+                                <include reference="az8-vM-e3z"/>
+                                <include reference="ZSH-0e-a4R"/>
+                                <exclude reference="cY7-JW-0Sk"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Category Setting" id="uDo-vp-aZe"/>
                     <connections>
+                        <outlet property="segmentedControl" destination="e5j-Es-5L5" id="agW-tV-tfv"/>
                         <outlet property="tableView" destination="yJE-S7-dvN" id="9sA-XB-wza"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tAG-8E-inp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2868.115942028986" y="-686.38392857142856"/>
+            <point key="canvasLocation" x="2868" y="-686.45320197044339"/>
         </scene>
-        <!--Add CategoryVC-->
+        <!--Add expense category-->
         <scene sceneID="FSw-Sb-L2j">
             <objects>
                 <viewController id="xQ3-XH-TD3" customClass="AddCategoryVC" customModule="Money_Management" customModuleProvider="target" sceneMemberID="viewController">
@@ -202,8 +255,8 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="s1H-kG-Oe7"/>
                     </view>
-                    <navigationItem key="navigationItem" id="TGK-5a-vJP">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="tick" id="KDu-Cc-fG5">
+                    <navigationItem key="navigationItem" title="Add expense category" id="TGK-5a-vJP">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="KDu-Cc-fG5">
                             <connections>
                                 <action selector="saveCategory" destination="xQ3-XH-TD3" id="4E3-MV-CTA"/>
                             </connections>
@@ -223,7 +276,7 @@
         <scene sceneID="eea-oa-xW9">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dbN-h8-GkV" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="類別" image="category (1)" id="Fv2-Nl-2Ze"/>
+                    <tabBarItem key="tabBarItem" tag="3" title="類別" image="category (1)" id="Fv2-Nl-2Ze"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nrA-bQ-nCn">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
@@ -240,11 +293,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Category/Restaurant/001" width="512" height="512"/>
-        <image name="category (1)" width="32" height="32"/>
+        <image name="category (1)" width="21" height="21"/>
         <image name="export" width="42.666667938232422" height="42.666667938232422"/>
-        <image name="homepage" width="32" height="32"/>
+        <image name="homepage" width="21" height="21"/>
         <image name="menu" width="42.666667938232422" height="42.666667938232422"/>
-        <image name="tick" width="42.666667938232422" height="42.666667938232422"/>
     </resources>
 </document>

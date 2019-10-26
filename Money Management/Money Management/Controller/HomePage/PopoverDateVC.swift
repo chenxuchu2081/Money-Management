@@ -14,23 +14,34 @@ class PopoverDateVC: UIViewController {
     
     static var changeYear: Int? = 2019
     static var passNowMonth: String? = Date().month
-    //var month: String? = Date().month
+    static var startOfMonth: String? = "01"
+    static var endOfMonth: String? = "29"
     static var choseMonthFindd: Bool? = false
     
+    var currentYear: String?
+    let userDefault = UserDefaults()
     @IBOutlet weak var yearlabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        yearlabel.text = years[2019]
-        PopoverDateVC.changeYear = 2019
+       if let year = PopoverDateVC.changeYear{
+             yearlabel.text = String(year)
+        }
+       
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
     }
     
     @IBAction func previous(_ sender: UIButton){
         if PopoverDateVC.changeYear != nil{
             yearlabel.text = years[PopoverDateVC.changeYear! - 1]
             PopoverDateVC.changeYear! -= 1
+            
         }
         
     }
@@ -39,63 +50,83 @@ class PopoverDateVC: UIViewController {
         if PopoverDateVC.changeYear != nil{
             yearlabel.text = years[PopoverDateVC.changeYear! + 1]
             PopoverDateVC.changeYear! += 1
+            
         }
     }
     
     @IBAction func selectMonth(_ sender: UIButton) {
         print(sender.tag)
         let months = sender.tag
+        
+//        let month = String(sender.tag)
+//        userDefault.set(month, forKey: "PopeverDateMonth")
+//        userDefault.set(currentYear, forKey: "PopeverDateYear")
+        
+        
         switch months {
         case 1:
-            PopoverDateVC.passNowMonth = "01"
+            PopoverDateVC.passNowMonth = "1"
+            PopoverDateVC.endOfMonth = "31"
             PopoverDateVC.choseMonthFindd = true
             break
         case 2:
-            PopoverDateVC.passNowMonth = "02"
+            PopoverDateVC.passNowMonth = "2"
+            PopoverDateVC.endOfMonth = "28"
             PopoverDateVC.choseMonthFindd = true
             break
         case 3:
-            PopoverDateVC.passNowMonth = "03"
+            PopoverDateVC.passNowMonth = "3"
+            PopoverDateVC.endOfMonth = "31"
             PopoverDateVC.choseMonthFindd = true
             break
         case 4:
-            PopoverDateVC.passNowMonth = "04"
+            PopoverDateVC.passNowMonth = "4"
+            PopoverDateVC.endOfMonth = "30"
             PopoverDateVC.choseMonthFindd = true
             break
         case 5:
-            PopoverDateVC.passNowMonth = "05"
+            PopoverDateVC.passNowMonth = "5"
+            PopoverDateVC.endOfMonth = "31"
             PopoverDateVC.choseMonthFindd = true
             break
         case 6:
-            PopoverDateVC.passNowMonth = "06"
+            PopoverDateVC.passNowMonth = "6"
+            PopoverDateVC.endOfMonth = "30"
             PopoverDateVC.choseMonthFindd = true
             break
         case 7:
-            PopoverDateVC.passNowMonth = "07"
+            PopoverDateVC.passNowMonth = "7"
+            PopoverDateVC.endOfMonth = "31"
             PopoverDateVC.choseMonthFindd = true
             break
         case 8:
-            PopoverDateVC.passNowMonth = "08"
+            PopoverDateVC.passNowMonth = "8"
+            PopoverDateVC.endOfMonth = "31"
             PopoverDateVC.choseMonthFindd = true
             break
         case 9:
-            PopoverDateVC.passNowMonth = "09"
+            PopoverDateVC.passNowMonth = "9"
+            PopoverDateVC.endOfMonth = "30"
             PopoverDateVC.choseMonthFindd = true
             break
         case 10:
             PopoverDateVC.passNowMonth = "10"
+            PopoverDateVC.endOfMonth = "31"
             PopoverDateVC.choseMonthFindd = true
             break
         case 11:
             PopoverDateVC.passNowMonth = "11"
+            PopoverDateVC.endOfMonth = "30"
             PopoverDateVC.choseMonthFindd = true
             break
         case 12:
             PopoverDateVC.passNowMonth = "12"
+            PopoverDateVC.endOfMonth = "31"
             PopoverDateVC.choseMonthFindd = true
             break
         default:
             PopoverDateVC.passNowMonth = "01"
+            PopoverDateVC.endOfMonth = "31"
             PopoverDateVC.choseMonthFindd = true
             break
         }
@@ -110,13 +141,13 @@ class PopoverDateVC: UIViewController {
 //        // Pass the selected object to the new view controller.
 //        if segue.identifier == "segue_vc_to_PoperverDate"{
 //            let vc = segue.destination as! HomePageVC
-//
-//
+//            vc.popover = popovers
 //        }
 //    }
  
 
 }
+
 extension Date {
     var month: String {
         let dateFormatter = DateFormatter()
@@ -127,4 +158,9 @@ extension Date {
         return toStringMonth
         //return dateFormatter.string(from: self)
     }
+    
+   
 }
+
+
+

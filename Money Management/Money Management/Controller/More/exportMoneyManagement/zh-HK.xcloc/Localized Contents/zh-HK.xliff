@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
+  <file original="Money Management/en.lproj/InfoPlist.strings" datatype="plaintext" source-language="en" target-language="zh-HK">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="11.0" build-num="11A420a"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleName" xml:space="preserve">
+        <source>Money Management</source>
+        <note>Bundle name</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="Storyboards/Base.lproj/export.storyboard" source-language="en" target-language="zh-HK" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="11.0" build-num="11A420a"/>
+    </header>
+    <body>
+      <trans-unit id="959-G1-F7l.title" xml:space="preserve">
+        <source>Export Form</source>
+        <target>導出表格</target>
+        <note>Class = "UINavigationItem"; title = "Export Form"; ObjectID = "959-G1-F7l";</note>
+      </trans-unit>
+      <trans-unit id="Dlq-W3-xD6.title" xml:space="preserve">
+        <source>導出</source>
+        <target>導出</target>
+        <note>Class = "UITabBarItem"; title = "導出"; ObjectID = "Dlq-W3-xD6";</note>
+      </trans-unit>
+      <trans-unit id="FHr-i4-TPD.normalTitle" xml:space="preserve">
+        <source>OK</source>
+        <target>確定</target>
+        <note>Class = "UIButton"; normalTitle = "OK"; ObjectID = "FHr-i4-TPD";</note>
+      </trans-unit>
+      <trans-unit id="Y7V-Sf-GDv.text" xml:space="preserve">
+        <source>End</source>
+        <target>結束</target>
+        <note>Class = "UILabel"; text = "End"; ObjectID = "Y7V-Sf-GDv";</note>
+      </trans-unit>
+      <trans-unit id="bSe-Tr-hDK.text" xml:space="preserve">
+        <source>Format</source>
+        <target>格式</target>
+        <note>Class = "UILabel"; text = "Format"; ObjectID = "bSe-Tr-hDK";</note>
+      </trans-unit>
+      <trans-unit id="xbZ-UD-Id4.text" xml:space="preserve">
+        <source>Start</source>
+        <target>開始</target>
+        <note>Class = "UILabel"; text = "Start"; ObjectID = "xbZ-UD-Id4";</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="Storyboards/Base.lproj/HomePage.storyboard" source-language="en" target-language="zh-HK" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="11.0" build-num="11A420a"/>
+    </header>
+    <body>
+      <trans-unit id="1uH-hp-WlB.normalTitle" xml:space="preserve">
+        <source>Mar.</source>
+        <target>3月</target>
+        <note>Class = "UIButton"; normalTitle = "Mar."; ObjectID = "1uH-hp-WlB";</note>
+      </trans-unit>
+      <trans-unit id="5aH-Jx-jpX.text" xml:space="preserve">
+        <source>Expend:</source>
+        <target>支出:</target>
+        <note>Class = "UILabel"; text = "Expend:"; ObjectID = "5aH-Jx-jpX";</note>
+      </trans-unit>
+      <trans-unit id="9gl-sE-TPm.normalTitle" xml:space="preserve">
+        <source>May</source>
+        <target>5月</target>
+        <note>Class = "UIButton"; normalTitle = "May"; ObjectID = "9gl-sE-TPm";</note>
+      </trans-unit>
+      <trans-unit id="9vv-Lb-vFf.normalTitle" xml:space="preserve">
+        <source>Feb.</source>
+        <target>2月</target>
+        <note>Class = "UIButton"; normalTitle = "Feb."; ObjectID = "9vv-Lb-vFf";</note>
+      </trans-unit>
+      <trans-unit id="65G-eP-VZO.text" xml:space="preserve">
+        <source>TypeName</source>
+        <target>類別</target>
+        <note>Class = "UILabel"; text = "TypeName"; ObjectID = "65G-eP-VZO";</note>
+      </trans-unit>
+      <trans-unit id="B2u-8F-cRo.normalTitle" xml:space="preserve">
+        <source>Dec.</source>
+        <target>12月</target>
+        <note>Class = "UIButton"; normalTitle = "Dec."; ObjectID = "B2u-8F-cRo";</note>
+      </trans-unit>
+      <trans-unit id="BS6-yV-inf.normalTitle" xml:space="preserve">
+        <source>Aug.</source>
+        <target>8月</target>
+        <note>Class = "UIButton"; normalTitle = "Aug."; ObjectID = "BS6-yV-inf";</note>
+      </trans-unit>
+      <trans-unit id="Bwt-pi-FrO.normalTitle" xml:space="preserve">
+        <source>Oct.</source>
+        <target>10月</target>
+        <note>Class = "UIButton"; normalTitle = "Oct."; ObjectID = "Bwt-pi-FrO";</note>
+      </trans-unit>
+      <trans-unit id="C5y-7j-RfN.normalTitle" xml:space="preserve">
+        <source>Jun.</source>
+        <target>1月</target>
+        <note>Class = "UIButton"; normalTitle = "Jun."; ObjectID = "C5y-7j-RfN";</note>
+      </trans-unit>
+      <trans-unit id="Ddx-7R-GtA.text" xml:space="preserve">
+        <source>Balance</source>
+        <target>餘額</target>
+        <note>Class = "UILabel"; text = "Balance"; ObjectID = "Ddx-7R-GtA";</note>
+      </trans-unit>
+      <trans-unit id="Eh9-Yg-MJx.text" xml:space="preserve">
+        <source>Type</source>
+        <target>類別</target>
+        <note>Class = "UILabel"; text = "Type"; ObjectID = "Eh9-Yg-MJx";</note>
+      </trans-unit>
+      <trans-unit id="GVV-vl-uyw.title" xml:space="preserve">
+        <source>關閉</source>
+        <target>關閉</target>
+        <note>Class = "UIBarButtonItem"; title = "關閉"; ObjectID = "GVV-vl-uyw";</note>
+      </trans-unit>
+      <trans-unit id="HC3-yT-MW8.title" xml:space="preserve">
+        <source>主頁</source>
+        <target>主頁</target>
+        <note>Class = "UITabBarItem"; title = "主頁"; ObjectID = "HC3-yT-MW8";</note>
+      </trans-unit>
+      <trans-unit id="IBv-NG-W6m.text" xml:space="preserve">
+        <source>telephone</source>
+        <target>電話</target>
+        <note>Class = "UILabel"; text = "telephone"; ObjectID = "IBv-NG-W6m";</note>
+      </trans-unit>
+      <trans-unit id="Isn-tF-8Xd.text" xml:space="preserve">
+        <source>08，26，2019（Monday）</source>
+        <target>08，26，2019（星期一）</target>
+        <note>Class = "UILabel"; text = "08，26，2019（Monday）"; ObjectID = "Isn-tF-8Xd";</note>
+      </trans-unit>
+      <trans-unit id="K0C-zQ-SWl.normalTitle" xml:space="preserve">
+        <source>Sep.</source>
+        <target>9月</target>
+        <note>Class = "UIButton"; normalTitle = "Sep."; ObjectID = "K0C-zQ-SWl";</note>
+      </trans-unit>
+      <trans-unit id="LYy-tB-hMa.text" xml:space="preserve">
+        <source>2019</source>
+        <target>2019</target>
+        <note>Class = "UILabel"; text = "2019"; ObjectID = "LYy-tB-hMa";</note>
+      </trans-unit>
+      <trans-unit id="P3j-g5-KLh.text" xml:space="preserve">
+        <source>Expend</source>
+        <target>支出</target>
+        <note>Class = "UILabel"; text = "Expend"; ObjectID = "P3j-g5-KLh";</note>
+      </trans-unit>
+      <trans-unit id="QeY-5M-joc.text" xml:space="preserve">
+        <source>Note</source>
+        <target>備註</target>
+        <note>Class = "UILabel"; text = "Note"; ObjectID = "QeY-5M-joc";</note>
+      </trans-unit>
+      <trans-unit id="RCh-DQ-DpL.text" xml:space="preserve">
+        <source>Expend</source>
+        <target>支出</target>
+        <note>Class = "UILabel"; text = "Expend"; ObjectID = "RCh-DQ-DpL";</note>
+      </trans-unit>
+      <trans-unit id="SdE-qU-pgm.normalTitle" xml:space="preserve">
+        <source>Jun.</source>
+        <target>6月</target>
+        <note>Class = "UIButton"; normalTitle = "Jun."; ObjectID = "SdE-qU-pgm";</note>
+      </trans-unit>
+      <trans-unit id="TRM-GD-8Z9.text" xml:space="preserve">
+        <source>Date</source>
+        <target>日期</target>
+        <note>Class = "UILabel"; text = "Date"; ObjectID = "TRM-GD-8Z9";</note>
+      </trans-unit>
+      <trans-unit id="V2X-Zc-AYX.text" xml:space="preserve">
+        <source>Income</source>
+        <target>收入</target>
+        <note>Class = "UILabel"; text = "Income"; ObjectID = "V2X-Zc-AYX";</note>
+      </trans-unit>
+      <trans-unit id="XoT-b4-rlO.text" xml:space="preserve">
+        <source>Amount</source>
+        <target>金額</target>
+        <note>Class = "UILabel"; text = "Amount"; ObjectID = "XoT-b4-rlO";</note>
+      </trans-unit>
+      <trans-unit id="Ylv-aE-Llr.title" xml:space="preserve">
+        <source>Home</source>
+        <target>主頁</target>
+        <note>Class = "UINavigationItem"; title = "Home"; ObjectID = "Ylv-aE-Llr";</note>
+      </trans-unit>
+      <trans-unit id="Zcw-xY-TKB.normalTitle" xml:space="preserve">
+        <source>Apr.</source>
+        <target>4月</target>
+        <note>Class = "UIButton"; normalTitle = "Apr."; ObjectID = "Zcw-xY-TKB";</note>
+      </trans-unit>
+      <trans-unit id="be9-Yf-f7c.title" xml:space="preserve">
+        <source>Month</source>
+        <target>月</target>
+        <note>Class = "UIBarButtonItem"; title = "Month"; ObjectID = "be9-Yf-f7c";</note>
+      </trans-unit>
+      <trans-unit id="cgg-JD-hdG.title" xml:space="preserve">
+        <source>Expend</source>
+        <target>支出</target>
+        <note>Class = "UINavigationItem"; title = "Expend"; ObjectID = "cgg-JD-hdG";</note>
+      </trans-unit>
+      <trans-unit id="dez-rC-z8Z.text" xml:space="preserve">
+        <source>10</source>
+        <target>10</target>
+        <note>Class = "UILabel"; text = "10"; ObjectID = "dez-rC-z8Z";</note>
+      </trans-unit>
+      <trans-unit id="f73-T5-dLs.text" xml:space="preserve">
+        <source>-300</source>
+        <target>-300</target>
+        <note>Class = "UILabel"; text = "-300"; ObjectID = "f73-T5-dLs";</note>
+      </trans-unit>
+      <trans-unit id="fvv-0o-Nap.text" xml:space="preserve">
+        <source>50000</source>
+        <target>50000</target>
+        <note>Class = "UILabel"; text = "50000"; ObjectID = "fvv-0o-Nap";</note>
+      </trans-unit>
+      <trans-unit id="gQQ-MF-mYN.normalTitle" xml:space="preserve">
+        <source>Jul.</source>
+        <target>7月</target>
+        <note>Class = "UIButton"; normalTitle = "Jul."; ObjectID = "gQQ-MF-mYN";</note>
+      </trans-unit>
+      <trans-unit id="geY-uf-liB.title" xml:space="preserve">
+        <source>詳情</source>
+        <target>詳情</target>
+        <note>Class = "UINavigationItem"; title = "詳情"; ObjectID = "geY-uf-liB";</note>
+      </trans-unit>
+      <trans-unit id="k6u-Lh-hwu.text" xml:space="preserve">
+        <source>this is Snack</source>
+        <target>this is Snack</target>
+        <note>Class = "UILabel"; text = "this is Snack"; ObjectID = "k6u-Lh-hwu";</note>
+      </trans-unit>
+      <trans-unit id="lL7-qv-T6U.normalTitle" xml:space="preserve">
+        <source>Nov.</source>
+        <target>11月</target>
+        <note>Class = "UIButton"; normalTitle = "Nov."; ObjectID = "lL7-qv-T6U";</note>
+      </trans-unit>
+      <trans-unit id="p4N-cT-H7M.text" xml:space="preserve">
+        <source>50000</source>
+        <target>50000</target>
+        <note>Class = "UILabel"; text = "50000"; ObjectID = "p4N-cT-H7M";</note>
+      </trans-unit>
+      <trans-unit id="r93-or-EgZ.text" xml:space="preserve">
+        <source>50000</source>
+        <target>50000</target>
+        <note>Class = "UILabel"; text = "50000"; ObjectID = "r93-or-EgZ";</note>
+      </trans-unit>
+      <trans-unit id="vyd-qD-3Xc.text" xml:space="preserve">
+        <source>Data</source>
+        <target>日期</target>
+        <note>Class = "UILabel"; text = "Data"; ObjectID = "vyd-qD-3Xc";</note>
+      </trans-unit>
+      <trans-unit id="zgz-5J-1u3.text" xml:space="preserve">
+        <source>Snack</source>
+        <target>Snack</target>
+        <note>Class = "UILabel"; text = "Snack"; ObjectID = "zgz-5J-1u3";</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="Storyboards/Base.lproj/More.storyboard" source-language="en" target-language="zh-HK" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="11.0" build-num="11A420a"/>
+    </header>
+    <body>
+      <trans-unit id="0Hu-GB-Vl1.text" xml:space="preserve">
+        <source>其他</source>
+        <target>其他</target>
+        <note>Class = "UITextField"; text = "其他"; ObjectID = "0Hu-GB-Vl1";</note>
+      </trans-unit>
+      <trans-unit id="0ed-Td-T9T.text" xml:space="preserve">
+        <source>名字</source>
+        <target>名字</target>
+        <note>Class = "UILabel"; text = "名字"; ObjectID = "0ed-Td-T9T";</note>
+      </trans-unit>
+      <trans-unit id="1ld-6R-cMs.text" xml:space="preserve">
+        <source>生日</source>
+        <target>生日</target>
+        <note>Class = "UILabel"; text = "生日"; ObjectID = "1ld-6R-cMs";</note>
+      </trans-unit>
+      <trans-unit id="7ak-4e-ocf.headerTitle" xml:space="preserve">
+        <source>Personal Information</source>
+        <target>個人檔案</target>
+        <note>Class = "UITableViewSection"; headerTitle = "Personal Information"; ObjectID = "7ak-4e-ocf";</note>
+      </trans-unit>
+      <trans-unit id="18v-e1-hej.title" xml:space="preserve">
+        <source>Language</source>
+        <target>語言</target>
+        <note>Class = "UINavigationItem"; title = "Language"; ObjectID = "18v-e1-hej";</note>
+      </trans-unit>
+      <trans-unit id="54f-rQ-R7P.headerTitle" xml:space="preserve">
+        <source>Language</source>
+        <target>語言</target>
+        <note>Class = "UITableViewSection"; headerTitle = "Language"; ObjectID = "54f-rQ-R7P";</note>
+      </trans-unit>
+      <trans-unit id="BOb-Po-FFo.text" xml:space="preserve">
+        <source>1999-01-01</source>
+        <target>1999-01-01</target>
+        <note>Class = "UITextField"; text = "1999-01-01"; ObjectID = "BOb-Po-FFo";</note>
+      </trans-unit>
+      <trans-unit id="Eis-Vw-oKm.headerTitle" xml:space="preserve">
+        <source>Smart Reminder</source>
+        <target>智能提醒</target>
+        <note>Class = "UITableViewSection"; headerTitle = "Smart Reminder"; ObjectID = "Eis-Vw-oKm";</note>
+      </trans-unit>
+      <trans-unit id="FEd-eB-DM3.text" xml:space="preserve">
+        <source>Roger Fingers</source>
+        <target>Roger Fingers</target>
+        <note>Class = "UILabel"; text = "Roger Fingers"; ObjectID = "FEd-eB-DM3";</note>
+      </trans-unit>
+      <trans-unit id="HYV-4H-ORn.text" xml:space="preserve">
+        <source>Chinese Languge</source>
+        <target>中文版</target>
+        <note>Class = "UILabel"; text = "Chinese Languge"; ObjectID = "HYV-4H-ORn";</note>
+      </trans-unit>
+      <trans-unit id="JIu-8R-LVT.text" xml:space="preserve">
+        <source>Version： 1.0</source>
+        <target>版本： 1.0</target>
+        <note>Class = "UILabel"; text = "Version： 1.0"; ObjectID = "JIu-8R-LVT";</note>
+      </trans-unit>
+      <trans-unit id="JLK-3p-xN4.title" xml:space="preserve">
+        <source>Smart Reminder</source>
+        <target>智能提醒</target>
+        <note>Class = "UINavigationItem"; title = "Smart Reminder"; ObjectID = "JLK-3p-xN4";</note>
+      </trans-unit>
+      <trans-unit id="Llr-Yd-tXl.text" xml:space="preserve">
+        <source>MMoney</source>
+        <target>MMoney</target>
+        <note>Class = "UILabel"; text = "MMoney"; ObjectID = "Llr-Yd-tXl";</note>
+      </trans-unit>
+      <trans-unit id="Vd9-Vo-PDj.text" xml:space="preserve">
+        <source>Apple ID: Chen12345@Apple.com</source>
+        <target>Apple ID: Chen12345@Apple.com</target>
+        <note>Class = "UILabel"; text = "Apple ID: Chen12345@Apple.com"; ObjectID = "Vd9-Vo-PDj";</note>
+      </trans-unit>
+      <trans-unit id="Y1y-Jn-cbm.text" xml:space="preserve">
+        <source>Label</source>
+        <note>Class = "UILabel"; text = "Label"; ObjectID = "Y1y-Jn-cbm";</note>
+      </trans-unit>
+      <trans-unit id="Yqb-Zg-Mb5.text" xml:space="preserve">
+        <source>Roger Fingers</source>
+        <target>Roger Fingers</target>
+        <note>Class = "UITextField"; text = "Roger Fingers"; ObjectID = "Yqb-Zg-Mb5";</note>
+      </trans-unit>
+      <trans-unit id="bEg-iy-PQB.text" xml:space="preserve">
+        <source>20:00</source>
+        <target>20:00</target>
+        <note>Class = "UILabel"; text = "20:00"; ObjectID = "bEg-iy-PQB";</note>
+      </trans-unit>
+      <trans-unit id="c3l-SI-8D0.text" xml:space="preserve">
+        <source>Version Code：5</source>
+        <target>Version Code：5</target>
+        <note>Class = "UILabel"; text = "Version Code：5"; ObjectID = "c3l-SI-8D0";</note>
+      </trans-unit>
+      <trans-unit id="eMV-Xg-fMX.normalTitle" xml:space="preserve">
+        <source>SURE</source>
+        <target>確定</target>
+        <note>Class = "UIButton"; normalTitle = "SURE"; ObjectID = "eMV-Xg-fMX";</note>
+      </trans-unit>
+      <trans-unit id="exj-Xs-Pj7.title" xml:space="preserve">
+        <source>Setting</source>
+        <target>設定</target>
+        <note>Class = "UINavigationItem"; title = "Setting"; ObjectID = "exj-Xs-Pj7";</note>
+      </trans-unit>
+      <trans-unit id="jft-Gc-8wa.headerTitle" xml:space="preserve">
+        <source>About</source>
+        <target>關於</target>
+        <note>Class = "UITableViewSection"; headerTitle = "About"; ObjectID = "jft-Gc-8wa";</note>
+      </trans-unit>
+      <trans-unit id="n1r-dl-l5k.text" xml:space="preserve">
+        <source>No Reminder</source>
+        <target>沒有提醒</target>
+        <note>Class = "UILabel"; text = "No Reminder"; ObjectID = "n1r-dl-l5k";</note>
+      </trans-unit>
+      <trans-unit id="qll-Wa-xyu.title" xml:space="preserve">
+        <source>個人檔案</source>
+        <target>個人檔案</target>
+        <note>Class = "UINavigationItem"; title = "個人檔案"; ObjectID = "qll-Wa-xyu";</note>
+      </trans-unit>
+      <trans-unit id="sPx-XI-uxY.text" xml:space="preserve">
+        <source>性別</source>
+        <target>性別</target>
+        <note>Class = "UILabel"; text = "性別"; ObjectID = "sPx-XI-uxY";</note>
+      </trans-unit>
+      <trans-unit id="sQC-c7-K1j.title" xml:space="preserve">
+        <source>設置</source>
+        <target>設置</target>
+        <note>Class = "UITabBarItem"; title = "設置"; ObjectID = "sQC-c7-K1j";</note>
+      </trans-unit>
+      <trans-unit id="zii-03-opz.normalTitle" xml:space="preserve">
+        <source>+ Create Reminder</source>
+        <target>+ 創造提醒</target>
+        <note>Class = "UIButton"; normalTitle = "+ Create Reminder"; ObjectID = "zii-03-opz";</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="Storyboards/Money Management/Base.lproj/Category.storyboard" source-language="en" target-language="zh-HK" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="11.0" build-num="11A420a"/>
+    </header>
+    <body>
+      <trans-unit id="1Ka-U5-bZw.text" xml:space="preserve">
+        <source>Name</source>
+        <target>名稱</target>
+        <note>Class = "UILabel"; text = "Name"; ObjectID = "1Ka-U5-bZw";</note>
+      </trans-unit>
+      <trans-unit id="CzX-IR-V5T.text" xml:space="preserve">
+        <source>Transportation</source>
+        <target>交通</target>
+        <note>Class = "UILabel"; text = "Transportation"; ObjectID = "CzX-IR-V5T";</note>
+      </trans-unit>
+      <trans-unit id="E36-x2-xgF.placeholder" xml:space="preserve">
+        <source>分類名稱</source>
+        <target>分類名稱</target>
+        <note>Class = "UITextField"; placeholder = "分類名稱"; ObjectID = "E36-x2-xgF";</note>
+      </trans-unit>
+      <trans-unit id="Fv2-Nl-2Ze.title" xml:space="preserve">
+        <source>類別</source>
+        <target>類別</target>
+        <note>Class = "UITabBarItem"; title = "類別"; ObjectID = "Fv2-Nl-2Ze";</note>
+      </trans-unit>
+      <trans-unit id="KDu-Cc-fG5.title" xml:space="preserve">
+        <source>Item</source>
+        <target>Item</target>
+        <note>Class = "UIBarButtonItem"; title = "Item"; ObjectID = "KDu-Cc-fG5";</note>
+      </trans-unit>
+      <trans-unit id="e5j-Es-5L5.segmentTitles[0]" xml:space="preserve">
+        <source>Expend</source>
+        <target>支出</target>
+        <note>Class = "UISegmentedControl"; e5j-Es-5L5.segmentTitles[0] = "Expend"; ObjectID = "e5j-Es-5L5";</note>
+      </trans-unit>
+      <trans-unit id="e5j-Es-5L5.segmentTitles[1]" xml:space="preserve">
+        <source>Income</source>
+        <target>收入</target>
+        <note>Class = "UISegmentedControl"; e5j-Es-5L5.segmentTitles[1] = "Income"; ObjectID = "e5j-Es-5L5";</note>
+      </trans-unit>
+      <trans-unit id="hUK-pM-u4G.normalTitle" xml:space="preserve">
+        <source>+ Add New Category</source>
+        <target>+ 加新的類別</target>
+        <note>Class = "UIButton"; normalTitle = "+ Add New Category"; ObjectID = "hUK-pM-u4G";</note>
+      </trans-unit>
+      <trans-unit id="uDo-vp-aZe.title" xml:space="preserve">
+        <source>Category Setting</source>
+        <target>類別設定</target>
+        <note>Class = "UINavigationItem"; title = "Category Setting"; ObjectID = "uDo-vp-aZe";</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="Storyboards/Money Management/Base.lproj/Diagram.storyboard" source-language="en" target-language="zh-HK" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="11.0" build-num="11A420a"/>
+    </header>
+    <body>
+      <trans-unit id="3pI-6e-cF3.text" xml:space="preserve">
+        <source>93</source>
+        <target>93</target>
+        <note>Class = "UILabel"; text = "93"; ObjectID = "3pI-6e-cF3";</note>
+      </trans-unit>
+      <trans-unit id="5d1-Fr-IVY.text" xml:space="preserve">
+        <source>Foods 83%</source>
+        <target>Foods 83%</target>
+        <note>Class = "UILabel"; text = "Foods 83%"; ObjectID = "5d1-Fr-IVY";</note>
+      </trans-unit>
+      <trans-unit id="6Go-nC-Q4B.title" xml:space="preserve">
+        <source>9月</source>
+        <target>9月</target>
+        <note>Class = "UINavigationItem"; title = "9月"; ObjectID = "6Go-nC-Q4B";</note>
+      </trans-unit>
+      <trans-unit id="LLc-Ch-ECL.title" xml:space="preserve">
+        <source>圖表</source>
+        <target>圖表</target>
+        <note>Class = "UITabBarItem"; title = "圖表"; ObjectID = "LLc-Ch-ECL";</note>
+      </trans-unit>
+      <trans-unit id="P9n-Sn-csV.text" xml:space="preserve">
+        <source>Food 53%</source>
+        <target>Food 53%</target>
+        <note>Class = "UILabel"; text = "Food 53%"; ObjectID = "P9n-Sn-csV";</note>
+      </trans-unit>
+      <trans-unit id="dc2-A3-d4c.text" xml:space="preserve">
+        <source>3.10</source>
+        <target>3.10</target>
+        <note>Class = "UILabel"; text = "3.10"; ObjectID = "dc2-A3-d4c";</note>
+      </trans-unit>
+      <trans-unit id="dfN-cw-Qo8.text" xml:space="preserve">
+        <source>93:00</source>
+        <target>93:00</target>
+        <note>Class = "UILabel"; text = "93:00"; ObjectID = "dfN-cw-Qo8";</note>
+      </trans-unit>
+      <trans-unit id="h2y-dR-xwz.segmentTitles[0]" xml:space="preserve">
+        <source>Expend List</source>
+        <target>支出列表</target>
+        <note>Class = "UISegmentedControl"; h2y-dR-xwz.segmentTitles[0] = "Expend List"; ObjectID = "h2y-dR-xwz";</note>
+      </trans-unit>
+      <trans-unit id="h2y-dR-xwz.segmentTitles[1]" xml:space="preserve">
+        <source>Income List</source>
+        <target>收入列表</target>
+        <note>Class = "UISegmentedControl"; h2y-dR-xwz.segmentTitles[1] = "Income List"; ObjectID = "h2y-dR-xwz";</note>
+      </trans-unit>
+      <trans-unit id="iKU-gS-c4j.text" xml:space="preserve">
+        <source>Foods</source>
+        <target>Foods</target>
+        <note>Class = "UILabel"; text = "Foods"; ObjectID = "iKU-gS-c4j";</note>
+      </trans-unit>
+      <trans-unit id="mHn-Hm-0Zi.text" xml:space="preserve">
+        <source>Average Day:</source>
+        <target>平均每天:</target>
+        <note>Class = "UILabel"; text = "Average Day:"; ObjectID = "mHn-Hm-0Zi";</note>
+      </trans-unit>
+      <trans-unit id="s3c-7s-CYW.text" xml:space="preserve">
+        <source>2019-9-1</source>
+        <target>2019-9-1</target>
+        <note>Class = "UILabel"; text = "2019-9-1"; ObjectID = "s3c-7s-CYW";</note>
+      </trans-unit>
+      <trans-unit id="v0H-D0-9Zh.text" xml:space="preserve">
+        <source>Total:</source>
+        <target>總額:</target>
+        <note>Class = "UILabel"; text = "Total:"; ObjectID = "v0H-D0-9Zh";</note>
+      </trans-unit>
+      <trans-unit id="wGq-ep-VR4.text" xml:space="preserve">
+        <source>93</source>
+        <target>93</target>
+        <note>Class = "UILabel"; text = "93"; ObjectID = "wGq-ep-VR4";</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

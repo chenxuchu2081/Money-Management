@@ -1,0 +1,84 @@
+
+/* Class = "UITextField"; text = "其他"; ObjectID = "0Hu-GB-Vl1"; */
+"0Hu-GB-Vl1.text" = "其他";
+
+/* Class = "UILabel"; text = "名字"; ObjectID = "0ed-Td-T9T"; */
+"0ed-Td-T9T.text" = "名字";
+
+/* Class = "UINavigationItem"; title = "Language"; ObjectID = "18v-e1-hej"; */
+"18v-e1-hej.title" = "語言";
+
+/* Class = "UILabel"; text = "生日"; ObjectID = "1ld-6R-cMs"; */
+"1ld-6R-cMs.text" = "生日";
+
+/* Class = "UITableViewSection"; headerTitle = "Language"; ObjectID = "54f-rQ-R7P"; */
+"54f-rQ-R7P.headerTitle" = "語言";
+
+/* Class = "UITableViewSection"; headerTitle = "Personal Information"; ObjectID = "7ak-4e-ocf"; */
+"7ak-4e-ocf.headerTitle" = "個人檔案";
+
+/* Class = "UITextField"; text = "1999-01-01"; ObjectID = "BOb-Po-FFo"; */
+"BOb-Po-FFo.text" = "1999-01-01";
+
+/* Class = "UITableViewSection"; headerTitle = "Smart Reminder"; ObjectID = "Eis-Vw-oKm"; */
+"Eis-Vw-oKm.headerTitle" = "智能提醒";
+
+/* Class = "UILabel"; text = "Roger Fingers"; ObjectID = "FEd-eB-DM3"; */
+"FEd-eB-DM3.text" = "Roger Fingers";
+
+/* Class = "UILabel"; text = "Chinese Languge"; ObjectID = "HYV-4H-ORn"; */
+"HYV-4H-ORn.text" = "中文版";
+
+/* Class = "UILabel"; text = "Version： 1.0"; ObjectID = "JIu-8R-LVT"; */
+"JIu-8R-LVT.text" = "版本： 1.0";
+
+/* Class = "UINavigationItem"; title = "Smart Reminder"; ObjectID = "JLK-3p-xN4"; */
+"JLK-3p-xN4.title" = "智能提醒";
+
+/* Class = "UILabel"; text = "MMoney"; ObjectID = "Llr-Yd-tXl"; */
+"Llr-Yd-tXl.text" = "MMoney";
+
+/* Class = "UILabel"; text = "Apple ID: Chen12345@Apple.com"; ObjectID = "Vd9-Vo-PDj"; */
+"Vd9-Vo-PDj.text" = "Apple ID: Chen12345@Apple.com";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Y1y-Jn-cbm"; */
+"Y1y-Jn-cbm.text" = "Label";
+
+/* Class = "UITextField"; text = "Roger Fingers"; ObjectID = "Yqb-Zg-Mb5"; */
+"Yqb-Zg-Mb5.text" = "Roger Fingers";
+
+/* Class = "UILabel"; text = "20:00"; ObjectID = "bEg-iy-PQB"; */
+"bEg-iy-PQB.text" = "20:00";
+
+/* Class = "UILabel"; text = "Version Code：5"; ObjectID = "c3l-SI-8D0"; */
+"c3l-SI-8D0.text" = "版本代號：5";
+
+/* Class = "UIButton"; normalTitle = "SURE"; ObjectID = "eMV-Xg-fMX"; */
+"eMV-Xg-fMX.normalTitle" = "確定";
+
+/* Class = "UINavigationItem"; title = "Setting"; ObjectID = "exj-Xs-Pj7"; */
+"exj-Xs-Pj7.title" = "設置";
+
+/* Class = "UITableViewSection"; headerTitle = "About"; ObjectID = "jft-Gc-8wa"; */
+"jft-Gc-8wa.headerTitle" = "關於";
+
+/* Class = "UILabel"; text = "No Reminder"; ObjectID = "n1r-dl-l5k"; */
+"n1r-dl-l5k.text" = "沒有提醒";
+
+/* Class = "UINavigationItem"; title = "個人檔案"; ObjectID = "qll-Wa-xyu"; */
+"qll-Wa-xyu.title" = "個人檔案";
+
+/* Class = "UILabel"; text = "性別"; ObjectID = "sPx-XI-uxY"; */
+"sPx-XI-uxY.text" = "性別";
+
+/* Class = "UITabBarItem"; title = "設置"; ObjectID = "sQC-c7-K1j"; */
+"sQC-c7-K1j.title" = "設置";
+
+/* Class = "UIButton"; normalTitle = "+ Create Reminder"; ObjectID = "zii-03-opz"; */
+"zii-03-opz.normalTitle" = "+ 創造提醒";
+
+"login_successful" = "登入成功"
+"login_welcome" = "歡迎:"
+"login_fail" = "登入失敗"
+"login_fail_reason" = "原因:"
+

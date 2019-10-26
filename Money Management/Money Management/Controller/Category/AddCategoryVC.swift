@@ -25,61 +25,50 @@ class AddCategoryVC: UIViewController, UICollectionViewDelegate, UICollectionVie
     let app = UIApplication.shared.delegate as! AppDelegate
     var viewContext: NSManagedObjectContext!
     
-    let category = [CategoryPreview(title: "餐廳", images: [
-       "Category/Restaurant/001","Category/Restaurant/002",
-       "Category/Restaurant/003","Category/Restaurant/004",
-       "Category/Restaurant/005","Category/Restaurant/006",
-        "Category/Restaurant/007","Category/Restaurant/008",
-        "Category/Restaurant/009","Category/Restaurant/0010",
-        "Category/Restaurant/0011","Category/Restaurant/0012",
-       "Category/Restaurant/0013","Category/Restaurant/0014",
-       "Category/Restaurant/0015","Category/Restaurant/0016",
-        "Category/Restaurant/0017","Category/Restaurant/0018",
-        "Category/Restaurant/0019","Category/Restaurant/0020"]),
-                    CategoryPreview(title: "購物", images: [
-            "Category/publicSerive/01" ,"Category/publicSerive/02","Category/publicSerive/03","Category/publicSerive/04","Category/publicSerive/05","Category/publicSerive/06","Category/publicSerive/07","Category/publicSerive/08","Category/publicSerive/09","Category/publicSerive/10"]),
-                    CategoryPreview(title: "娛樂", images: [
-            "Category/enterntainment/01", "Category/enterntainment/02",
-            "Category/enterntainment/03", "Category/enterntainment/04",
-            "Category/enterntainment/05", "Category/enterntainment/06"]),
-                    CategoryPreview(title: "交通", images: [
-        "Category/transportation/01", "Category/transportation/02", "Category/transportation/03","Category/transportation/04","Category/transportation/05","Category/transportation/06","Category/transportation/07","Category/transportation/08"]),
-                    CategoryPreview(title: "健康", images: [
-        "Category/health/01", "Category/health/02","Category/health/03"]),
-                    CategoryPreview(title: "家庭", images: [
-"Category/family/04","Category/family/05","Category/family/06","Category/family/07","Category/family/08","Category/family/09"]),
-                    CategoryPreview(title: "電子產品", images: [
-                    "Category/electronic/01", "Category/electronic/02", "Category/electronic/03"]),
-                    CategoryPreview(title: "教育", images: [
-                "Category/education/01", "Category/education/02", "Category/education/03","Category/education/04"]),
-                    CategoryPreview(title: "個人", images: ["Category/personal"]),
-                    CategoryPreview(title: "生活", images: []),
-                    CategoryPreview(title: "收入", images: [])]
+    var category = [CategoryPreview]()
+    
+//                    CategoryPreview(title: "個人", images: ["Category/personal"])
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         viewContext = app.persistentContainer.viewContext
        
-        
-        
-//        let fm = FileManager.default
-//        let path = NSHomeDirectory() + "/Documents/restaurant"
-//
-//        do {
-//            let files = try fm.contentsOfDirectory(atPath: path)
-//            for file in files{
-//                print(file)
-//            }
-//        }catch{
-//            print(error)
-//        }
-//       print(path)
-        
+        print("testing json")
+        let data = JsonRead.readJSONFromFile(fileName: "Category")
+        if let jsonResult = data as? Dictionary<String, AnyObject>{
+            //let entainternment = jsonResult["entertainment"] as Any
+            for (key, value) in jsonResult{
+                
+                addCategory(title: key, key: key, value: value)
+//                if key == "entertainment"{
+//                    addCategory(title: "餐廳", key: key, value: value)
+//                }else if key == "shopping"{
+//                    addCategory(title: "購物", key: key, value: value)
+//                }
+                  
+                print("json key: \(key)")
+                print("json value: \(value)")
+            }
+        }
     }
     
-
+    func addCategory(title: String, key: String, value: AnyObject){
+        
+            var CategoryObject = CategoryPreview(title: title, images: [])
+            if let values = value as? Array<String>{
+                for x in values{
+                CategoryObject.images.append("Category/\(key)/\(x)")
+                    print("Image url is Category/\(key)/\(x)")
+                }
+            category.append(CategoryObject)
+        }
+    }
+    
+    
+    
     //获取分区数
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return category.count
@@ -155,7 +144,7 @@ class AddCategoryVC: UIViewController, UICollectionViewDelegate, UICollectionVie
                 entity.image = categoryImage?.jpegData(compressionQuality: 0.9) as NSData?
             }
                 app.saveContext()
-            print("Save Succussful")
+                AlertMessages.showToast(msg: "Expense Category Save Successfully!", seconds: 1, vc: self)
             } else if isWhichSegmentName == "Income"{
                 let entity = NSEntityDescription.insertNewObject(forEntityName: "Category_Income", into: viewContext) as! Category_Income
                 entity.name = name
@@ -163,7 +152,7 @@ class AddCategoryVC: UIViewController, UICollectionViewDelegate, UICollectionVie
                     entity.image = categoryImage?.jpegData(compressionQuality: 0.9) as NSData?
                 }
                 app.saveContext()
-                print("Save Succussful")
+                AlertMessages.showToast(msg: "Income Category Save Successfully!", seconds: 1, vc: self)
             }
             //query()
 //            }else{

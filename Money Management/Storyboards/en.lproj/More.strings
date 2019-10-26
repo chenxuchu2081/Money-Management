@@ -1,0 +1,19 @@
+/* Class = "UILabel"; text = "名字"; ObjectID = "0ed-Td-T9T"; */
+"0ed-Td-T9T.text" = "name";
+
+/* Class = "UITextField"; text = "其他"; ObjectID = "0Hu-GB-Vl1"; */
+"0Hu-GB-Vl1.text" = "other";
+
+/* Class = "UILabel"; text = "生日"; ObjectID = "1ld-6R-cMs"; */
+"1ld-6R-cMs.text" = "birth";
+
+/* Class = "UINavigationItem"; title = "個人檔案"; ObjectID = "qll-Wa-xyu"; */
+"qll-Wa-xyu.title" = "Personal Information";
+
+/* Class = "UILabel"; text = "性別"; ObjectID = "sPx-XI-uxY"; */
+"sPx-XI-uxY.text" = "Gender";
+
+/* Class = "UITabBarItem"; title = "設置"; ObjectID = "sQC-c7-K1j"; */
+"sQC-c7-K1j.title" = "Setting";
+
+

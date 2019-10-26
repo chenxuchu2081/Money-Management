@@ -44,4 +44,31 @@ class AlertMessages{
         vc.present(alert, animated:  true, completion: nil)
     }
     
+    static public func showToast(msg: String, seconds: Double, vc: UIViewController){
+        let alert = UIAlertController(title: nil, message: msg, preferredStyle: .alert)
+        alert.view.backgroundColor = UIColor(displayP3Red: 88.0/255, green: 204.0/255, blue: 237.0/255, alpha: 0.5)
+        //alert.view.alpha = 0.5
+        alert.view.layer.cornerRadius = 15
+        
+        //style font
+        let toastLb = UILabel()
+        toastLb.numberOfLines = 0
+        toastLb.lineBreakMode = .byWordWrapping
+        toastLb.backgroundColor = UIColor.black.withAlphaComponent(0.7)
+        toastLb.textColor = UIColor.white
+        toastLb.layer.cornerRadius = 10.0
+        toastLb.textAlignment = .center
+        toastLb.font = UIFont.systemFont(ofSize: 15.0)
+        toastLb.layer.masksToBounds = true
+        alert.view.addSubview(toastLb)
+        
+        vc.present(alert, animated: true, completion: nil)
+        
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + seconds){
+            alert.dismiss(animated: true, completion: nil)
+        }
+        
+    }
+    
+    
 }
