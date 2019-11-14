@@ -16,7 +16,7 @@ is the process of budgeting, saving, investing, spending or otherwise overseeing
 ## Previews
 + Insert / Delete / Edit Banlance
 + Charts
-+ Setting Category
++ Custimize Category
 + Export Form (Excel / Json)
 + Cloud Storage(Synchronous Data) / Language Version / Local Notification 
 
