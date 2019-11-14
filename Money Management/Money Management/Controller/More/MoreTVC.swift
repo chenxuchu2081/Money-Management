@@ -27,7 +27,7 @@ class MoreTVC: UITableViewController {
         // Do any additional setup after loading the view.
         _ = NSLocale.current.languageCode
         let pre = Locale.preferredLanguages[0]
-        LanguageLabel.text = "Current \((pre == "en" ? "English" : "Chinese")) Language"
+        LanguageLabel.text = "\((pre == "en" ? "English Language" : "中文語言"))"
         
     }
     

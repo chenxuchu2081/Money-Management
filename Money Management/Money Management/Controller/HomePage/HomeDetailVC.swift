@@ -16,6 +16,9 @@ class HomeDetailVC: UIViewController {
 //    var detailDate: Date?
 //    var dateilDesc: String?
     
+    public var expendName : String? = NSLocalizedString("Type_Expense", comment: "")
+    public var incomeName : String? = NSLocalizedString("Type_Income", comment: "")
+    
     var detail: Detail!
     
     var deleteObjectId: String?
@@ -57,7 +60,12 @@ class HomeDetailVC: UIViewController {
             date = detail.detailDate!
             deteilDesc.text = detail.dateilDesc
             desc = detail.dateilDesc
-            detailType.text = detail.detailType
+            
+            if detail.detailType == incomeName{
+                detailType.text = incomeName
+            }else if detail.detailType == expendName{
+                detailType.text = expendName
+            }
             type = detail.detailType
         }
     }

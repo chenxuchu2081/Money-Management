@@ -1,0 +1,43 @@
+/* AccountVC.swift*/
+"prompt_login" = "please login in your account";
+
+"login_successful" = "Login suceesfully";
+"login_welcome" = "Welcome:";
+"login_fail" = "Login failed";
+"login_fail_reason" = "Reason:";
+
+"synchronize_Options" = "You have not synced to the local area yet. You can choose to upload the local ledger to the cloud (overwriting the original book on the cloud), or syncing the ledger on the cloud to the local (overwriting the original local ledger).";
+"synchronize" = "Synchronize";
+"syncToMobile" = "📲Cloud are synchronized to the local";
+"syncToCloud" = " 🌐Upload local to the cloud";
+"sure" = "✅Confirm";
+"cancel" = "❌Cancel";
+"HowMuch_load_cloud" = "Are you sure to sync your spending records from the cloud to your local ledger? The local ledger will be overwritten.";
+"HowMuch_Upload_cloud" = "Are you sure to upload %d purchase records locally to your cloud account? The data on the cloud will be overwritten.";
+
+"No upload for No Data" = "There is no consumption record in your mobile phone and cannot be uploaded.";
+"waiting for upload" = "The %d consumption record is being uploaded to the cloud, please be patient.";
+
+/*HomePage*/
+"month" = " Month";
+"price" = "price";
+"note" = "notes (optional)";
+"date" = "date";
+"edit_data" = "Modify this information?";
+"nothing" = "no";
+"update_error" = "Update Error";
+"space" = "the price space should be filled in";
+"income" = "income";
+"expense" = "expenditure";
+"input_data" = "Enter this information?";
+
+/*languageVC.swift*/
+"NowLanguage" = "Current Language is";
+"changeToEng" = "The language was changed to English, App will be restart";
+"changeToChi" = "The language was changed to Chinese, App will be restart";
+"notice" = "Notice⚠️";
+
+
+/*important word*/
+"Type_Income" = "Income";
+"Type_Expense" = "Expend";

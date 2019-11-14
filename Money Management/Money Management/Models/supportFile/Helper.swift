@@ -47,7 +47,8 @@ class Helper: NSObject{
     
     static func getComponentOfDate(Date: Date, WhichComponent: String) -> Int{
         let calendar = Calendar.current
-        let timeZone = TimeZone.init(identifier: "UTC")
+        let currentTimeZone = TimeZone.current.identifier
+        let timeZone = TimeZone.init(identifier: currentTimeZone)
         let componets = calendar.dateComponents(in: timeZone!, from: Date)
         
         switch WhichComponent {
@@ -59,6 +60,8 @@ class Helper: NSObject{
             return componets.day!
         case "hour":
             return componets.hour!
+        case "minute":
+            return componets.minute!
         case "second":
             return componets.second!
         case "weekday":

@@ -34,6 +34,16 @@ class ViewStyle{
         return CGAffineTransform(scaleX: 0.5, y: 0.5)
     }
     
+//    static func AmzingView(myView: UIView){
+//        myView.layer.shadowPath =
+//              UIBezierPath(roundedRect: myView.bounds,
+//              cornerRadius: myView.layer.cornerRadius).cgPath
+//        myView.layer.shadowColor = UIColor.black.cgColor
+//        myView.layer.shadowOpacity = 0.8
+//        myView.layer.shadowOffset = CGSize(width: 10, height: 10)
+//        myView.layer.shadowRadius = 5
+//        myView.layer.masksToBounds = true
+//    }
     
 }
 
@@ -44,4 +54,5 @@ extension UIView {
             self.alpha = self.alpha == 1 ? 0 : 1
         }
     }
+    
 }

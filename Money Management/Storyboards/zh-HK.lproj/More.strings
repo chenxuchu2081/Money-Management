@@ -77,8 +77,4 @@
 /* Class = "UIButton"; normalTitle = "+ Create Reminder"; ObjectID = "zii-03-opz"; */
 "zii-03-opz.normalTitle" = "+ 創造提醒";
 
-"login_successful" = "登入成功"
-"login_welcome" = "歡迎:"
-"login_fail" = "登入失敗"
-"login_fail_reason" = "原因:"
 

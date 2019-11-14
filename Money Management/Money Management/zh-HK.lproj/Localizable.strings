@@ -1,0 +1,44 @@
+/* AccountVC.swift*/
+"prompt_login" = "请登录您的帐户";
+
+"login_successful" = "登入成功";
+"login_welcome" = "歡迎:";
+"login_fail" = "登入失敗";
+"login_fail_reason" = "原因:";
+"synchronize_Options" = "您还未曾同步到本地过。您可以选择将本地账本上传到云（覆盖掉原来在云上的账本），或者将云上的账本同步到本地（覆盖掉原来在本地的账本).";
+"synchronize" = "同步";
+"syncToMobile" = "📲云上账本同步到本地";
+"syncToCloud" = " 🌐本地账本上传到云上";
+"sure" = "✅確定";
+"cancel" = "❌取消";
+"HowMuch_load_cloud" = "确定将消费记录从云上同步到本地账本？本地账本将被覆盖。";
+"HowMuch_Upload_cloud" = "确定将 %d 条消费记录从本地上传到云上账本？云上账本将被覆盖。";
+"No upload for No Data" = "您的手机里没有消费记录，不能上传。";
+"waiting for upload" = "正在上传第 %d 条消费记录到云，请耐心等候。";
+
+/*HomePage*/
+"month" = " 月";
+"price" = "價錢";
+"note" = "備忘(可選)";
+"date" = "日期";
+"edit_data" = "修改這筆資料？";
+"nothing" = "沒有";
+"update_error" = "更新錯誤";
+"space" = "價錢不能留空";
+"income" = "收入";
+"expense" = "支出";
+"input_data" = "輸入這筆資料？";
+
+/*languageVC.swift*/
+"NowLanguage" ="当前语言是： ";
+"changeToEng" ="语言已更改为英语，将重新启动应用程序";
+"changeToChi" ="语言已更改为中文，应用程式将重新启动";
+"notice" = "注意⚠️";
+
+/*important word*/
+"Type_Income" = "支出";
+"Type_Expense" = "支出";
+
+
+/*NotificationVC.swift*/
+

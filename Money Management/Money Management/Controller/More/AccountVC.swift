@@ -174,15 +174,16 @@ class AccountVC: UIViewController, GIDSignInDelegate{
     
    
     func SynchronizeOptions(){
-        let msg = "您还未曾同步到本地过。您可以选择将本地账本上传到云（覆盖掉原来在云上的账本），或者将云上的账本同步到本地（覆盖掉原来在本地的账本)."
-        let alert = UIAlertController(title: "同步", message: msg, preferredStyle: .actionSheet)
-        let syncToMobile = UIAlertAction(title: "📲云上账本同步到本地", style: .default, handler: {(UIAlertAction) in
+        let msg = NSLocalizedString("synchronize_Options", comment: "")
+        let localizeTitle = NSLocalizedString("synchronize", comment: "")
+        let alert = UIAlertController(title: localizeTitle, message: msg, preferredStyle: .actionSheet)
+        let syncToMobile = UIAlertAction(title: NSLocalizedString("syncToMobile", comment: ""), style: .default, handler: {(UIAlertAction) in
             self.syncToMobile()
         })
-        let syncToCloud = UIAlertAction(title: " 🌐本地账本上传到云上", style: .default, handler: {(UIAlertAction) in
+        let syncToCloud = UIAlertAction(title: NSLocalizedString("syncToCloud", comment: ""), style: .default, handler: {(UIAlertAction) in
             self.syncToCloud()
         })
-        let cancel = UIAlertAction(title: "❌取消", style: .cancel, handler: nil)
+        let cancel = UIAlertAction(title: NSLocalizedString("cancle", comment: ""), style: .cancel, handler: nil)
         alert.addAction(syncToMobile)
         alert.addAction(syncToCloud)
         alert.addAction(cancel)
@@ -194,17 +195,17 @@ class AccountVC: UIViewController, GIDSignInDelegate{
         let user = Auth.auth().currentUser
         if let user = user{
             let userID = user.uid
-            let msg = "确定将 条消费记录从云上同步到本地账本？本地账本将被覆盖。"
-                           let alert = UIAlertController(title: "同步", message: msg, preferredStyle: .alert)
-                           let sure = UIAlertAction(title: "✅確定", style: .default, handler: {(UIAlertAction) in
+            let msg = NSLocalizedString("HowMuch_load_cloud", comment: "")
+                           let alert = UIAlertController(title: NSLocalizedString("synchronize", comment: ""), message: msg, preferredStyle: .alert)
+                           let sure = UIAlertAction(title: NSLocalizedString("sure", comment: ""), style: .default, handler: {(UIAlertAction) in
                             self.SynchronizingLoad(cloudToMobile: true, userID: userID)
                            })
-                           let cancle = UIAlertAction(title: "❌取消", style: .cancel, handler: nil)
+                           let cancle = UIAlertAction(title: NSLocalizedString("cancel", comment: ""), style: .cancel, handler: nil)
                            alert.addAction(sure)
                            alert.addAction(cancle)
                            present(alert, animated: true, completion: nil)
         }else{
-            AlertMessages.showToast(msg: "please login in your account", seconds: 1, vc: self)
+            AlertMessages.showToast(msg: NSLocalizedString("prompt_login", comment: ""), seconds: 1, vc: self)
         }
     }
     
@@ -215,24 +216,24 @@ class AccountVC: UIViewController, GIDSignInDelegate{
         if let user = user{
             let userID = user.uid
             if MaxNumber > 0{
-                msg = "确定将\(MaxNumber)条消费记录从本地上传到云上账本？云上账本将被覆盖。"
-                let alert = UIAlertController(title: "同步", message: msg, preferredStyle: .alert)
-                let sure = UIAlertAction(title: "✅確定", style: .default, handler: {(UIAlertAction) in
+                msg = NSLocalizedString("HowMuch_Upload_cloud", comment: "")
+                let alert = UIAlertController(title: NSLocalizedString("synchronize", comment: ""), message: String.localizedStringWithFormat(msg!, MaxNumber), preferredStyle: .alert)
+                let sure = UIAlertAction(title: NSLocalizedString("sure", comment: ""), style: .default, handler: {(UIAlertAction) in
                     self.SynchronizingUpload(mobileToCloud: true, userID: userID)
                 })
-                let cancle = UIAlertAction(title: "❌取消", style: .cancel, handler: nil)
+                let cancle = UIAlertAction(title: NSLocalizedString("cancel", comment: ""), style: .cancel, handler: nil)
                 alert.addAction(sure)
                 alert.addAction(cancle)
                 present(alert, animated: true, completion: nil)
             }else{
-                msg = "您的手机里没有消费记录，不能上传。"
-                let alert = UIAlertController(title: "同步", message: msg, preferredStyle: .alert)
-                let cancle = UIAlertAction(title: "❌取消", style: .cancel, handler: nil)
+                msg = NSLocalizedString("No upload for No Data", comment: "")
+                let alert = UIAlertController(title: NSLocalizedString("synchronize", comment: ""), message: msg, preferredStyle: .alert)
+                let cancle = UIAlertAction(title: NSLocalizedString("cancel", comment: ""), style: .cancel, handler: nil)
                 alert.addAction(cancle)
                 present(alert, animated: true, completion: nil)
             }
         }else{
-            AlertMessages.showToast(msg: "please login in your account", seconds: 1, vc: self)
+            AlertMessages.showToast(msg: NSLocalizedString("prompt_login", comment: ""), seconds: 1, vc: self)
         }
     }
     
@@ -241,15 +242,15 @@ class AccountVC: UIViewController, GIDSignInDelegate{
         let MaxNumber = fetchSumCount()
        // let storageRef = storage.reference()// Create a root reference
         
-                    msg = "正在上传第\(MaxNumber)条消费记录到云，请耐心等候。"
-            
+                    msg = NSLocalizedString("waiting for upload", comment: "")
+        let massage = String.localizedStringWithFormat(msg!, MaxNumber)
                 
                    let anotherQueue = DispatchQueue(label: "com.appcoda.anotherQueue", qos: .utility)
                    anotherQueue.async {
                        self.delete_Storage_File(userId: userID);print("first")
                    }
                    
-                   AlertMessages.showToast(msg: msg!, seconds: 1, vc: self)
+                   AlertMessages.showToast(msg: massage, seconds: 1, vc: self)
                    getCoreDataForUpload(userID: userID);print("third")
                    
                    

@@ -20,7 +20,8 @@ class LanguageVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
         // Do any additional setup after loading the view.
         let locale = NSLocale.current.languageCode
         let pre = Locale.preferredLanguages[0]
-        currentLanguageLabel.text = "Current \((pre == "en" ? "English" : "Chinese")) Language"
+        let localizeLanguage = NSLocalizedString("NowLanguage", comment: "")
+        currentLanguageLabel.text = "\(localizeLanguage) \((pre == "en" ? "English" : "Chinese"))"
         if pre == "zh-HK"{
             language[0] = "Chinese"
             language[1] = "English"
@@ -46,13 +47,13 @@ class LanguageVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
             //this method of change language need to restart the app
             UserDefaults.standard.set(["en"], forKey: "AppleLanguages")
             UserDefaults.standard.synchronize()
-            alertWithKillApp(msg: "The language was changed to English, App will be restart")
+            alertWithKillApp(msg: NSLocalizedString("changeToEng", comment: ""))
            
           // exit(0) shut down app
         }else{
             UserDefaults.standard.set(["zh-HK"], forKey: "AppleLanguages")
             UserDefaults.standard.synchronize()
-            alertWithKillApp(msg: "The language was changed to Chinese, App will be restart")
+            alertWithKillApp(msg: NSLocalizedString("changeToChi", comment: ""))
            
             //exit(0)
         }
@@ -60,8 +61,8 @@ class LanguageVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
     }
     
     private func alertWithKillApp(msg: String){
-        let alert = UIAlertController(title: "Notice⚠️", message: msg, preferredStyle: .alert)
-        let exitAppAction = UIAlertAction(title: "Confirm", style: .default, handler: {_ in exit(0)} )
+        let alert = UIAlertController(title: NSLocalizedString("notice", comment: ""), message: msg, preferredStyle: .alert)
+        let exitAppAction = UIAlertAction(title: NSLocalizedString("sure", comment: ""), style: .default, handler: {_ in exit(0)} )
         alert.addAction(exitAppAction)
         present(alert, animated: true, completion: nil)
     }

@@ -19,7 +19,7 @@ class HomePageVC: UIViewController,UITableViewDelegate, UITableViewDataSource, N
     @IBOutlet weak var expendLable: UILabel!
     @IBOutlet weak var incomeLabel: UILabel!
     @IBOutlet weak var popertyLabel: UILabel!
-    
+
     @IBOutlet weak var showMonth: UIBarButtonItem!
     
     let app = UIApplication.shared.delegate as! AppDelegate
@@ -28,13 +28,16 @@ class HomePageVC: UIViewController,UITableViewDelegate, UITableViewDataSource, N
     var controller = NSFetchedResultsController<PopertyItem>()
     let fetchRequest = NSFetchRequest<PopertyItem>(entityName: "PopertyItem")
     
+   public var expendName : String? = NSLocalizedString("Type_Expense", comment: "")
+   public var incomeName : String? = NSLocalizedString("Type_Income", comment: "")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         viewContext = app.persistentContainer.viewContext
        fetchExpend()
-        showMonth.title = PopoverDateVC.passNowMonth! + "月"
-        
+        showMonth.title = PopoverDateVC.passNowMonth! + NSLocalizedString("month", comment: "")
+       
       
     }
     
@@ -91,7 +94,7 @@ class HomePageVC: UIViewController,UITableViewDelegate, UITableViewDataSource, N
         popertyLabel.text = String(calculator.totalProperty!)
         
         //set bar title
-        showMonth.title = months! + "月"
+        showMonth.title = months! + NSLocalizedString("month", comment: "")
         
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: "date", ascending: true)]
         fetchRequest.predicate = NSPredicate(format: "date >= %@ and date <= %@", fromDate as CVarArg, toDate as CVarArg)
@@ -160,8 +163,12 @@ class HomePageVC: UIViewController,UITableViewDelegate, UITableViewDataSource, N
              cell.dataOfYear.text = Helper.FormatDate(dates: list.date as! Date)
         }
              cell.payPrice.text = String(list.price)
-        if list.type != nil{
-             cell.popertyType.text = list.type
+        if let type = list.type{
+            if type == expendName{ //identifier which language
+             cell.popertyType.text = expendName
+            }else if type == incomeName{
+             cell.popertyType.text = incomeName
+            }
         }
       // print(list.expend_ID)
         return cell

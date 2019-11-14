@@ -20,6 +20,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
+        
+        //TODO: - Styling NavigationBar
+        UINavigationBar.appearance().barTintColor = UIColor(red: 255.0/255.0, green: 250.0/255.0, blue: 250.0/255.0, alpha: 1.0)
+        let tintcolor = UIColor(red: 235.0/255.0, green: 75.0/255.0, blue: 27.0/255.0, alpha: 1.0)
+        UINavigationBar.appearance().tintColor = tintcolor
+        if let barFont = UIFont(name: "Avenir-Light", size: 24.0){
+            UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: tintcolor, NSAttributedString.Key.font: barFont]
+        }
+        
+         //TODO: - Styling TabBar
+        UITabBar.appearance().tintColor = UIColor(red: 235.0/255.0, green: 75.0/255.0, blue: 27.0/255.0, alpha: 1.0)
+        UITabBar.appearance().barTintColor = UIColor(red: 255.0/255.0, green: 250.0/255.0, blue: 250.0/255.0, alpha: 1.0)
+        
         return true
     }
     

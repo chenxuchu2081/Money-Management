@@ -15,6 +15,7 @@ class NotificationVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var chooseTimeView: UIView!
     @IBOutlet weak var timePicker: UIDatePicker!
     @IBOutlet weak var notificationTable: UITableView!
+   
     
     let app = UIApplication.shared.delegate as! AppDelegate
     var viewContext: NSManagedObjectContext!
@@ -26,7 +27,7 @@ class NotificationVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
         viewContext = app.persistentContainer.viewContext
         // Do any additional setup after loading the view.
-        sendNotification()
+       // sendNotification()
         chooseTimeView.alpha = 0 //hide
         
         fetch()
@@ -42,24 +43,49 @@ class NotificationVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBAction func setTime(_ sender: UIButton){
         let time = timePicker.date
         print(time)
-        
-        let Dates = NSEntityDescription.insertNewObject(forEntityName: "Notifications", into: viewContext) as! Notifications
-        Dates.id = UUID()
-        Dates.isDelete = false
-        Dates.isPend = false
-        Dates.time = time as NSDate
-        do {
-            try viewContext.save()
-            AlertMessages.showSuccessfulMessage(title: "Success", msg: "Save Sucessfully", vc: self)
-        } catch {
-            fatalError("Failure to save context: \(error)")
+        let currentItem = fecthCount()//core data
+        if limited(Maxitem: 5, NowItem: currentItem){
+            let Dates = NSEntityDescription.insertNewObject(forEntityName: "Notifications", into: viewContext) as! Notifications
+            Dates.id = UUID()
+            Dates.isDelete = false
+            Dates.isPend = true
+            Dates.time = time as NSDate
+            do {
+                try viewContext.save()
+                AlertMessages.showSuccessfulMessage(title: "Success", msg: "Save Sucessfully", vc: self)
+            } catch {
+                fatalError("Failure to save context: \(error)")
+            }
+            
+            let settedTime = time
+            let settedHour = Helper.getComponentOfDate(Date: settedTime, WhichComponent: "hour")
+            let settedMinute = Helper.getComponentOfDate(Date: settedTime, WhichComponent: "minute")
+            let settedSecond = Helper.getComponentOfDate(Date: settedTime, WhichComponent: "second")
+            print("setted hour: \(settedHour) , minute: \(settedMinute), second: \(settedSecond)")
+            
+                sendNotification(hour: settedHour, minute: settedMinute, second: settedSecond)
+            
+            
+        }else{
+            print("item exceed 5")
         }
+        
         fetch()
         notificationTable.reloadData()
         
     }
     
-    func sendNotification(){
+    
+    func limited(Maxitem: Int = 5, NowItem: Int) -> Bool{
+        if NowItem < Maxitem{
+            return true
+        }
+        return false
+    }
+    
+    
+    //MARK: - Local Notification
+    func sendNotification(hour: Int, minute: Int, second: Int){
         //1.
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert,.sound,.badge, .carPlay], completionHandler: { (granted, error) in
             if granted {
@@ -71,14 +97,20 @@ class NotificationVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         //2.
         let content = UNMutableNotificationContent()
-        content.title = "hello"
-        content.body = "hello body"
+        content.title = "MMoney Reminder"
+        content.body = "It is time to record your property!"
         content.sound = UNNotificationSound.default
         
         //3.Deliver the notification in five seconds.
-        let date = Date().addingTimeInterval(5)
-        let dateComponent = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date)
-        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponent, repeats: false)
+//        let date = Date().addingTimeInterval(5)
+//        let dateComponent = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date)
+        var dateComponent = DateComponents()
+        dateComponent.hour = hour
+        dateComponent.minute = minute
+        dateComponent.second = second
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponent, repeats: true)
+        
+       // let trigger = UNTimeIntervalNotificationTrigger(timeInterval: TimeInterval(trigarSecond), repeats: false) //Time-Based triggar
         
         //4. create request
         let uiustring = UUID().uuidString
@@ -89,12 +121,14 @@ class NotificationVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         center.add(request) { (error : Error?) in
             if let theError = error {
                 // Handle any errors
+                print(theError)
             }
         }
         
         
     }
     
+    //MARK: - Core Data
     func fetch(){
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: "time", ascending: true)]
        // fetchRequest.predicate = NSPredicate(format: "date == %@")
@@ -106,6 +140,19 @@ class NotificationVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
     
+    func fecthCount() -> Int{
+        var count = 0
+            do{
+                let allData = try viewContext.fetch(Notifications.fetchRequest())
+                count = allData.count
+            }catch{
+                print("fail to get notification total count")
+            }
+        return count
+    }
+    
+    
+    //MARK: - TableView
     func numberOfSections(in tableView: UITableView) -> Int {
         return controller.sections!.count
     }
@@ -118,6 +165,7 @@ class NotificationVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         let cell = tableView.dequeueReusableCell(withIdentifier: indentifierCell, for: indexPath) as! NotificationTVC
         let it = self.controller.object(at: indexPath)
         cell.dateLabel.text = Helper.FormatTime(time: it.time! as Date)
+        //cell.dateLabel.tag = indexPath.row
         
         //configure button
         cell.isdeleteButton.isSelected = it.isDelete
@@ -135,6 +183,7 @@ class NotificationVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     @objc func switchChanged(_ sender : UISwitch!){
         print("table row switch Changed \(sender.tag)")
         print("The switch is \(sender.isOn ? "ON" : "OFF")")
+        
     }
    
     @objc func deleteWhichNotification(_ sender: UIButton!){
@@ -143,24 +192,15 @@ class NotificationVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     
-//    func controllerWillChangeContent(_ controller: NSFetchedResultsController<Notifications>) {
+    
+    
+    
+//    //MARK: - TableView connect Core data
+//    func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
 //        notificationTable.beginUpdates()
 //    }
 //
-//    func controller(_ controller: NSFetchedResultsController<Notifications>, didChange sectionInfo: NSFetchedResultsSectionInfo, atSectionIndex sectionIndex: Int, for type: NSFetchedResultsChangeType) {
-//        switch type {
-//        case .insert:
-//            notificationTable.insertSections(IndexSet(integer: sectionIndex), with: .fade)
-//        case .delete:
-//            notificationTable.deleteSections(IndexSet(integer: sectionIndex), with: .fade)
-//        case .move:
-//            break
-//        case .update:
-//            break
-//        }
-//    }
-//
-//    func controller(_ controller: NSFetchedResultsController<Notifications>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+//    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
 //        switch type {
 //        case .insert:
 //            notificationTable.insertRows(at: [newIndexPath!], with: .fade)
@@ -170,10 +210,12 @@ class NotificationVC: UIViewController, UITableViewDelegate, UITableViewDataSour
 //            notificationTable.reloadRows(at: [indexPath!], with: .fade)
 //        case .move:
 //            notificationTable.moveRow(at: indexPath!, to: newIndexPath!)
+//        default:
+//            notificationTable.reloadData()
 //        }
 //    }
 //
-//    func controllerDidChangeContent(_ controller: NSFetchedResultsController<Notifications>) {
+//    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
 //        notificationTable.endUpdates()
 //    }
     

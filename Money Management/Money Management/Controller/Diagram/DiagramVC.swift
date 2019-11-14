@@ -87,7 +87,7 @@ class DiagramVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        navtitle.title = PopoverDateVC.passNowMonth! + "月"
+        navtitle.title = PopoverDateVC.passNowMonth! + NSLocalizedString("month", comment: "")
     }
     
     

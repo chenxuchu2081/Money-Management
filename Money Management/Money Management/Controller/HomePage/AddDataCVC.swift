@@ -178,12 +178,12 @@ class AddDataCVC: UICollectionViewController, NSFetchedResultsControllerDelegate
         let name = name
         let image = image
         
-        let alert = UIAlertController(title: "輸入這筆資料？", message: name , preferredStyle: .alert)
-        let cancleAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
-        let sureAction = UIAlertAction(title: "確定", style: .default){
+        let alert = UIAlertController(title: NSLocalizedString("input_data", comment: ""), message: name , preferredStyle: .alert)
+        let cancleAction = UIAlertAction(title: NSLocalizedString("cancel", comment: ""), style: .cancel, handler: nil)
+        let sureAction = UIAlertAction(title: NSLocalizedString("sure", comment: ""), style: .default){
             (action) in
             price = Double(alert.textFields![0].text!)
-            desc = alert.textFields![1].text ?? "沒有"
+            desc = alert.textFields![1].text ?? NSLocalizedString("nothing", comment: "")
             date = Helper.stringConvertDate(string: alert.textFields![2].text!)
             
             
@@ -205,7 +205,7 @@ class AddDataCVC: UICollectionViewController, NSFetchedResultsControllerDelegate
                 }
                 
                 self.app.saveContext()
-                AlertMessages.showToast(msg: "Data Save Successfully", seconds: 2, vc: self)
+                AlertMessages.showToast(msg: "Data Save Successfully", seconds: 1, vc: self)
             }
             
             
@@ -215,7 +215,7 @@ class AddDataCVC: UICollectionViewController, NSFetchedResultsControllerDelegate
         
         alert.addTextField{
             (textField) in
-            textField.placeholder = "價錢"
+            textField.placeholder = NSLocalizedString("price", comment: "")
             textField.keyboardType = .numberPad
             textField.layer.cornerRadius = 8
             //            textField.text = name
@@ -223,12 +223,12 @@ class AddDataCVC: UICollectionViewController, NSFetchedResultsControllerDelegate
         }
         alert.addTextField{
             (textField) in
-            textField.placeholder = "備忘(可選)"
+            textField.placeholder = NSLocalizedString("note", comment: "")
             
         }
         alert.addTextField{
             (textField) in
-            textField.placeholder = "日期"
+            textField.placeholder = NSLocalizedString("date", comment: "")
             textField.text = Helper.FormatDate(dates: Date())
             
         }
@@ -246,12 +246,12 @@ class AddDataCVC: UICollectionViewController, NSFetchedResultsControllerDelegate
         let name = name
         let image = image
         
-        let alert = UIAlertController(title: "修改這筆資料？", message: name , preferredStyle: .alert)
-        let cancleAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
-        let sureAction = UIAlertAction(title: "確定", style: .default){
+        let alert = UIAlertController(title: NSLocalizedString("edit_data", comment: ""), message: name , preferredStyle: .alert)
+        let cancleAction = UIAlertAction(title: NSLocalizedString("cancel", comment: ""), style: .cancel, handler: nil)
+        let sureAction = UIAlertAction(title: NSLocalizedString("sure", comment: ""), style: .default){
             (action) in
             price = Double(alert.textFields![0].text!)
-            desc = alert.textFields![1].text ?? "沒有"
+            desc = alert.textFields![1].text ?? NSLocalizedString("nothing", comment: "")
             date = Helper.stringConvertDate(string: alert.textFields![2].text!)
         
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "PopertyItem")
@@ -264,7 +264,7 @@ class AddDataCVC: UICollectionViewController, NSFetchedResultsControllerDelegate
                 try self.viewContext.fetch(request) as! [PopertyItem]
             
                 if price == nil{
-                    AlertMessages.showErrorAlert(title: "Update Error", msg: "the price space should be filled in", vc: self)
+                    AlertMessages.showErrorAlert(title: NSLocalizedString("update_error", comment: ""), msg: NSLocalizedString("space", comment: ""), vc: self)
                 }else{
                     results[0].setValue(name, forKey: "name")
                     results[0].setValue(desc, forKey: "desc")
@@ -288,7 +288,7 @@ class AddDataCVC: UICollectionViewController, NSFetchedResultsControllerDelegate
         }
         alert.addTextField{
             (textField) in
-            textField.placeholder = "價錢"
+            textField.placeholder = NSLocalizedString("price", comment: "")
             textField.keyboardType = .numberPad
             textField.layer.cornerRadius = 8
             if self.editData != nil{
@@ -298,7 +298,7 @@ class AddDataCVC: UICollectionViewController, NSFetchedResultsControllerDelegate
         }
         alert.addTextField{
             (textField) in
-            textField.placeholder = "備忘(可選)"
+            textField.placeholder = NSLocalizedString("note", comment: "")
             if self.editData != nil{
                 textField.text = self.editData.desc
             }
@@ -306,7 +306,7 @@ class AddDataCVC: UICollectionViewController, NSFetchedResultsControllerDelegate
         }
         alert.addTextField{
             (textField) in
-            textField.placeholder = "日期"
+            textField.placeholder = NSLocalizedString("date", comment: "")
             if self.editData != nil{
                 textField.text = Helper.FormatDate(dates: self.editData.date!)
             }
@@ -372,12 +372,12 @@ class AddDataCVC: UICollectionViewController, NSFetchedResultsControllerDelegate
     
     @IBAction func selectExpendOrIncome(_ sender: UIBarButtonItem){
         if isChangeNavTitleExpend == true{
-            navigationTitle.title = "收入"
+            navigationTitle.title = NSLocalizedString("income", comment: "")
             isChangeNavTitleExpend = false
             fetchCategory_Income_Data(entityName: "Category_Income")
             collectionsView.reloadData()
         }else{
-            navigationTitle.title = "支出"
+            navigationTitle.title = NSLocalizedString("expense", comment: "")
             isChangeNavTitleExpend = true
             fetchCategory_Expend_Data(entityName: "Category_Expend")
             collectionsView.reloadData()
