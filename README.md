@@ -14,12 +14,11 @@ is the process of budgeting, saving, investing, spending or otherwise overseeing
 </br></br>
 
 ## Previews
-+ Cloud Storage
 + Insert / Delete / Edit Banlance
 + Charts
 + Setting Category
 + Export Form (Excel / Json)
-+ Cloud(Synchronous Data) / Language Version / Local Notification 
++ Cloud Storage(Synchronous Data) / Language Version / Local Notification 
 
 <img src="https://github.com/chenxuchu2081/Money-Management/blob/master/MMoneyGif/MMoney_1.gif" width="300" height="650" />
 <img src="https://github.com/chenxuchu2081/Money-Management/blob/master/MMoneyGif/MMoney_2.gif" width="300" height="650" />
