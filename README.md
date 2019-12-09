@@ -2,7 +2,7 @@
 <img
 src="https://github.com/chenxuchu2081/Money-Management/blob/master/Money%20Management/Money%20Management/Assets.xcassets/AppIcon.appiconset/180.png"
 align="left" width="200" hspace="10" vspace="10">
-Our MMoney application helps you manage your finances efficiently. Simple and very easy to use. With a single tap, you don't need to fill in anything other than the amount. It only takes a few seconds to record where your money went. <br/>
+helps you manage your finances efficiently. Simple and very easy to use. With a single tap, you don't need to fill in anything other than the amount. It only takes a few seconds to record where your money went. <br/>
 
 <div style="display:flex;" >
 <a href="">
