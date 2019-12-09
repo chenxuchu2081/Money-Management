@@ -14,30 +14,31 @@ helps you manage your finances efficiently. Simple and very easy to use. With a 
 </br></br>
 
 ## Main Functions
-<h5>Easy to use, simple and intuitive tracking income and expenses.</h5>
-<h5>Track expenses and Income. </h5>
+<h4>Easy to use, simple and intuitive tracking income and expenses.</h4>
+<h4>Track expenses and Income. </h4>
 * Easy to track your founding resource.
 
-<h5>Visual list</h5>
+<h4>Visual list</h4>
 * Get a clear picture of your finances. Know where your money went, and a visual chart report will tell you the financial distribution, broken down by time and category.
 
-<h5>Expense / Income Pie Charts</h5>
+<h4>Expense / Income Pie Charts</h4>
 * display your spending on information distribution chart, or view transactions grouped by category.
 
-<h5> Custimize Category </h5>
+<h4> Custimize Category </h4>
 * customize your favorite category for the record on your demand.
 
-<h5> Export Form (Excel / Json) </h5>
+<h4> Export Form (Excel / Json) </h4>
 * Export your funding on information by using excel format.
 
-<h5>remind </h5>
+<h4>remind </h4>
 * Set reminders to remind you to record every day.
 
-<h5> No ads, free </h5>
+<h4> No ads, free </h4>
 
-<h5> supported language</h5>
-* Chineses
+<h4> supported language</h4>
+* Chineses 
 * English
+
 
 <img src="https://github.com/chenxuchu2081/Money-Management/blob/master/MMoneyGif/MMoney_1.gif" width="300" height="650" />
 <img src="https://github.com/chenxuchu2081/Money-Management/blob/master/MMoneyGif/MMoney_2.gif" width="300" height="650" />
