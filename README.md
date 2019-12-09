@@ -36,7 +36,7 @@ helps you manage your finances efficiently. Simple and very easy to use. With a 
 <h4> No ads, free </h4>
 
 <h4> supported language</h4>
-* Chineses 
+* Chineses </br>
 * English
 
 
