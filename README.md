@@ -2,7 +2,7 @@
 <img
 src="https://github.com/chenxuchu2081/Money-Management/blob/master/Money%20Management/Money%20Management/Assets.xcassets/AppIcon.appiconset/180.png"
 align="left" width="200" hspace="10" vspace="10">
-is the process of budgeting, saving, investing, spending or otherwise overseeing the capital usage of an individual. <br/>
+Our MMoney application helps you manage your finances efficiently. Simple and very easy to use. With a single tap, you don't need to fill in anything other than the amount. It only takes a few seconds to record where your money went. <br/>
 
 <div style="display:flex;" >
 <a href="">
@@ -13,12 +13,31 @@ is the process of budgeting, saving, investing, spending or otherwise overseeing
 </div>
 </br></br>
 
-## Previews
-+ Insert / Delete / Edit Banlance
-+ Charts
-+ Custimize Category
-+ Export Form (Excel / Json)
-+ Cloud Storage(Synchronous Data) / Language Version / Local Notification 
+## Main Functions
+<h5>Easy to use, simple and intuitive tracking income and expenses.</h5>
+<h5>Track expenses and Income. </h5>
+* Easy to track your founding resource.
+
+<h5>Visual list</h5>
+* Get a clear picture of your finances. Know where your money went, and a visual chart report will tell you the financial distribution, broken down by time and category.
+
+<h5>Expense / Income Pie Charts</h5>
+* display your spending on information distribution chart, or view transactions grouped by category.
+
+<h5> Custimize Category </h5>
+* customize your favorite category for the record on your demand.
+
+<h5> Export Form (Excel / Json) </h5>
+* Export your funding on information by using excel format.
+
+<h5>remind </h5>
+* Set reminders to remind you to record every day.
+
+<h5> No ads, free </h5>
+
+<h5> supported language</h5>
+* Chineses
+* English
 
 <img src="https://github.com/chenxuchu2081/Money-Management/blob/master/MMoneyGif/MMoney_1.gif" width="300" height="650" />
 <img src="https://github.com/chenxuchu2081/Money-Management/blob/master/MMoneyGif/MMoney_2.gif" width="300" height="650" />
